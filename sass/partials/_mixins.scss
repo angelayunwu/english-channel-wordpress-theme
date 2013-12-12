@@ -1,0 +1,62 @@
+//////////////////////////////
+// MIXINS: Mixins should have arguments. Otherwise use extendables...
+//////////////////////////////
+
+@mixin element-invisible {
+    // Can't extend from a media-query so this is %element-invisible in a mixin Code from: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    // IE6, IE7 
+    clip: rect(1px 1px 1px 1px); 
+  }
+  clip: rect(1px, 1px, 1px, 1px); 
+}
+
+@mixin background-gradient($direction: top, $start: true, $start-pos: 0 default, $mid: false, $mid-pos: 33% default, $end: false, $end-pos: 66% default, $final: false) {
+  @if $end { background: $end; }
+  @else { background: $start; }  
+  @if $final { @include background-image(linear-gradient($direction, $start $start-pos, $mid $mid-pos, $end $end-pos, $final)); }
+  @else { @include background-image(linear-gradient($direction, $start $start-pos, $mid $mid-pos, $end $end-pos)); }
+}
+
+@mixin web-font-face($font-name, $font-file-name, $font-weight: normal, $font-style: normal, $inline-fonts: false) { 
+  @if $inline-fonts and $font-name {
+  @include font-face(
+    $font-name, 
+    inline-font-files(
+      "#{$font-file-name}.woff", woff, 
+      "#{$font-file-name}.ttf", truetype, 
+      "#{$font-file-name}.svg", svg
+    ), 
+    "#{$font-file-name}.eot",  
+    $font-weight, 
+    $font-style
+  );
+  }
+  @else if $font-name { 
+    @include font-face(
+      $font-name, 
+      font-files(
+        "#{$font-file-name}.woff", woff, 
+        "#{$font-file-name}.ttf", truetype,
+        "#{$font-file-name}.svg##{$font-name}", svg
+      ), 
+      "#{$font-file-name}.eot", 
+      $font-weight, 
+      $font-style
+    );
+  }
+}
+
+// IE Fixin Mixins
+
+@mixin opacitIE($opacity) {
+  // Could be extended for other even older browsers if needed http://css-tricks.com/css-transparency-settings-for-all-broswers/
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    @include has-layout-zoom;  // trigger hasLayout
+  }
+  filter: unquote("alpha(opacity=#{round($opacity * 100)})");
+}

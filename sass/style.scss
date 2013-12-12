@@ -1,0 +1,35 @@
+/*
+Theme Name: Boxy
+Author: DLTS
+Description: This is a custom theme for NYU engish department. 
+Version: 1.2.3
+License: GNU General Public License
+License URI: license.txt
+*/
+@import "compass/typography";
+@import "compass/css3";
+
+@import "compass-pattern-primer";
+
+@import 'modular-scale';
+@import 'toolkit';
+@import "compass";
+
+@import "partials/_browsers";
+@import "partials/_defines";
+
+@import "partials/_mixins";
+@import "partials/_extendables";
+@import "partials/_functions";
+
+@import "partials/_reset";
+@import "partials/_globals";
+@import "partials/_helpers";
+@import "partials/_canvas";
+@import "partials/_header";
+@import "partials/_menu";
+@import "partials/_content";
+@import "partials/_comments-area";
+@import "partials/_widget-area";
+@import "partials/_footer";
+@import "partials/_media-queries";

@@ -1,0 +1,433 @@
+//////////////////////////////
+// COLORS: Create a color scheme
+//////////////////////////////
+@import "toolkit/colours";
+
+// tint-stack, shade-stack etc
+
+// Example color scheme
+// this is an approximation of the green
+$primary-color: #22e744;
+$black-value: #071e09;
+
+//$background-color: #11ff11;
+
+$cs-primary: $primary-color;
+
+// Primary color, can be any color you can use in CSS, plus CMYK from Color Schemer
+$cs-scheme: accented-analogic;
+
+// Options: mono, complement, triad, tetrad, analogic, accented-analogic
+$cs-hue-offset: 20;
+
+// Options: 0-100;
+$cs-brightness-offset: 10;
+
+// Options: 0-100;
+$cs-color-model: ryb;
+
+// Options: rgb, ryb
+
+$black: tint-stack($black-value);
+$primary: tint-stack(cs-primary());
+$primary-dark: darken(nth($primary, 2), 50%);
+$secondary: tint-stack(cs-secondary());
+$secondary-dark: darken(nth($secondary, 2), 40%);
+$secondary-dark2: darken(nth($secondary, 2), 50%);
+$tertiary: tint-stack(cs-tertiary());
+$quadrary: tint-stack(cs-quadrary());
+
+//$sans-font: 'PT Sans', Verdana, Geneva, sans-serif;
+$sans-font: "PT Sans", Verdana, Geneva, sans-serif;
+$heading-font: Lato, "PT Sans", Verdana, Geneva, sans-serif;
+$serif-font: "PT Sans", Verdana, Geneva, sans-serif;
+$site-heading-color: nth($primary, 1);
+$heading-color: $primary-dark;
+$text-color: nth($black, 1);
+$link-color: nth($quadrary, 1);
+$link-color-rgba: rgba(56, 140, 164, 0.5);
+$border-color: nth($black, 2);
+$primary-bg-color: nth($black, 6);
+$secondary-bg-color: nth($black, 5);
+$tertiary-bg-color: nth($black, 6);
+$blocks-bg-color: #eee;
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin primary-box {
+   background-color: #fff;
+  // background-color: $primary-bg-color;
+  // background-color: white;
+ 
+  // @include box-shadow( rgba(0, 0, 0, 0.5) 0 0 1px );
+  
+}
+
+@mixin secondary-box {
+  //background-color: #f6f6f6;
+  //background-color: $blocks-bg-color;
+  //@include box-shadow( rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset);
+}
+
+@mixin blocks-box {
+  background: $blocks-bg-color;
+  //@include box-shadow( rgba(0, 0, 0, 0.2) 0 0 0.2rem );
+}
+
+@mixin entries-4col {
+  .js #dynamic-grid {
+    margin: -10px -10px 20px;
+    margin: -1rem -1rem 2rem;
+    .hentry {
+      float: left;
+      width: 420px;
+      width: 48rem;
+      margin: 10px;
+      margin: 1rem;
+      
+      // padding: 0 0 10px 0;
+      // padding: 0 0 1rem 0 ;
+      padding: 0;
+      .entry-header {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@mixin body-6col {
+  body {
+    padding: 0;
+  }
+  .site-header {
+    .header-main {
+      // padding: 30px 20px 32px;
+      // padding: 3rem 2rem 3.2rem;
+   
+    }
+    .site-title {
+      font-size: 35px;
+      font-size: 3.5rem;
+    }
+    .site-description {
+      font-size: 16px;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+    }
+  }
+  
+  .custom-header.no-logo-image.header-text-hidden .site-header .header-main {
+    min-height: 78px;
+    min-height: 7.8rem;
+  }
+  .hentry,
+  .comments-area {
+      padding: 60px;
+    padding: 6rem;
+      padding: 3rem 12rem;
+  }
+  .post-navigation {
+    padding: 30px;
+    padding: 1rem 0 4rem;
+  }
+  .single,
+  body.page,
+  .one-col-excerpts,
+  .one-col-full-posts,
+  .not-found,
+  .no-js .hentry {
+    // .entry-title {
+    // 	font-size: 27px;
+    // 	font-size: 2.7rem;
+    // }
+    .entry-content,
+    .entry-summary,
+    .comment-content,
+    .comments-area,
+    .pingback {
+      font-size: 14px;
+      font-size: 1.4rem;
+      h1 {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      h2 {
+        font-size: 22px;
+        font-size: 2.2rem;
+      }
+      h3 {
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .wp-post-image.attachment-post-thumbnail {
+    width: 150px;
+    width: 15rem;
+  }
+  .wp-caption-text, .entry-attachment .entry-caption p {
+    font-size: 0.8em;
+  }
+  .comments-title {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+  #reply-title {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+  ol.commentlist {
+    ul.children {
+      margin-left: 40px;
+      margin-left: 4rem;
+      & > li:before {
+        font-size: 2.4rem;
+        left: -3.6rem;
+      }
+    }
+  }
+  .pingback {
+    margin: 0 0 20px;
+    margin: 0 0 2rem;
+    p:before {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+  article.comment {
+    margin: 0 0 20px;
+    margin: 0 0 2rem;
+    padding-left: 100px;
+    padding-left: 10rem;
+    min-height: 80px;
+    min-height: 8rem;
+    footer {
+      padding: 0 0 3px;
+      padding: 0 0 0.3rem;
+      em {
+        left: 100px;
+        left: 10rem;
+      }
+    }
+  }
+  .avatar {
+    width: 80px;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    top: 1rem;
+    left: 10px;
+    left: 1rem;
+    @include blocks-box;
+  }
+  .comment-author {
+    cite {
+      position: static;
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+  }
+  .comment-meta {
+    float: right;
+    left: 0;
+    top: -20px;
+    top: -2rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+  .no-comment-avatars {
+    article.comment {
+      padding-left: 10px;
+      padding-left: 1rem;
+    }
+    .comment-meta {
+      position: relative;
+    }
+  }
+  #respond {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+}
+
+@mixin content-8col {
+ 
+  .single,
+  body.page,
+  .one-col-excerpts,
+  .one-col-full-posts,
+  .no-js {
+    &.no-sidebar {
+      .entry-header,
+      .entry-content,
+      .entry-summary,
+      #image-navigation,
+      .entry-meta,
+      .comments-title,
+      .comment-navigation,
+      ol.commentlist,
+      #respond {
+        max-width: 660px;
+        max-width: 66rem;
+        // margin-right: auto;
+        // margin-left: auto;
+      }
+      // .entry-title {
+      // 	font-size: 30px;
+      // 	font-size: 3rem;
+      // }
+      .entry-content,
+      .entry-summary {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      .pingback, article.comment {
+        margin: 0 0 30px;
+        margin: 0 0 3rem;
+      }
+    }
+    &.has-sidebar {
+      .site-main {
+        padding: 0 240px 0 0;
+        padding: 0 24rem 0 0;
+      }
+      .content-area {
+        float: left;
+        margin-right: -100%;
+        width: 100%;
+      }
+      .widget-area.sidebar {
+        float: right;
+        margin-right: -240px;
+        margin-right: -24rem;
+        width: 220px;
+        width: 22rem;
+      }
+      #the-sidebar {
+        width: 220px;
+        width: 22rem;
+      }
+      .entry-title {
+        text-align: left;
+      }
+      .comment-meta {
+        float: none;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+}
+
+@mixin content-10col {
+  .single,
+  body.page,
+  .one-col-excerpts,
+  .one-col-full-posts,
+  .no-js {
+    &.has-sidebar {
+      .entry-title {
+        font-size: 30px;
+        font-size: 3rem;
+      }
+      .entry-content,
+      .entry-summary {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@mixin content-12col {
+  .content-area {
+    // max-width: 940px;
+    // max-width: 94rem;
+  }
+  .single, body.page {
+    &.has-sidebar {
+      .comment-meta {
+        float: right;
+        top: -20px;
+        top: -2rem;
+      }
+    }
+  }
+}
+
+@mixin footer-6col {
+  #footer-widgets, #the-sidebar {
+    width: 460px;
+    width: 46rem;
+  }
+}
+
+@mixin footer-9col {
+  #footer-widgets {
+    width: 700px;
+    width: 70rem;
+  }
+}
+
+@mixin footer-12col {
+  #footer-widgets {
+    width: 940px;
+    width: 94rem;
+  }
+}
+
+@mixin bottom-bar-8col {
+  #bottom-bar {
+    .footer-text {
+      width: 48%;
+      float: left;
+      text-align: left;
+    }
+    .site-info {
+      width: 48%;
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+@mixin non-responsive {
+  #page {
+    width: 940px;
+    width: 94rem;
+  }
+  @include entries-4col;
+  @include body-6col;
+  @include content-8col;
+  @include content-10col;
+  @include content-12col;
+  @include footer-12col;
+  @include bottom-bar-8col;
+}
+
+@mixin fontello {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+}

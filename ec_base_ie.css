@@ -1,0 +1,3222 @@
+/**
+* Theme Name: English Channel
+* Author: Laura M Henze
+*/
+/* line 36, ../../../../../../Ruby/Gems/1.8/gems/toolkit-1.3.8/stylesheets/toolkit/_box-sizing.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 4, ../../../../../../Ruby/Gems/1.8/gems/toolkit-1.3.8/stylesheets/toolkit/_fluid-media.scss */
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+/* line 20, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_html5.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 28, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_html5.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/* line 39, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_html5.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 46, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_html5.scss */
+[hidden] {
+  display: none;
+}
+
+/*! normalize.css v2.1.0 | Base | MIT License | git.io/normalize */
+/* line 13, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_base.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* line 37, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_base.scss */
+body {
+  margin: 0;
+}
+
+/*! normalize.css v2.1.0 | Links | MIT License | git.io/normalize */
+/* line 9, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_links.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 16, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_links.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/*! normalize.css v2.1.0 | Typography | MIT License | git.io/normalize */
+/* line 13, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 47, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 54, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 66, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 73, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 81, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 100, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/* line 110, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 118, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 140, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 147, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 154, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 158, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_typography.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/*! normalize.css v2.1.0 | Embedded Content | MIT License | git.io/normalize */
+/* line 9, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_embeds.scss */
+img {
+  border: 0;
+}
+
+/* line 18, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_embeds.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*! normalize.css v2.1.0 | Figures | MIT License | git.io/normalize */
+/* line 9, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_figures.scss */
+figure {
+  margin: 0;
+}
+
+/*! normalize.css v2.1.0 | Forms | MIT License | git.io/normalize */
+/* line 17, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 30, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/* line 49, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 63, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 73, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/* line 90, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 101, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/* line 113, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 126, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 137, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 144, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 152, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_forms.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/*! normalize.css v2.1.0 | Tables | MIT License | git.io/normalize */
+/* line 9, ../../../../../../Ruby/Gems/1.8/gems/compass-normalize-1.4.3/stylesheets/normalize/_tables.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 10, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_tiny {
+  width: 50px;
+}
+
+/* line 13, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_small {
+  width: 100px;
+}
+
+/* line 16, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_medium {
+  width: 150px;
+}
+
+/* line 19, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_large {
+  width: 200px;
+}
+
+/* line 22, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_xlarge {
+  width: 250px;
+}
+
+/* line 25, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_xxlarge {
+  width: 300px;
+}
+
+/* line 35, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+.input_full_wrap {
+  display: block;
+  padding-right: 8px;
+}
+
+/* line 42, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+/* line 52, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input:invalid,
+button:invalid,
+a.button:invalid,
+select:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 56, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input:focus,
+button:focus,
+a.button:focus,
+select:focus,
+textarea:focus {
+  -webkit-box-shadow: #0066ff 0 0 5px 0;
+  -moz-box-shadow: #0066ff 0 0 5px 0;
+  box-shadow: #0066ff 0 0 5px 0;
+  z-index: 1;
+}
+
+/* line 64, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 68, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background: #dddddd url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAAAAADhgtq/AAAAHElEQVQoz2P8z4ADsOCW+UeGnsFs2nDzz5AMHQA+JRlAyyOraAAAAABJRU5ErkJggg==) repeat-x;
+  background-image: -webkit-linear-gradient(#ffffff, #dddddd);
+  background-image: -moz-linear-gradient(#ffffff, #dddddd);
+  background-image: linear-gradient(#ffffff, #dddddd);
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  display: inline-block;
+  font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  padding: 3px 10px;
+  text-shadow: white 0 1px 1px;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+}
+/* line 97, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+button:hover,
+a.button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  text-decoration: none;
+}
+/* line 100, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+button:active,
+a.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  background-image: -webkit-linear-gradient(#dddddd, #eeeeee);
+  background-image: -moz-linear-gradient(#dddddd, #eeeeee);
+  background-image: linear-gradient(#dddddd, #eeeeee);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  border-color: #999999 #bbbbbb #dddddd;
+}
+/* line 111, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 125, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 2px 3px;
+  text-align: left;
+  font-size: 13px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 1.8em;
+  vertical-align: top;
+}
+/* line 163, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee;
+}
+
+/* line 166, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #888888;
+  cursor: default;
+}
+
+/* line 184, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888888;
+}
+
+/* line 188, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888;
+}
+
+/* line 192, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888;
+}
+
+/* line 196, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+textarea,
+select[size],
+select[multiple] {
+  height: auto;
+}
+
+/* line 203, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+}
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* line 212, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+
+  /* line 218, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+
+  /* line 227, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    min-height: 16px;
+  }
+
+  /* line 239, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border-color: #666666;
+  }
+}
+/* line 247, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+
+/* line 253, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+}
+/* line 262, ../../../../../../Ruby/Gems/1.8/gems/compass_formalize-0.0.5/stylesheets/_formalize.sass */
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* =Reset
+-------------------------------------------------------------- */
+/* line 10, sass/base/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 23, sass/base/_reset.scss */
+html {
+  font-size: 62.5%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centred in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+/* line 34, sass/base/_reset.scss */
+body {
+  background: #eeeeee;
+}
+
+/* line 46, sass/base/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/* line 50, sass/base/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 54, sass/base/_reset.scss */
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+/* line 60, sass/base/_reset.scss */
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+/* line 66, sass/base/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+/* line 70, sass/base/_reset.scss */
+blockquote, q {
+  quotes: "" "";
+}
+
+/* line 74, sass/base/_reset.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 79, sass/base/_reset.scss */
+a:hover,
+a:active {
+  /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+  outline: 0;
+}
+
+/* line 84, sass/base/_reset.scss */
+a img {
+  border: 0;
+}
+
+/* =Global
+----------------------------------------------- */
+/* line 8, sass/base/_global.scss */
+body,
+button,
+input,
+select,
+textarea {
+  color: #444;
+  font-family: "PT Sans", Verdana, Geneva, sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Headings */
+/* line 17, sass/base/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  color: #555555;
+  font-family: "Bree Serif", Georgia, serif;
+  text-shadow: rgba(255, 255, 255, 0.9) 0 0 1rem;
+}
+
+/* line 24, sass/base/_global.scss */
+hr {
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
+}
+
+/* Text elements */
+/* line 32, sass/base/_global.scss */
+p, ul, ol {
+  margin-bottom: 1.5em;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 40, sass/base/_global.scss */
+ul {
+  list-style: none;
+  position: relative;
+  margin-left: 0.8em;
+}
+
+/* line 45, sass/base/_global.scss */
+ul li:before {
+  content: "\203A \0020";
+  position: absolute;
+  left: -0.8em;
+}
+
+/* line 51, sass/base/_global.scss */
+ol {
+  margin-left: 1.2em;
+}
+
+/* line 55, sass/base/_global.scss */
+ol, ol ol ol ol {
+  list-style: decimal outside;
+}
+
+/* line 59, sass/base/_global.scss */
+ol ol {
+  list-style: lower-roman outside;
+}
+
+/* line 63, sass/base/_global.scss */
+ol ol ol {
+  list-style: lower-alpha outside;
+}
+
+/* line 67, sass/base/_global.scss */
+ul ul, ol ol, ul ol, ol ul {
+  margin-bottom: 0;
+  margin-left: 1.2em;
+}
+
+/* line 72, sass/base/_global.scss */
+li {
+  margin-top: 0.2em;
+}
+
+/* line 75, sass/base/_global.scss */
+li:first-child {
+  margin-top: 0;
+}
+
+/* line 79, sass/base/_global.scss */
+dt {
+  font-weight: bold;
+}
+
+/* line 83, sass/base/_global.scss */
+dd {
+  margin: 0 1.5em 1.5em;
+}
+
+/* line 87, sass/base/_global.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 91, sass/base/_global.scss */
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+/* line 95, sass/base/_global.scss */
+blockquote, pre {
+  margin: 0 0 1em;
+  padding: 1em;
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+}
+
+/* line 104, sass/base/_global.scss */
+blockquote {
+  padding-left: 4em;
+  position: relative;
+}
+
+/* line 108, sass/base/_global.scss */
+blockquote:before {
+  position: absolute;
+  left: 0.4em;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  font-size: 2em;
+  opacity: 0.3;
+  content: '\275d';
+}
+
+/* line 126, sass/base/_global.scss */
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 130, sass/base/_global.scss */
+address {
+  margin: 0 0 1em;
+}
+
+/* line 134, sass/base/_global.scss */
+pre {
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  overflow: auto;
+  max-width: 100%;
+}
+
+/* line 140, sass/base/_global.scss */
+code, kbd, tt, var {
+  background: #f8f8f8;
+  border: 1px solid #dddddd;
+  font: 0.9em Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+/* line 146, sass/base/_global.scss */
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+/* line 152, sass/base/_global.scss */
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 160, sass/base/_global.scss */
+sup {
+  bottom: 1ex;
+}
+
+/* line 164, sass/base/_global.scss */
+sub {
+  top: .5ex;
+}
+
+/* line 168, sass/base/_global.scss */
+small {
+  font-size: 75%;
+}
+
+/* line 172, sass/base/_global.scss */
+big {
+  font-size: 125%;
+}
+
+/* line 176, sass/base/_global.scss */
+figure {
+  margin: 0;
+}
+
+/* line 180, sass/base/_global.scss */
+table {
+  margin: 0 0 1.5em;
+  width: 100%;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #dddddd;
+  background: #f8f8f8;
+}
+
+/* line 189, sass/base/_global.scss */
+th, td {
+  padding: 5px 10px;
+  padding: 0.5rem 1rem;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: #ddd;
+}
+
+/* line 197, sass/base/_global.scss */
+th {
+  background: #eee;
+  font-weight: bold;
+}
+
+/* line 205, sass/base/_global.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* Corrects font size not being inherited in all browsers */
+  margin: 0;
+  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  vertical-align: baseline;
+  /* Improves appearance and consistency in all browsers */
+  *vertical-align: middle;
+  /* Improves appearance and consistency in all browsers */
+}
+
+/* line 217, sass/base/_global.scss */
+button,
+input {
+  line-height: normal;
+  /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+  *overflow: visible;
+  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+
+/* line 227, sass/base/_global.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid #ccc;
+  border-color: #ccc #ccc #bbb #ccc;
+  border-radius: 3px;
+  background: #e6e6e6;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  /* Improves usability and consistency of cursor style between image-type 'input' and others */
+  -webkit-appearance: button;
+  /* Corrects inability to style clickable 'input' types in iOS */
+  line-height: 2em;
+  height: 2.1em;
+  padding: 0 1em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* line 249, sass/base/_global.scss */
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  border-color: #ccc #bbb #aaa #bbb;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+/* line 263, sass/base/_global.scss */
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  border-color: #aaa #bbb #bbb #bbb;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* line 271, sass/base/_global.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* Addresses box sizing set to content-box in IE8/9 */
+  padding: 0;
+  /* Addresses excess padding in IE8/9 */
+}
+
+/* line 278, sass/base/_global.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* Addresses appearance set to searchfield in S5, Chrome */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+  box-sizing: content-box;
+}
+
+/* line 287, sass/base/_global.scss */
+input[type="search"]::-webkit-search-decoration {
+  /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+  -webkit-appearance: none;
+}
+
+/* line 293, sass/base/_global.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+  border: 0;
+  padding: 0;
+}
+
+/* line 301, sass/base/_global.scss */
+input[type=text],
+input[type=email],
+textarea {
+  color: #666;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* line 309, sass/base/_global.scss */
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+  color: #111;
+}
+
+/* line 314, sass/base/_global.scss */
+input[type=text],
+input[type=email] {
+  padding: 3px;
+}
+
+/* line 318, sass/base/_global.scss */
+textarea {
+  overflow: auto;
+  /* Removes default vertical scrollbar in IE6/7/8/9 */
+  padding-left: 3px;
+  vertical-align: top;
+  /* Improves readability and alignment in all browsers */
+  width: 98%;
+}
+
+/* Links */
+/* line 328, sass/base/_global.scss */
+a {
+  color: #388ca4;
+  text-decoration: none;
+}
+
+/* line 335, sass/base/_global.scss */
+a:hover,
+a:focus,
+a:active {
+  opacity: 0.95;
+}
+
+/* Alignment */
+/* line 340, sass/base/_global.scss */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+
+/* line 346, sass/base/_global.scss */
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* line 352, sass/base/_global.scss */
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+/* line 359, sass/base/_global.scss */
+.assistive-text {
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+}
+
+/* Clearfix hack. See http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* line 368, sass/base/_global.scss */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* line 373, sass/base/_global.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 377, sass/base/_global.scss */
+.cf {
+  *zoom: 1;
+}
+
+/* =Canvas
+----------------------------------------------- */
+/* line 383, sass/base/_global.scss */
+body {
+  padding: 0 10px;
+  padding: 0 1rem;
+}
+
+/* line 388, sass/base/_global.scss */
+#page {
+  width: auto;
+  max-width: 940px;
+  max-width: 94rem;
+  margin: 0 auto;
+}
+
+/* line 395, sass/base/_global.scss */
+.content-area {
+  margin: 0 auto 30px;
+  margin: 0 auto 3rem;
+  max-width: 300px;
+  max-width: 30rem;
+}
+
+/* line 406, sass/base/_global.scss */
+.single .content-area,
+.page .content-area,
+.one-col-excerpts .content-area,
+.one-col-full-posts .content-area,
+.no-js .content-area {
+  max-width: 940px;
+  max-width: 94rem;
+}
+
+/* line 411, sass/base/_global.scss */
+.site-footer {
+  clear: both;
+}
+
+/* line 415, sass/base/_global.scss */
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* line 429, sass/base/_global.scss */
+.back-to-top:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* line 432, sass/base/_global.scss */
+.back-to-top:before {
+  font-weight: bold;
+}
+
+/**
+* Theme Name: Emphaino Child
+* Author: Laura Henze
+* Template: emphaino
+*/
+/* =Content
+----------------------------------------------- */
+/* line 10, sass/base/_emphaino.scss */
+.sticky {
+  background: inherit;
+}
+
+/* line 14, sass/base/_emphaino.scss */
+.page-header, .hentry, .post-navigation, .paging-navigation {
+  padding: 10px;
+  padding: 1rem;
+}
+
+/* line 19, sass/base/_emphaino.scss */
+.page-header {
+  margin: 0 0 30px;
+  margin: 0 0 3rem;
+  background-color: #f6f6f6;
+  background-color: rgba(248, 248, 248, 0.7);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  text-align: center;
+}
+
+/* line 30, sass/base/_emphaino.scss */
+.site-content {
+  width: 100%;
+}
+
+/* line 34, sass/base/_emphaino.scss */
+.hentry {
+  width: auto;
+  max-width: 900px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  margin: 0 auto 20px;
+  margin: 0 auto 2rem;
+}
+
+/* line 48, sass/base/_emphaino.scss */
+.entry-title, article .entry-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 56, sass/base/_emphaino.scss */
+.entry-title a {
+  color: orange;
+}
+
+/* line 59, sass/base/_emphaino.scss */
+.entry-title a:hover {
+  color: #388ca4;
+}
+
+/* line 62, sass/base/_emphaino.scss */
+.entry-title:before {
+  color: orange;
+}
+
+/* line 69, sass/base/_emphaino.scss */
+.entry-content,
+.entry-summary,
+.comment-content,
+.pingback {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 91, sass/base/_emphaino.scss */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
+.entry-summary h1,
+.entry-summary h2,
+.entry-summary h3,
+.entry-summary h4,
+.entry-summary h5,
+.entry-summary h6,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6,
+.pingback h1,
+.pingback h2,
+.pingback h3,
+.pingback h4,
+.pingback h5,
+.pingback h6 {
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
+}
+
+/* line 98, sass/base/_emphaino.scss */
+.entry-content h1,
+.entry-summary h1,
+.comment-content h1,
+.pingback h1 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* line 106, sass/base/_emphaino.scss */
+.entry-content h2,
+.entry-summary h2,
+.comment-content h2,
+.pingback h2 {
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+/* line 113, sass/base/_emphaino.scss */
+.entry-content h3,
+.entry-summary h3,
+.comment-content h3,
+.pingback h3 {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 120, sass/base/_emphaino.scss */
+.entry-content h4,
+.entry-summary h4,
+.comment-content h4,
+.pingback h4 {
+  font: bold 13px "PT Sans", Verdana, Geneva, sans-serif;
+  font: bold 1.3rem "PT Sans", Verdana, Geneva, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 128, sass/base/_emphaino.scss */
+.entry-content h5,
+.entry-summary h5,
+.comment-content h5,
+.pingback h5 {
+  font: bold 12px "PT Sans", Verdana, Geneva, sans-serif;
+  font: bold 1.2rem "PT Sans", Verdana, Geneva, sans-serif;
+  text-transform: uppercase;
+}
+
+/* line 136, sass/base/_emphaino.scss */
+.entry-content h6,
+.entry-summary h6,
+.comment-content h6,
+.pingback h6 {
+  font: bold 12px "PT Sans", Verdana, Geneva, sans-serif;
+  font: bold 1.2rem "PT Sans", Verdana, Geneva, sans-serif;
+}
+
+/* line 141, sass/base/_emphaino.scss */
+.not-found #searchform {
+  margin-bottom: 30px;
+  margin-bottom: 3rem;
+}
+
+/* line 145, sass/base/_emphaino.scss */
+.not-found #searchsubmit {
+  display: inline-block;
+}
+
+/* line 149, sass/base/_emphaino.scss */
+.entry-meta {
+  clear: both;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+/* line 155, sass/base/_emphaino.scss */
+.entry-meta span {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+/* line 159, sass/base/_emphaino.scss */
+.entry-meta span.byline {
+  display: none;
+}
+
+/* line 162, sass/base/_emphaino.scss */
+.entry-meta span.post-author {
+  margin-right: 0;
+}
+
+/* line 184, sass/base/_emphaino.scss */
+.format-image .entry-title:before,
+.single-format-image .entry-title:before,
+.format-gallery .entry-title:before,
+.single-format-gallery .entry-title:before,
+.format-chat .entry-title:before,
+.single-format-chat .entry-title:before,
+.format-link .entry-title:before,
+.single-format-link .entry-title:before,
+.format-quote .entry-title:before,
+.single-format-quote .entry-title:before,
+.format-audio .entry-title:before,
+.single-format-audio .entry-title:before,
+.format-video .entry-title:before,
+.single-format-video .entry-title:before,
+.format-status .entry-title:before,
+.single-format-status .entry-title:before,
+.format-aside .entry-title:before,
+.single-format-aside .entry-title:before,
+.post-password-required .entry-title:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  margin-right: 0.4em;
+}
+
+/* line 199, sass/base/_emphaino.scss */
+.format-image .entry-title:before, .single-format-image .entry-title:before {
+  content: '\e805 \0020';
+}
+
+/* line 203, sass/base/_emphaino.scss */
+.format-gallery .entry-title:before, .single-format-gallery .entry-title:before {
+  content: '\1f304 \0020';
+}
+
+/* line 207, sass/base/_emphaino.scss */
+.format-chat .entry-title:before, .single-format-chat .entry-title:before {
+  content: '\e802 \0020';
+}
+
+/* line 211, sass/base/_emphaino.scss */
+.format-link .entry-title:before, .single-format-link .entry-title:before {
+  content: '\e807 \0020';
+}
+
+/* line 215, sass/base/_emphaino.scss */
+.format-quote .entry-title:before, .single-format-quote .entry-title:before {
+  content: '\275d \0020';
+}
+
+/* line 219, sass/base/_emphaino.scss */
+.format-audio .entry-title:before, .single-format-audio .entry-title:before {
+  content: '\e804 \0020';
+}
+
+/* line 223, sass/base/_emphaino.scss */
+.format-video .entry-title:before, .single-format-video .entry-title:before {
+  content: '\e806 \0020';
+}
+
+/* line 227, sass/base/_emphaino.scss */
+.format-status .entry-title:before, .single-format-status .entry-title:before {
+  content: '\1f514 \0020';
+}
+
+/* line 231, sass/base/_emphaino.scss */
+.format-aside .entry-title:before, .single-format-aside .entry-title:before {
+  content: '\e732 \0020';
+}
+
+/* line 235, sass/base/_emphaino.scss */
+.post-password-required .entry-title:before {
+  content: '\e708 \0020';
+}
+
+/* line 239, sass/base/_emphaino.scss */
+.format-quote .entry-title, .single-format-quote .entry-title {
+  display: none;
+}
+
+/* line 243, sass/base/_emphaino.scss */
+figure.quote {
+  margin: 0 1em 1em 0;
+  padding-left: 4em;
+  position: relative;
+}
+
+/* line 248, sass/base/_emphaino.scss */
+figure.quote:before {
+  position: absolute;
+  left: 0;
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  font-size: 2em;
+  opacity: 0.5;
+  content: '\275d';
+}
+
+/* line 266, sass/base/_emphaino.scss */
+figure.quote p:last-child {
+  margin-bottom: 0;
+}
+
+/* line 269, sass/base/_emphaino.scss */
+figure.quote blockquote {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 277, sass/base/_emphaino.scss */
+figure.quote blockquote:before {
+  display: none;
+}
+
+/* line 280, sass/base/_emphaino.scss */
+figure.quote .quote-caption {
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  text-align: right;
+}
+
+/* line 286, sass/base/_emphaino.scss */
+footer.entry-meta {
+  border-top: 1px solid #dddddd;
+  padding-top: 10px;
+  padding-top: 1rem;
+}
+
+/* line 293, sass/base/_emphaino.scss */
+.single .entry-meta .byline,
+.group-blog .entry-meta .byline {
+  display: inline;
+}
+
+/* line 297, sass/base/_emphaino.scss */
+.attachment .entry-meta .byline {
+  display: none;
+}
+
+/* line 302, sass/base/_emphaino.scss */
+.entry-content,
+.entry-summary {
+  margin: 1em 0 0;
+}
+
+/* line 306, sass/base/_emphaino.scss */
+.featured-image {
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 312, sass/base/_emphaino.scss */
+.wp-post-image {
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  margin: 0 0 1em;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 323, sass/base/_emphaino.scss */
+.wp-post-image.attachment-post-thumbnail {
+  float: right;
+  width: 80px;
+  width: 8rem;
+  margin: 0.4em 0 10px 10px;
+  margin: 0.4em 0 1rem 1rem;
+}
+
+/* line 331, sass/base/_emphaino.scss */
+.page-links {
+  clear: both;
+  background-color: #f6f6f6;
+  background-color: rgba(248, 248, 248, 0.7);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  margin: 0 0 1em;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* =Asides & Statuses
+----------------------------------------------- */
+/* line 348, sass/base/_emphaino.scss */
+.blog .format-aside .entry-title a,
+.blog .format-status .entry-title a,
+.archive .format-aside .entry-title a,
+.archive .format-status .entry-title a {
+  display: none;
+}
+
+/* =Chat
+----------------------------------------------- */
+/* line 354, sass/base/_emphaino.scss */
+.format-chat .entry-content {
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  margin: 0 0 1.5em;
+  padding: 1rem;
+}
+
+/* line 362, sass/base/_emphaino.scss */
+.format-chat .entry-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =format-link
+----------------------------------------------- */
+/* line 368, sass/base/_emphaino.scss */
+.format-link .entry-content a:first-child {
+  display: block;
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  margin: 0 0 1.5em;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* =Media
+----------------------------------------------- */
+/* line 384, sass/base/_emphaino.scss */
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+  max-width: 100%;
+  /* Fluid images for posts, comments, and widgets */
+}
+
+/* line 393, sass/base/_emphaino.scss */
+.site-header img,
+.entry-content img,
+.comment-content img[height],
+img[class*="align"],
+img[class*="wp-image-"] {
+  height: auto;
+  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* line 400, sass/base/_emphaino.scss */
+.site-header img,
+.entry-content img,
+img.size-full {
+  max-width: 100%;
+}
+
+/* line 405, sass/base/_emphaino.scss */
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* line 412, sass/base/_emphaino.scss */
+.wp-caption {
+  max-width: 100%;
+}
+
+/* line 416, sass/base/_emphaino.scss */
+.wp-caption, .entry-attachment {
+  margin-bottom: 1.5em;
+}
+
+/* line 419, sass/base/_emphaino.scss */
+.wp-caption img, .entry-attachment img {
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+}
+
+/* line 426, sass/base/_emphaino.scss */
+.wp-caption-text, .entry-attachment .entry-caption p {
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  text-align: center;
+}
+
+/* Gallery */
+/* line 435, sass/base/_emphaino.scss */
+.site-content .gallery {
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
+}
+
+/* line 439, sass/base/_emphaino.scss */
+.site-content .gallery .gallery-item {
+  float: left;
+  margin: 10px 0;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+/* line 445, sass/base/_emphaino.scss */
+.site-content .gallery .gallery-icon, .site-content .gallery .gallery-caption {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* line 449, sass/base/_emphaino.scss */
+.site-content .gallery a img {
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  border: none;
+  height: auto;
+  max-width: 100%;
+}
+
+/* line 458, sass/base/_emphaino.scss */
+.site-content .gallery .gallery-caption {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 462, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+/* line 465, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+/* line 468, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-3 .gallery-item {
+  width: 33%;
+}
+
+/* line 471, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+/* line 474, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+/* line 477, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-6 .gallery-item {
+  width: 16%;
+}
+
+/* line 480, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-7 .gallery-item {
+  width: 14%;
+}
+
+/* line 483, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-8 .gallery-item {
+  width: 12%;
+}
+
+/* line 486, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-9 .gallery-item {
+  width: 11%;
+}
+
+/* line 489, sass/base/_emphaino.scss */
+.site-content .gallery.gallery-columns-10 .gallery-item {
+  width: 10%;
+}
+
+/* Make sure embeds and iframes fit their containers */
+/* line 496, sass/base/_emphaino.scss */
+embed,
+iframe,
+object {
+  max-width: 100%;
+  margin: 0 0 1.5em;
+}
+
+/* =Navigation
+----------------------------------------------- */
+/* line 503, sass/base/_emphaino.scss */
+.site-content .site-navigation {
+  clear: both;
+  background-color: #59a200;
+  margin: 0 0 30px;
+  margin: 0 0 3rem;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+/* line 515, sass/base/_emphaino.scss */
+.site-content .site-navigation span:empty {
+  display: none;
+}
+
+/* line 518, sass/base/_emphaino.scss */
+.site-content .nav-previous, .site-content .previous-image {
+  float: left;
+  text-align: left;
+}
+
+/* line 522, sass/base/_emphaino.scss */
+.site-content .nav-next, .site-content .next-image {
+  float: right;
+  text-align: right;
+}
+
+/* line 526, sass/base/_emphaino.scss */
+.site-content .previous-image, .site-content .next-image, .site-content .comment-navigation div {
+  margin: 1rem;
+}
+
+/* =Comments
+----------------------------------------------- */
+/* line 532, sass/base/_emphaino.scss */
+.comments-area {
+  padding: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+}
+
+/* line 541, sass/base/_emphaino.scss */
+.comments-area:empty {
+  display: none;
+}
+
+/* line 545, sass/base/_emphaino.scss */
+.comments-title, #reply-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+}
+
+/* line 552, sass/base/_emphaino.scss */
+ol.commentlist {
+  list-style: none;
+  margin: 0 0 20px;
+  margin: 0 0 2rem;
+}
+
+/* line 557, sass/base/_emphaino.scss */
+ol.commentlist ul.children {
+  margin-left: 20px;
+  margin-left: 2rem;
+}
+
+/* line 561, sass/base/_emphaino.scss */
+ol.commentlist ul.children > li {
+  position: relative;
+}
+
+/* line 564, sass/base/_emphaino.scss */
+ol.commentlist ul.children > li:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  content: "\21b3";
+  position: absolute;
+  left: -2.2rem;
+  opacity: 0.3;
+}
+
+/* line 582, sass/base/_emphaino.scss */
+article.comment {
+  position: relative;
+  overflow: hidden;
+  clear: both;
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
+  padding: 10px;
+  padding: 1rem;
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+}
+
+/* line 595, sass/base/_emphaino.scss */
+article.comment footer {
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  padding: 0 0 10px;
+  padding: 0 0 1rem;
+}
+
+/* line 602, sass/base/_emphaino.scss */
+article.comment footer em {
+  /* "Your comment is awaiting moderation" message */
+  position: absolute;
+  bottom: 10px;
+  bottom: 1rem;
+  left: 10px;
+  left: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 612, sass/base/_emphaino.scss */
+article.comment footer em:before {
+  content: '(';
+}
+
+/* line 615, sass/base/_emphaino.scss */
+article.comment footer em:after {
+  content: ')';
+}
+
+/* line 618, sass/base/_emphaino.scss */
+article.comment footer br {
+  display: none;
+}
+
+/* line 622, sass/base/_emphaino.scss */
+.pingback p {
+  position: relative;
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
+  padding: 10px 10px 10px 28px;
+  padding: 1rem 1rem 1rem 2.8rem;
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+}
+
+/* line 633, sass/base/_emphaino.scss */
+.pingback p:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  position: absolute;
+  left: 0.5rem;
+  top: 1.3rem;
+  content: '\e761\e78b';
+  opacity: 0.5;
+}
+
+/* line 652, sass/base/_emphaino.scss */
+.avatar {
+  float: left;
+  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  width: 40px;
+  width: 4rem;
+  height: auto;
+  background: #f8f8f8;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+}
+
+/* line 665, sass/base/_emphaino.scss */
+.comment-author cite {
+  position: relative;
+  left: 10px;
+  left: 1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Bree Serif", Georgia, serif;
+  font-style: normal;
+}
+
+/* line 675, sass/base/_emphaino.scss */
+.comment-meta {
+  position: relative;
+  left: 10px;
+  left: 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 684, sass/base/_emphaino.scss */
+.no-comment-avatars .comment-author cite,
+.no-comment-avatars .comment-meta {
+  position: static;
+}
+
+/* line 688, sass/base/_emphaino.scss */
+.bypostauthor > .comment .comment-author cite:after {
+  content: '*';
+  font-size: 0.8em;
+  position: relative;
+  bottom: 0.2em;
+}
+
+/* line 695, sass/base/_emphaino.scss */
+.reply {
+  position: absolute;
+  bottom: 10px;
+  bottom: 1rem;
+  right: 10px;
+  right: 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 706, sass/base/_emphaino.scss */
+.reply:before {
+  color: #888;
+}
+
+/* line 709, sass/base/_emphaino.scss */
+.reply:empty:before {
+  display: none;
+}
+
+/* line 713, sass/base/_emphaino.scss */
+#respond {
+  position: relative;
+  margin: 0 0 10px;
+  margin: 0 0 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 720, sass/base/_emphaino.scss */
+#respond label {
+  font-weight: bold;
+}
+
+/* line 723, sass/base/_emphaino.scss */
+#respond .comment-form-author, #respond .comment-form-email, #respond .comment-form-url {
+  position: relative;
+  margin-left: 5em;
+}
+
+/* line 727, sass/base/_emphaino.scss */
+#respond .comment-form-author label, #respond .comment-form-email label, #respond .comment-form-url label {
+  position: absolute;
+  left: -5em;
+  bottom: 0.1em;
+}
+
+/* line 732, sass/base/_emphaino.scss */
+#respond .comment-form-author input, #respond .comment-form-email input, #respond .comment-form-url input {
+  width: 97%;
+}
+
+/* line 736, sass/base/_emphaino.scss */
+#cancel-comment-reply-link {
+  position: absolute;
+  top: 10px;
+  top: 1rem;
+  right: 0;
+  font-family: "PT Sans", Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 745, sass/base/_emphaino.scss */
+#cancel-comment-reply-link:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  content: '\e80b';
+  color: #f00;
+  opacity: 0.4;
+}
+
+/* =Widget area
+----------------------------------------------- */
+/* line 764, sass/base/_emphaino.scss */
+.widget-area {
+  background-color: #f6f6f6;
+  background-color: rgba(248, 248, 248, 0.7);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset;
+  overflow: hidden;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/* line 774, sass/base/_emphaino.scss */
+.widget-area .widget-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 778, sass/base/_emphaino.scss */
+.widget-area .widget {
+  width: 200px;
+  float: left;
+  padding: 0;
+  margin: 10px;
+}
+
+/* line 784, sass/base/_emphaino.scss */
+.widget-area.sidebar {
+  margin-bottom: 30px;
+  margin-bottom: 3rem;
+}
+
+/* line 789, sass/base/_emphaino.scss */
+.no-js #footer-widgets {
+  padding-left: 10px;
+  padding-left: 1rem;
+}
+
+/* line 793, sass/base/_emphaino.scss */
+.no-js #footer-widgets .widget {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 15px;
+  margin: 1rem 1.5rem;
+}
+
+/* line 801, sass/base/_emphaino.scss */
+#footer-widgets, #the-sidebar {
+  margin: auto;
+  width: 220px;
+  width: 22rem;
+}
+
+/* =Widgets
+----------------------------------------------- */
+/* line 809, sass/base/_emphaino.scss */
+.widget {
+  margin: 0 0 1.5em;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+
+/* line 816, sass/base/_emphaino.scss */
+.widget img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 820, sass/base/_emphaino.scss */
+.widget select {
+  max-width: 100%;
+}
+
+/* Search widget */
+/* line 825, sass/base/_emphaino.scss */
+#searchsubmit {
+  display: none;
+}
+
+/* Calendar widget */
+/* line 830, sass/base/_emphaino.scss */
+#wp-calendar {
+  width: 100%;
+}
+
+/* line 833, sass/base/_emphaino.scss */
+#wp-calendar tfoot, #wp-calendar caption {
+  background-color: #ddd;
+}
+
+/* line 836, sass/base/_emphaino.scss */
+#wp-calendar caption {
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+/* line 841, sass/base/_emphaino.scss */
+#wp-calendar td {
+  padding: 0;
+  margin: auto;
+  text-align: center;
+}
+
+/* line 846, sass/base/_emphaino.scss */
+#wp-calendar td#today {
+  text-decoration: underline;
+}
+
+/* line 849, sass/base/_emphaino.scss */
+#wp-calendar td#prev {
+  text-align: left;
+  padding-left: 0.5em;
+}
+
+/* line 853, sass/base/_emphaino.scss */
+#wp-calendar td#next {
+  text-align: right;
+  padding-right: 0.5em;
+}
+
+/* line 858, sass/base/_emphaino.scss */
+#bottom-bar {
+  overflow: hidden;
+  padding: 10px;
+  padding: 1rem;
+  background-color: #484848;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5rem;
+  color: #dde;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* line 872, sass/base/_emphaino.scss */
+#bottom-bar a {
+  color: #4da8c2;
+}
+
+/* =Media queries
+----------------------------------------------- */
+/* 4col, 320px ( 4 * 80px ) */
+@media screen and (min-width: 20em) {
+  /* line 880, sass/base/_emphaino.scss */
+  .js #dynamic-grid {
+    margin: -10px -10px 20px;
+    margin: -1rem -1rem 2rem;
+  }
+
+  /* line 884, sass/base/_emphaino.scss */
+  .js #dynamic-grid .hentry {
+    float: left;
+    width: 280px;
+    width: 28rem;
+    margin: 10px;
+    margin: 1rem;
+    padding: 10px;
+    padding: 1rem;
+  }
+
+  /* line 893, sass/base/_emphaino.scss */
+  .js #dynamic-grid .hentry .entry-header {
+    text-align: left;
+  }
+}
+/* 6col, 500px ( 10px + ( 6 * 80px ) + 10px ) */
+@media screen and (min-width: 31.25em) {
+  /* line 899, sass/base/_emphaino.scss */
+  body {
+    padding: 0 20px;
+    padding: 0 2rem;
+  }
+
+  /* line 904, sass/base/_emphaino.scss */
+  .site-header .header-main {
+    padding: 30px 20px 32px;
+    padding: 3rem 2rem 3.2rem;
+  }
+
+  /* line 908, sass/base/_emphaino.scss */
+  .site-header .site-title {
+    font-size: 40px;
+    font-size: 4rem;
+  }
+
+  /* line 912, sass/base/_emphaino.scss */
+  .site-header .site-description {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
+  /* line 917, sass/base/_emphaino.scss */
+  .has-logo-image .site-header .header-main {
+    padding: 30px 20px;
+    padding: 3rem 2rem;
+  }
+
+  /* line 921, sass/base/_emphaino.scss */
+  .has-logo-image .site-header .header-main img {
+    max-height: 80px;
+    max-height: 8rem;
+    width: auto;
+  }
+
+  /* line 927, sass/base/_emphaino.scss */
+  .custom-header.no-logo-image.header-text-hidden .site-header .header-main {
+    min-height: 78px;
+    min-height: 7.8rem;
+  }
+
+  /* line 935, sass/base/_emphaino.scss */
+  .page-header,
+  .hentry,
+  .comments-area,
+  .post-navigation {
+    padding: 20px;
+    padding: 2rem;
+  }
+
+  /* line 970, sass/base/_emphaino.scss */
+  .single .entry-content,
+  .single .entry-summary,
+  .single .comment-content,
+  .single .comments-area,
+  .single .pingback,
+  body.page .entry-content,
+  body.page .entry-summary,
+  body.page .comment-content,
+  body.page .comments-area,
+  body.page .pingback,
+  .one-col-excerpts .entry-content,
+  .one-col-excerpts .entry-summary,
+  .one-col-excerpts .comment-content,
+  .one-col-excerpts .comments-area,
+  .one-col-excerpts .pingback,
+  .one-col-full-posts .entry-content,
+  .one-col-full-posts .entry-summary,
+  .one-col-full-posts .comment-content,
+  .one-col-full-posts .comments-area,
+  .one-col-full-posts .pingback,
+  .not-found .entry-content,
+  .not-found .entry-summary,
+  .not-found .comment-content,
+  .not-found .comments-area,
+  .not-found .pingback,
+  .no-js .hentry .entry-content,
+  .no-js .hentry .entry-summary,
+  .no-js .hentry .comment-content,
+  .no-js .hentry .comments-area,
+  .no-js .hentry .pingback {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
+  /* line 1003, sass/base/_emphaino.scss */
+  .single .entry-content h1,
+  .single .entry-summary h1,
+  .single .comment-content h1,
+  .single .comments-area h1,
+  .single .pingback h1,
+  body.page .entry-content h1,
+  body.page .entry-summary h1,
+  body.page .comment-content h1,
+  body.page .comments-area h1,
+  body.page .pingback h1,
+  .one-col-excerpts .entry-content h1,
+  .one-col-excerpts .entry-summary h1,
+  .one-col-excerpts .comment-content h1,
+  .one-col-excerpts .comments-area h1,
+  .one-col-excerpts .pingback h1,
+  .one-col-full-posts .entry-content h1,
+  .one-col-full-posts .entry-summary h1,
+  .one-col-full-posts .comment-content h1,
+  .one-col-full-posts .comments-area h1,
+  .one-col-full-posts .pingback h1,
+  .not-found .entry-content h1,
+  .not-found .entry-summary h1,
+  .not-found .comment-content h1,
+  .not-found .comments-area h1,
+  .not-found .pingback h1,
+  .no-js .hentry .entry-content h1,
+  .no-js .hentry .entry-summary h1,
+  .no-js .hentry .comment-content h1,
+  .no-js .hentry .comments-area h1,
+  .no-js .hentry .pingback h1 {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+
+  /* line 1036, sass/base/_emphaino.scss */
+  .single .entry-content h2,
+  .single .entry-summary h2,
+  .single .comment-content h2,
+  .single .comments-area h2,
+  .single .pingback h2,
+  body.page .entry-content h2,
+  body.page .entry-summary h2,
+  body.page .comment-content h2,
+  body.page .comments-area h2,
+  body.page .pingback h2,
+  .one-col-excerpts .entry-content h2,
+  .one-col-excerpts .entry-summary h2,
+  .one-col-excerpts .comment-content h2,
+  .one-col-excerpts .comments-area h2,
+  .one-col-excerpts .pingback h2,
+  .one-col-full-posts .entry-content h2,
+  .one-col-full-posts .entry-summary h2,
+  .one-col-full-posts .comment-content h2,
+  .one-col-full-posts .comments-area h2,
+  .one-col-full-posts .pingback h2,
+  .not-found .entry-content h2,
+  .not-found .entry-summary h2,
+  .not-found .comment-content h2,
+  .not-found .comments-area h2,
+  .not-found .pingback h2,
+  .no-js .hentry .entry-content h2,
+  .no-js .hentry .entry-summary h2,
+  .no-js .hentry .comment-content h2,
+  .no-js .hentry .comments-area h2,
+  .no-js .hentry .pingback h2 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+
+  /* line 1069, sass/base/_emphaino.scss */
+  .single .entry-content h3,
+  .single .entry-summary h3,
+  .single .comment-content h3,
+  .single .comments-area h3,
+  .single .pingback h3,
+  body.page .entry-content h3,
+  body.page .entry-summary h3,
+  body.page .comment-content h3,
+  body.page .comments-area h3,
+  body.page .pingback h3,
+  .one-col-excerpts .entry-content h3,
+  .one-col-excerpts .entry-summary h3,
+  .one-col-excerpts .comment-content h3,
+  .one-col-excerpts .comments-area h3,
+  .one-col-excerpts .pingback h3,
+  .one-col-full-posts .entry-content h3,
+  .one-col-full-posts .entry-summary h3,
+  .one-col-full-posts .comment-content h3,
+  .one-col-full-posts .comments-area h3,
+  .one-col-full-posts .pingback h3,
+  .not-found .entry-content h3,
+  .not-found .entry-summary h3,
+  .not-found .comment-content h3,
+  .not-found .comments-area h3,
+  .not-found .pingback h3,
+  .no-js .hentry .entry-content h3,
+  .no-js .hentry .entry-summary h3,
+  .no-js .hentry .comment-content h3,
+  .no-js .hentry .comments-area h3,
+  .no-js .hentry .pingback h3 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+
+  /* line 1102, sass/base/_emphaino.scss */
+  .single .entry-content h4,
+  .single .entry-summary h4,
+  .single .comment-content h4,
+  .single .comments-area h4,
+  .single .pingback h4,
+  body.page .entry-content h4,
+  body.page .entry-summary h4,
+  body.page .comment-content h4,
+  body.page .comments-area h4,
+  body.page .pingback h4,
+  .one-col-excerpts .entry-content h4,
+  .one-col-excerpts .entry-summary h4,
+  .one-col-excerpts .comment-content h4,
+  .one-col-excerpts .comments-area h4,
+  .one-col-excerpts .pingback h4,
+  .one-col-full-posts .entry-content h4,
+  .one-col-full-posts .entry-summary h4,
+  .one-col-full-posts .comment-content h4,
+  .one-col-full-posts .comments-area h4,
+  .one-col-full-posts .pingback h4,
+  .not-found .entry-content h4,
+  .not-found .entry-summary h4,
+  .not-found .comment-content h4,
+  .not-found .comments-area h4,
+  .not-found .pingback h4,
+  .no-js .hentry .entry-content h4,
+  .no-js .hentry .entry-summary h4,
+  .no-js .hentry .comment-content h4,
+  .no-js .hentry .comments-area h4,
+  .no-js .hentry .pingback h4 {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
+  /* line 1107, sass/base/_emphaino.scss */
+  .wp-post-image.attachment-post-thumbnail {
+    width: 150px;
+    width: 15rem;
+  }
+
+  /* line 1112, sass/base/_emphaino.scss */
+  .wp-caption-text, .entry-attachment .entry-caption p {
+    font-size: 0.8em;
+  }
+
+  /* line 1116, sass/base/_emphaino.scss */
+  .comments-title {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+
+  /* line 1121, sass/base/_emphaino.scss */
+  #reply-title {
+    font-size: 20px;
+    font-size: 2rem;
+  }
+
+  /* line 1126, sass/base/_emphaino.scss */
+  ol.commentlist ul.children {
+    margin-left: 40px;
+    margin-left: 4rem;
+  }
+
+  /* line 1130, sass/base/_emphaino.scss */
+  ol.commentlist ul.children > li:before {
+    font-size: 2.4rem;
+    left: -3.6rem;
+  }
+
+  /* line 1135, sass/base/_emphaino.scss */
+  .pingback {
+    margin: 0 0 20px;
+    margin: 0 0 2rem;
+  }
+
+  /* line 1139, sass/base/_emphaino.scss */
+  .pingback p:before {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  /* line 1144, sass/base/_emphaino.scss */
+  article.comment {
+    margin: 0 0 20px;
+    margin: 0 0 2rem;
+    padding-left: 100px;
+    padding-left: 10rem;
+    min-height: 80px;
+    min-height: 8rem;
+  }
+
+  /* line 1152, sass/base/_emphaino.scss */
+  article.comment footer {
+    padding: 0 0 3px;
+    padding: 0 0 0.3rem;
+  }
+
+  /* line 1156, sass/base/_emphaino.scss */
+  article.comment footer em {
+    left: 100px;
+    left: 10rem;
+  }
+
+  /* line 1161, sass/base/_emphaino.scss */
+  .avatar {
+    width: 80px;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    top: 1rem;
+    left: 10px;
+    left: 1rem;
+    background: #f8f8f8;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+    -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
+  }
+
+  /* line 1175, sass/base/_emphaino.scss */
+  .comment-author cite {
+    position: static;
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  /* line 1181, sass/base/_emphaino.scss */
+  .comment-meta {
+    float: right;
+    left: 0;
+    top: -20px;
+    top: -2rem;
+    font-size: 12px;
+    font-size: 1.2rem;
+  }
+
+  /* line 1190, sass/base/_emphaino.scss */
+  .no-comment-avatars article.comment {
+    padding-left: 10px;
+    padding-left: 1rem;
+  }
+
+  /* line 1194, sass/base/_emphaino.scss */
+  .no-comment-avatars .comment-meta {
+    position: relative;
+  }
+
+  /* line 1198, sass/base/_emphaino.scss */
+  #respond {
+    font-size: 14px;
+    font-size: 1.4rem;
+  }
+
+  /* line 1203, sass/base/_emphaino.scss */
+  #footer-widgets, #the-sidebar {
+    width: 460px;
+    width: 46rem;
+  }
+}
+/* 8col, 660px ( 10px + ( 8 * 80px ) + 10px ) */
+@media screen and (min-width: 41.25em) {
+  /* line 1210, sass/base/_emphaino.scss */
+  .content-area {
+    max-width: 620px;
+    max-width: 62rem;
+  }
+
+  /* line 1224, sass/base/_emphaino.scss */
+  .single.no-sidebar .hentry,
+  .single.no-sidebar .comments-area,
+  body.page.no-sidebar .hentry,
+  body.page.no-sidebar .comments-area,
+  .one-col-excerpts.no-sidebar .hentry,
+  .one-col-excerpts.no-sidebar .comments-area,
+  .one-col-full-posts.no-sidebar .hentry,
+  .one-col-full-posts.no-sidebar .comments-area,
+  .no-js.no-sidebar .hentry,
+  .no-js.no-sidebar .comments-area {
+    padding: 20px;
+    padding: 2rem;
+  }
+
+  /* line 1272, sass/base/_emphaino.scss */
+  .single.no-sidebar .entry-header,
+  .single.no-sidebar .entry-content,
+  .single.no-sidebar .entry-summary,
+  .single.no-sidebar #image-navigation,
+  .single.no-sidebar .entry-meta,
+  .single.no-sidebar .comments-title,
+  .single.no-sidebar .comment-navigation,
+  .single.no-sidebar ol.commentlist,
+  .single.no-sidebar #respond,
+  body.page.no-sidebar .entry-header,
+  body.page.no-sidebar .entry-content,
+  body.page.no-sidebar .entry-summary,
+  body.page.no-sidebar #image-navigation,
+  body.page.no-sidebar .entry-meta,
+  body.page.no-sidebar .comments-title,
+  body.page.no-sidebar .comment-navigation,
+  body.page.no-sidebar ol.commentlist,
+  body.page.no-sidebar #respond,
+  .one-col-excerpts.no-sidebar .entry-header,
+  .one-col-excerpts.no-sidebar .entry-content,
+  .one-col-excerpts.no-sidebar .entry-summary,
+  .one-col-excerpts.no-sidebar #image-navigation,
+  .one-col-excerpts.no-sidebar .entry-meta,
+  .one-col-excerpts.no-sidebar .comments-title,
+  .one-col-excerpts.no-sidebar .comment-navigation,
+  .one-col-excerpts.no-sidebar ol.commentlist,
+  .one-col-excerpts.no-sidebar #respond,
+  .one-col-full-posts.no-sidebar .entry-header,
+  .one-col-full-posts.no-sidebar .entry-content,
+  .one-col-full-posts.no-sidebar .entry-summary,
+  .one-col-full-posts.no-sidebar #image-navigation,
+  .one-col-full-posts.no-sidebar .entry-meta,
+  .one-col-full-posts.no-sidebar .comments-title,
+  .one-col-full-posts.no-sidebar .comment-navigation,
+  .one-col-full-posts.no-sidebar ol.commentlist,
+  .one-col-full-posts.no-sidebar #respond,
+  .no-js.no-sidebar .entry-header,
+  .no-js.no-sidebar .entry-content,
+  .no-js.no-sidebar .entry-summary,
+  .no-js.no-sidebar #image-navigation,
+  .no-js.no-sidebar .entry-meta,
+  .no-js.no-sidebar .comments-title,
+  .no-js.no-sidebar .comment-navigation,
+  .no-js.no-sidebar ol.commentlist,
+  .no-js.no-sidebar #respond {
+    max-width: 660px;
+    max-width: 66rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* line 1282, sass/base/_emphaino.scss */
+  .single.no-sidebar .entry-title,
+  .one-col-excerpts.no-sidebar .entry-title,
+  .one-col-full-posts.no-sidebar .entry-title,
+  .no-js.no-sidebar .entry-title {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+
+  /* line 1295, sass/base/_emphaino.scss */
+  .single.no-sidebar .entry-content,
+  .single.no-sidebar .entry-summary,
+  body.page.no-sidebar .entry-content,
+  body.page.no-sidebar .entry-summary,
+  .one-col-excerpts.no-sidebar .entry-content,
+  .one-col-excerpts.no-sidebar .entry-summary,
+  .one-col-full-posts.no-sidebar .entry-content,
+  .one-col-full-posts.no-sidebar .entry-summary,
+  .no-js.no-sidebar .entry-content,
+  .no-js.no-sidebar .entry-summary {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  /* line 1307, sass/base/_emphaino.scss */
+  .single.no-sidebar .pingback, .single.no-sidebar article.comment,
+  body.page.no-sidebar .pingback,
+  body.page.no-sidebar article.comment,
+  .one-col-excerpts.no-sidebar .pingback,
+  .one-col-excerpts.no-sidebar article.comment,
+  .one-col-full-posts.no-sidebar .pingback,
+  .one-col-full-posts.no-sidebar article.comment,
+  .no-js.no-sidebar .pingback,
+  .no-js.no-sidebar article.comment {
+    margin: 0 0 30px;
+    margin: 0 0 3rem;
+  }
+
+  /* line 1315, sass/base/_emphaino.scss */
+  .single.has-sidebar .site-main,
+  body.page.has-sidebar .site-main,
+  .one-col-excerpts.has-sidebar .site-main,
+  .one-col-full-posts.has-sidebar .site-main,
+  .no-js.has-sidebar .site-main {
+    padding: 0 240px 0 0;
+    padding: 0 24rem 0 0;
+  }
+
+  /* line 1323, sass/base/_emphaino.scss */
+  .single.has-sidebar .content-area,
+  body.page.has-sidebar .content-area,
+  .one-col-excerpts.has-sidebar .content-area,
+  .one-col-full-posts.has-sidebar .content-area,
+  .no-js.has-sidebar .content-area {
+    float: left;
+    margin-right: -100%;
+    width: 100%;
+  }
+
+  /* line 1332, sass/base/_emphaino.scss */
+  .single.has-sidebar .widget-area.sidebar,
+  body.page.has-sidebar .widget-area.sidebar,
+  .one-col-excerpts.has-sidebar .widget-area.sidebar,
+  .one-col-full-posts.has-sidebar .widget-area.sidebar,
+  .no-js.has-sidebar .widget-area.sidebar {
+    float: right;
+    margin-right: -240px;
+    margin-right: -24rem;
+    width: 220px;
+    width: 22rem;
+  }
+
+  /* line 1343, sass/base/_emphaino.scss */
+  .single.has-sidebar #the-sidebar,
+  body.page.has-sidebar #the-sidebar,
+  .one-col-excerpts.has-sidebar #the-sidebar,
+  .one-col-full-posts.has-sidebar #the-sidebar,
+  .no-js.has-sidebar #the-sidebar {
+    width: 220px;
+    width: 22rem;
+  }
+
+  /* line 1351, sass/base/_emphaino.scss */
+  .single.has-sidebar .entry-title,
+  body.page.has-sidebar .entry-title,
+  .one-col-excerpts.has-sidebar .entry-title,
+  .one-col-full-posts.has-sidebar .entry-title,
+  .no-js.has-sidebar .entry-title {
+    text-align: left;
+  }
+
+  /* line 1358, sass/base/_emphaino.scss */
+  .single.has-sidebar .comment-meta,
+  body.page.has-sidebar .comment-meta,
+  .one-col-excerpts.has-sidebar .comment-meta,
+  .one-col-full-posts.has-sidebar .comment-meta,
+  .no-js.has-sidebar .comment-meta {
+    float: none;
+    position: relative;
+    top: 0;
+  }
+
+  /* line 1364, sass/base/_emphaino.scss */
+  #bottom-bar .footer-text {
+    width: 48%;
+    float: left;
+    text-align: left;
+  }
+
+  /* line 1369, sass/base/_emphaino.scss */
+  #bottom-bar .site-info {
+    width: 48%;
+    float: right;
+    text-align: right;
+  }
+}
+/* 9col, 740px ( 10px + ( 9 * 80px ) + 10px ) */
+@media screen and (min-width: 46.25em) {
+  /* line 1377, sass/base/_emphaino.scss */
+  #footer-widgets {
+    width: 700px;
+    width: 70rem;
+  }
+}
+/* 10col, 820px ( 10px + ( 10 * 80px ) + 10px ) */
+@media screen and (min-width: 51.25em) {
+  /* line 1388, sass/base/_emphaino.scss */
+  .single.has-sidebar .entry-title,
+  body.page.has-sidebar .entry-title,
+  .one-col-excerpts.has-sidebar .entry-title,
+  .one-col-full-posts.has-sidebar .entry-title,
+  .no-js.has-sidebar .entry-title {
+    font-size: 30px;
+    font-size: 3rem;
+  }
+
+  /* line 1401, sass/base/_emphaino.scss */
+  .single.has-sidebar .entry-content,
+  .single.has-sidebar .entry-summary,
+  body.page.has-sidebar .entry-content,
+  body.page.has-sidebar .entry-summary,
+  .one-col-excerpts.has-sidebar .entry-content,
+  .one-col-excerpts.has-sidebar .entry-summary,
+  .one-col-full-posts.has-sidebar .entry-content,
+  .one-col-full-posts.has-sidebar .entry-summary,
+  .no-js.has-sidebar .entry-content,
+  .no-js.has-sidebar .entry-summary {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+}
+/* 12col, 980px ( 10px + ( 12 * 80px ) + 10px ) */
+@media screen and (min-width: 61.25em) {
+  /* line 1408, sass/base/_emphaino.scss */
+  .content-area {
+    max-width: 940px;
+    max-width: 94rem;
+  }
+
+  /* line 1413, sass/base/_emphaino.scss */
+  .single.has-sidebar .comment-meta, body.page.has-sidebar .comment-meta {
+    float: right;
+    top: -20px;
+    top: -2rem;
+  }
+
+  /* line 1419, sass/base/_emphaino.scss */
+  #footer-widgets {
+    width: 940px;
+    width: 94rem;
+  }
+}
+/* Uncomment the following lines if you want to make total use of the screen real estate in wider screens */
+/* @media screen and (min-width: 81.25em) {
+	#page,
+	.content-area {
+		max-width: 1260px;
+		max-width: 126rem;
+	}
+	#footer-widgets {
+		width: 1180px;
+	}
+}
+
+@media screen and (min-width: 101.25em) {
+	#page,
+	.content-area {
+		max-width: 1580px;
+		max-width: 158rem;
+	}
+	#footer-widgets {
+		width: 1420px;
+	}
+}
+ */
+/* =Header
+---------------------------------------------- */
+/* line 4, sass/base/_ec-header.scss */
+.site-header {
+  text-align: center;
+  margin: 0 0 30px;
+  margin: 0 0 3rem;
+}
+
+/* line 9, sass/base/_ec-header.scss */
+.site-header .header-main {
+  background-color: #59a200;
+  background-color: transparent;
+  padding: 15px 10px 16px;
+  padding: 1.5rem 1rem 1.6rem;
+}
+
+/* line 19, sass/base/_ec-header.scss */
+.site-header .site-title {
+  font-size: 20px;
+  font-size: 2rem;
+  color: green;
+}
+
+/* line 24, sass/base/_ec-header.scss */
+.site-header .site-title a {
+  color: #302323;
+}
+
+/* line 28, sass/base/_ec-header.scss */
+.site-header .site-description {
+  color: #635a5a;
+  font: normal 12px "PT Sans", Verdana, Geneva, sans-serif;
+  font: normal 1.2rem "PT Sans", Verdana, Geneva, sans-serif;
+  text-shadow: rgba(0, 0, 0, 0.1) 0 0 0.1rem;
+}
+
+/* line 35, sass/base/_ec-header.scss */
+.has-logo-image .site-header .header-main {
+  padding: 15px 10px;
+  padding: 1.5rem 1rem;
+}
+
+/* line 39, sass/base/_ec-header.scss */
+.has-logo-image .site-header .header-main img {
+  max-height: 60px;
+  max-height: 6rem;
+  width: auto;
+}
+
+/* line 45, sass/base/_ec-header.scss */
+.custom-header.no-logo-image.header-text-hidden .site-header .header-main {
+  min-height: 47px;
+  min-height: 4.7rem;
+}
+
+/* line 50, sass/base/_ec-header.scss */
+.no-custom-header.no-logo-image.header-text-hidden .site-header .header-main {
+  display: none;
+}
+
+/* line 54, sass/base/_ec-header.scss */
+#top-bar {
+  background-color: #484848;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 0.1rem;
+  min-height: 32px;
+  min-height: 3.2rem;
+  color: #eee;
+  text-align: left;
+  position: relative;
+}
+
+/* line 66, sass/base/_ec-header.scss */
+#top-bar #searchform {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 4px 10px;
+  margin: 0.4rem 1rem;
+  font-size: 12px;
+  font-size: 1.2rem;
+  border: 1px solid #666;
+  border-radius: 3px;
+  border-radius: 0.3rem;
+}
+
+/* line 78, sass/base/_ec-header.scss */
+#top-bar #searchform:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin: 0 0.2em;
+  text-align: center;
+  opacity: 0.8;
+  line-height: 1em;
+  content: '\1f50e';
+}
+
+/* line 92, sass/base/_ec-header.scss */
+#top-bar #searchform input[type=text] {
+  background: transparent;
+  border: 0;
+  color: #eee;
+}
+
+/* line 97, sass/base/_ec-header.scss */
+#top-bar #searchform input[type=text]:active, #top-bar #searchform input[type=text]:focus {
+  border: 0;
+  outline: 0;
+}
+
+/* =Menu
+----------------------------------------------- */
+/* line 4, sass/base/_ec-menu.scss */
+.site-header .site-navigation {
+  clear: both;
+  padding: 4px 0;
+  padding: 0.4rem 0;
+}
+
+/* line 9, sass/base/_ec-menu.scss */
+.site-header .site-navigation a {
+  color: #aaa;
+  font-size: 12px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.1rem;
+}
+
+/* line 16, sass/base/_ec-menu.scss */
+.site-header .site-navigation a:hover {
+  color: #fff;
+}
+
+/* line 19, sass/base/_ec-menu.scss */
+.site-header .site-navigation .home-page-link {
+  float: left;
+  display: inline;
+  margin: 0 0 0 5px;
+  margin: 0 0 0 0.5rem;
+}
+
+/* line 25, sass/base/_ec-menu.scss */
+.site-header .site-navigation .home-page-link span {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 31, sass/base/_ec-menu.scss */
+.site-header .site-navigation .home-page-link a {
+  padding: 0;
+  color: #ccc;
+}
+
+/* line 35, sass/base/_ec-menu.scss */
+.site-header .site-navigation .home-page-link a:hover {
+  color: #fff;
+}
+
+/* line 38, sass/base/_ec-menu.scss */
+.site-header .site-navigation .home-page-link a:before {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 43, sass/base/_ec-menu.scss */
+.main-small-navigation .home-page-link {
+  float: none;
+}
+
+/* line 46, sass/base/_ec-menu.scss */
+.main-small-navigation h1.icon-menu {
+  display: inline;
+  margin: 0 0 0 5px;
+  margin: 0 0 0 0.5rem;
+  color: #ccc;
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* line 54, sass/base/_ec-menu.scss */
+.main-small-navigation h1.icon-menu span {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* line 60, sass/base/_ec-menu.scss */
+.main-small-navigation ul {
+  margin: 0 10px;
+  margin: 0 1rem;
+}
+
+/* line 64, sass/base/_ec-menu.scss */
+.main-small-navigation ul li:before {
+  position: static;
+}
+
+/* line 68, sass/base/_ec-menu.scss */
+.main-navigation {
+  margin: 0 200px 0 0;
+  margin: 0 20rem 0 0;
+}
+
+/* line 72, sass/base/_ec-menu.scss */
+.main-navigation ul {
+  position: static;
+  list-style: none;
+  margin: 0;
+}
+
+/* line 77, sass/base/_ec-menu.scss */
+.main-navigation ul ul {
+  background: #333;
+  border-left: 1px solid #444;
+  display: none;
+  float: left;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  z-index: 99999;
+}
+
+/* line 87, sass/base/_ec-menu.scss */
+.main-navigation ul ul li {
+  display: block;
+  float: none;
+}
+
+/* line 91, sass/base/_ec-menu.scss */
+.main-navigation ul ul li:before {
+  content: none;
+}
+
+/* line 94, sass/base/_ec-menu.scss */
+.main-navigation ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* line 98, sass/base/_ec-menu.scss */
+.main-navigation ul ul a {
+  width: 200px;
+}
+
+/* line 101, sass/base/_ec-menu.scss */
+.main-navigation ul li:hover > ul {
+  display: block;
+}
+
+/* line 104, sass/base/_ec-menu.scss */
+.main-navigation li {
+  display: inline-block;
+  position: relative;
+  margin-top: 0;
+}
+
+/* line 109, sass/base/_ec-menu.scss */
+.main-navigation li:before {
+  position: static;
+  left: 0;
+  content: '|';
+  color: #7c8d95;
+  font-size: 0.75em;
+}
+
+/* line 116, sass/base/_ec-menu.scss */
+.main-navigation li:first-child:before {
+  content: none;
+}
+
+/* line 119, sass/base/_ec-menu.scss */
+.main-navigation a {
+  display: inline-block;
+  padding: 0 0.5em 0 0.8em;
+}
+
+/* Small menu */
+/* line 125, sass/base/_ec-menu.scss */
+.menu-toggle {
+  cursor: pointer;
+}
+
+/* line 129, sass/base/_ec-menu.scss */
+.main-small-navigation .menu {
+  display: none;
+}
+
+/* lmh */
+/* line 2, sass/base/_lmh.scss */
+.js .dynamic-grid#dynamic-grid .hentry.announcements {
+  background-color: #302323 #635a5a #979191 #cbc8c8 #dfdede #eae9e9;
+  width: 60rem;
+}
+
+/* line 6, sass/base/_lmh.scss */
+.home section.s2 article {
+  margin-bottom: 2em;
+}
+
+/* line 9, sass/base/_lmh.scss */
+.home section.s2 article p {
+  margin-bottom: .5em;
+}
+
+/* line 12, sass/base/_lmh.scss */
+.menu li.current-menu-item a {
+  background-color: black;
+  color: white;
+}

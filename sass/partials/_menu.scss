@@ -1,0 +1,108 @@
+/* =Menu
+----------------------------------------------- */
+ #top-block .site-navigation li.current-menu-item a,
+  body.single-projects #top-block .site-navigation li.item-projects a {
+    background-color: white;
+    color: $text-color;
+  }
+#top-block .site-navigation {
+  width: 33%;
+  float: right;
+  margin: 0;
+  background: #B4D3DC url(images/csa.jpg) no-repeat left bottom ;
+  a {
+    padding: 1em;
+    display: block;
+    color: nth($black, 2);
+    background-color: #efefef;
+    margin: 0;
+    @include text-shadow(rgba(255, 255, 255, 0.9) 0 0 0.1rem);
+    font-size: 13px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-family: $sans-font;
+    // border-top: 1px solid $primary-dark;
+    border-bottom: 1px solid #ddd;
+    // border-right: 1px solid $primary-dark;
+    //  border-left: 1px solid $primary-dark;
+    &:hover {
+      // color: white;
+      background-color: nth($quadrary, 1);
+      background-color: #fff;
+      //@include text-shadow(darken(nth($quadrary, 1), 20%) 0 0 2px);
+      //@include text-shadow( green 0 0  2px 2px );
+      text-decoration: none;
+   
+    }
+    &:active {
+      color: darken(nth($quadrary, 1), 5%);
+    }
+  }
+
+  .home-page-link {
+    display: none;
+    // 	float: left;
+    // 	display: inline;
+    // 	margin: 0 0 0 5px;
+    // 	margin: 0 0 0 0.5rem;
+    // 	span {
+    // 		position: absolute !important;
+    // 		clip: rect(1px 1px 1px 1px); /* IE6, IE7
+    // 		clip: rect(1px, 1px, 1px, 1px);
+    // 	}
+    // 	a {
+    // 		padding: 0;	
+    // 		color: #ccc;
+    // 		&:hover {
+    // 			color: #fff;
+    // 		}
+    // 		&:before {
+    // 			font-size: 16px;
+    // 			font-size: 1.6rem;
+    // 		}
+    // 	}
+ 
+  }
+}
+
+.main-small-navigation {
+  .home-page-link {
+    float: none;
+  }
+  h1.icon-menu {
+    background-color: purple;
+    display: inline;
+    margin: 0 0 0 5px;
+    margin: 0 0 0 0.5rem;
+    color: #ccc;
+    font-size: 16px;
+    font-size: 1.6rem;
+    span {
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px);
+      /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+    }
+  }
+  ul {
+    margin: 0 10px;
+    margin: 0 1rem;
+    li:before {
+      position: static;
+    }
+  }
+}
+
+.menu li.current-menu-item a {
+  background-color: nth($black, 1);
+  color: white;
+}
+
+/* Small menu */
+.menu-toggle {
+  cursor: pointer;
+}
+
+.main-small-navigation .menu {
+  display: none;
+}
