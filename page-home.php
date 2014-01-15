@@ -45,13 +45,12 @@ $loop = new WP_Query( $args );
 <div id="dynamic-grid" class="clearfix dynamic-grid">
 
   <?php 
-while ( $loop->have_posts() ) : $loop->the_post();
+    while ( $loop->have_posts() ) : $loop->the_post();
  
-    get_template_part( 'content', 'projects' );
-  endwhile;
-    if ( 'dynamic_grid_excerpts' == get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) ) echo '</div> <!-- #dynamic-grid -->'; 
+      get_template_part( 'content', 'projects' );
+    endwhile;
 
-?>
+?></div>
   </div>
   <!-- #content .site-content --> 
 </div>

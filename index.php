@@ -3,8 +3,7 @@
  * The main template file.
  *
  *
- * @package Emphaino
- * @since Emphaino 1.0
+ * @package Boxy
  */
 
 get_header(); ?>

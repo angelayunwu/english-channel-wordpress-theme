@@ -7,7 +7,7 @@
 
 
 
-<div class="entry-summary">
+<div class="entry-content">
 		
 
 		<?php the_content(); ?>

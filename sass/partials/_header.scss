@@ -2,69 +2,87 @@
 ---------------------------------------------- */
 
 .site-header {
-  background-color: #64B224;
-  padding: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 61px;
-  max-height: 61px;
-  .header-main {
-    overflow: visible;
-  }
-  .site-branding-a {
-    // display: inline-block;
-    // background-color: #ff0000;
-    // &:hover {
-    //   background-color: #ffff00;
-    // }
- 
-  }
-  .site-branding {
-    background-color: white;
-    display: inline-block;
-    padding: 10px 20px 1px 0;
-    padding: 1rem 2rem 1rem 0;
-    position: relative;
-    z-index: 1;
-    &:hover {
-      .site-title {
-        color: #64B224;
-      }
+    background-color: #64B224;
+    padding: 0;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    @include respond-to("desktop") {
+        height: 61px;
+        max-height: 61px;
+        margin: 0;
     }
-    &:before {
-      content: "";
-      width: 9999px;
-      background-color: white;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 100%;
+
+    .header-main {
+        overflow: visible;
     }
-    .site-title {
-      font-size: 30px;
-      font-size: 3rem;
-      color: $primary-dark;
-      letter-spacing: .6px;
-      line-height: 1.5;
-      // a {
-      //   color: $primary-dark;
-      //   @include text-shadow(rgba(0, 0, 0, 0.2) 0rem 0rem 0.1rem);
-      // }
+    .site-branding-a {
+        // display: inline-block;
+        // background-color: #ff0000;
+         &:hover {
+          background-color: #ffff00;
+          color: #64B224;
+                text-decoration: none;
+        }
    
     }
-  }
-  .site-description {
-    text-align: right;
-    color: nth($secondary, 1);
-    color: $secondary-dark;
-    // font: normal 15px $sans-font;
-    // font: normal 1.5rem $sans-font;
-    padding-top: 8px;
-    margin-bottom: 0;
-  }
+    .site-branding {
+        background-color: white;
+        padding: 10px  10px 10px 50px;
+        padding: 1rem 1rem 1rem 5rem;
+        padding: 1rem;
+        text-align: center;
+        &:hover {
+            .site-title {
+                color: #64B224;
+                text-decoration: none;
+            }
+        }
+        @include respond-to("desktop") {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            padding: 10px 20px 1px 0;
+            padding: 1rem 2rem 1rem 0;
+            &:before {
+                content: "";
+                width: 9999px;
+                background-color: white;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 100%;
+            }
+        }
+
+        .site-title {
+            font-size: 30px;
+            font-size: 3rem;
+            color: $primary-dark;
+            letter-spacing: .6px;
+            line-height: 1.5;
+            // margin-left: 7rem;
+            // @include respond-to("desktop") {
+            //       margin-left: 0rem;
+            // }
+            // a {
+            //   color: $primary-dark;
+            //   @include text-shadow(rgba(0, 0, 0, 0.2) 0rem 0rem 0.1rem);
+            // }
+       
+        }
+    }
+    .site-description {
+        text-align: center;
+        color: $secondary-dark;
+        // font: normal 15px $sans-font;
+        // font: normal 1.5rem $sans-font;
+        margin-bottom: 0;
+        @include respond-to("desktop") {
+            text-align: right;
+            padding-top: 8px;
+        }
+    }
 }
-
-
 
 // See also _menu.scss

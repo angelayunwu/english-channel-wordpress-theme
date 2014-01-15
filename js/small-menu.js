@@ -2,7 +2,8 @@
  * Handles toggling the main navigation menu for small screens.
  */
 jQuery( document ).ready( function( $ ) {
-	var $masthead = $( '#top-bar' ),
+	console.log("small-menu");
+	var $masthead = $( '#top-block' ),
 	    timeout = false;
 
 	$.fn.smallMenu = function() {

@@ -15,11 +15,12 @@ License URI: license.txt
 @import 'toolkit';
 @import "compass";
 
+@import "partials/_breakpoints";
 @import "partials/_browsers";
 @import "partials/_defines";
 
 @import "partials/_mixins";
-@import "partials/_extendables";
+
 @import "partials/_functions";
 
 @import "partials/_reset";
@@ -28,8 +29,12 @@ License URI: license.txt
 @import "partials/_canvas";
 @import "partials/_header";
 @import "partials/_menu";
+@import "partials/_responsive-nav";
 @import "partials/_content";
 @import "partials/_comments-area";
 @import "partials/_widget-area";
 @import "partials/_footer";
+
+@import "partials/_extendables";
 @import "partials/_media-queries";
+

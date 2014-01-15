@@ -3,8 +3,8 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" >
- <a href="<?php the_permalink(); ?>" rel="bookmark"> 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+ 
 	<div class="t">
 	<div class="l">
 <?php 
@@ -12,9 +12,10 @@
 		echo '<div class="news-kind">' . $terms[0] . '</div>';
 		
 		 ?>
-	<h1 class="entry-title"><?php the_title(); ?></h1></div>
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary --></div>
- </a>
+	</div>
+	<div class="r">
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"> <?php the_title(); ?> <span class="meta-nav">&rarr;</span></a></h1>
+	</div><!-- .entry-summary -->
+</div>
+ 
 </article><!-- #post-<?php the_ID(); ?> -->

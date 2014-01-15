@@ -1,108 +1,243 @@
 /* =Menu
 ----------------------------------------------- */
- #top-block .site-navigation li.current-menu-item a,
-  body.single-projects #top-block .site-navigation li.item-projects a {
-    background-color: white;
-    color: $text-color;
-  }
-#top-block .site-navigation {
-  width: 33%;
-  float: right;
-  margin: 0;
-  background: #B4D3DC url(images/csa.jpg) no-repeat left bottom ;
-  a {
-    padding: 1em;
-    display: block;
-    color: nth($black, 2);
-    background-color: #efefef;
-    margin: 0;
-    @include text-shadow(rgba(255, 255, 255, 0.9) 0 0 0.1rem);
-    font-size: 13px;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-family: $sans-font;
-    // border-top: 1px solid $primary-dark;
-    border-bottom: 1px solid #ddd;
-    // border-right: 1px solid $primary-dark;
-    //  border-left: 1px solid $primary-dark;
-    &:hover {
-      // color: white;
-      background-color: nth($quadrary, 1);
-      background-color: #fff;
-      //@include text-shadow(darken(nth($quadrary, 1), 20%) 0 0 2px);
-      //@include text-shadow( green 0 0  2px 2px );
-      text-decoration: none;
-   
-    }
-    &:active {
-      color: darken(nth($quadrary, 1), 5%);
-    }
-  }
 
-  .home-page-link {
-    display: none;
-    // 	float: left;
-    // 	display: inline;
-    // 	margin: 0 0 0 5px;
-    // 	margin: 0 0 0 0.5rem;
-    // 	span {
-    // 		position: absolute !important;
-    // 		clip: rect(1px 1px 1px 1px); /* IE6, IE7
-    // 		clip: rect(1px, 1px, 1px, 1px);
-    // 	}
-    // 	a {
-    // 		padding: 0;	
-    // 		color: #ccc;
-    // 		&:hover {
-    // 			color: #fff;
-    // 		}
-    // 		&:before {
-    // 			font-size: 16px;
-    // 			font-size: 1.6rem;
-    // 		}
-    // 	}
- 
-  }
+#top-block {
+    position: relative;
+    &:before {
+        content: "";
+        width: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    display: table;
+    width: 100%;
+    margin-bottom: 2rem;
+    .rowhold {
+        display: table;
+        width: 100%;
+    }
+    .site-navigation {
+        width: 100%;
+        display: table-header-group;
+    }
+    .left-block {
+        display: table-footer-group;
+        background-color: #B4D3DC;
+        h1 {
+            display: table-cell;
+            padding: 1rem 1rem 0 1rem;
+            
+        }
+    }
+    .site-navigation {
+        li.current-menu-item a, 
+        .single-projects & li.item-projects a,
+        .tax-working-groups & li.item-wg a,
+        .single-news & li.item-news a,
+        .events-single & li.item-events a{
+            background-color: white;
+            color: $text-color;
+        }
+        // min-height: 5rem;
+        li a {
+            padding: 1em;
+            display: block;
+            color: nth($black, 2);
+            background-color: #efefef;
+            margin: 0;
+            @include text-shadow(rgba(255, 255, 255, 0.9) 0 0 0.1rem);
+            font-size: 13px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            font-family: $sans-font;
+            // border-top: 1px solid $primary-dark;
+            border-bottom: 1px solid #ddd;
+            // border-right: 1px solid $primary-dark;
+            //  border-left: 1px solid $primary-dark;
+            &:hover {
+                // color: white;
+                background-color: nth($quadrary, 1);
+                background-color: #fff;
+                //@include text-shadow(darken(nth($quadrary, 1), 20%) 0 0 2px);
+                //@include text-shadow( green 0 0  2px 2px );
+                text-decoration: none;
+            }
+            &:active {
+                color: darken(nth($quadrary, 1), 5%);
+            }
+        }
+        .home-page-link {
+            display: none;
+            //  float: left;
+            //  display: inline;
+            //  margin: 0 0 0 5px;
+            //  margin: 0 0 0 0.5rem;
+            //  span {
+            //    position: absolute !important;
+            //    clip: rect(1px 1px 1px 1px); /* IE6, IE7
+            //    clip: rect(1px, 1px, 1px, 1px);
+            //  }
+            //  a {
+            //    padding: 0; 
+            //    color: #ccc;
+            //    &:hover {
+            //      color: #fff;
+            //    }
+            //    &:before {
+            //      font-size: 16px;
+            //      font-size: 1.6rem;
+            //    }
+            //  }
+       
+        }
+        @include respond-to("not desktop") {
+            a.nav-toggle {
+                display: block;
+                padding: 0rem 1rem 4rem;
+                margin: -7rem 0 0 2rem;
+            }
+        }
+    }
+    @include respond-to("desktop") {
+        .rowhold {
+            display: table-row;
+        }
+        .left-block {
+            vertical-align: bottom;
+            padding-right: 6rem;
+            // z-index:-1;
+            display: table-cell;
+            width: 67%;
+            .home & {
+                padding-top: 6rem;
+            }
+            .page-title {
+                padding: 0rem;
+                max-width: 13em;
+                
+            }
+        }
+        &:before {
+            background-color: #B4D3DC;
+            content: "";
+            width: 9999px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 100%;
+        }
+        .site-navigation {
+            width: 33%;
+            display: table-cell;
+            background: #b4d3dc url(images/csa.jpg) no-repeat left bottom;
+            a.nav-toggle {
+                display: none;
+            }
+            #menu-top-navigation {
+                display: block;
+            }
+        }
+    }
 }
 
 .main-small-navigation {
-  .home-page-link {
-    float: none;
-  }
-  h1.icon-menu {
-    background-color: purple;
-    display: inline;
-    margin: 0 0 0 5px;
-    margin: 0 0 0 0.5rem;
-    color: #ccc;
-    font-size: 16px;
-    font-size: 1.6rem;
-    span {
-      position: absolute !important;
-      clip: rect(1px 1px 1px 1px);
-      /* IE6, IE7 */
-      clip: rect(1px, 1px, 1px, 1px);
+    .home-page-link {
+        float: none;
     }
-  }
-  ul {
-    margin: 0 10px;
-    margin: 0 1rem;
-    li:before {
-      position: static;
+    h1.icon-menu {
+        background-color: purple;
+        display: inline;
+        margin: 0 0 0 5px;
+        margin: 0 0 0 0.5rem;
+        color: #ccc;
+        font-size: 16px;
+        font-size: 1.6rem;
+        span {
+            position: absolute !important;
+            clip: rect(1px 1px 1px 1px);
+            /* IE6, IE7 */
+            clip: rect(1px, 1px, 1px, 1px);
+        }
     }
-  }
+    ul {
+        margin: 0 10px;
+        margin: 0 1rem;
+        li:before {
+            position: static;
+        }
+    }
 }
 
 .menu li.current-menu-item a {
-  background-color: nth($black, 1);
-  color: white;
+    background-color: nth($black, 1);
+    color: white;
 }
 
-/* Small menu */
-.menu-toggle {
-  cursor: pointer;
+/*! responsive-nav.js 1.0.25 by @viljamis */
+@include respond-to("not desktop") {
+    .nav-collapse ul {
+        margin: 0;
+        // margin-bottom: 20px;
+        padding: 0;
+        // padding-bottom: 20px;
+        width: 100%;
+        display: block;
+        list-style: none;
+    }
+    .nav-collapse li {
+        width: 100%;
+        display: block;
+    }
+    .nav-collapse li:last-child {
+        padding-bottom: 1rem;
+    }
+    .js .nav-collapse {
+        clip: rect(0 0 0 0);
+        max-height: 0;
+        position: absolute;
+        display: block;
+        overflow: hidden;
+        zoom: 1;
+    }
+    .nav-collapse.opened {
+        max-height: 9999px;
+    }
+    .nav-collapse.disable-pointer-events {
+        pointer-events: none !important;
+    }
+    .nav-toggle {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        text-indent: -9000em;
+    }
+    .nav-toggle {
+        display: block;
+        position: relative;
+        margin-left: 1rem;
+        padding-left: 2.25rem;
+        width: 0rem;
+        background: url(./images/navicon.png) 0.1em;
+        background-size: 90%;
+        background-repeat: no-repeat;
+    }
 }
 
-.main-small-navigation .menu {
-  display: none;
+
+//@media screen and (min-width: 40em) {
+@include respond-to("desktop") {
+    // .js .nav-collapse {
+    //   position: relative;
+    // }
+    // .js .nav-collapse.closed {
+    //   max-height: none;
+    // }
+    .nav-toggle {
+        display: none;
+    }
 }

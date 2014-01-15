@@ -4,30 +4,32 @@
  */
 
 jQuery(window).load(function(){
-    jQuery('#footer-widgets, #the-sidebar').masonry({
-    	itemSelector: '.widget',
-    	gutterWidth: 20,
-    	isAnimated: true
-    });
-
     jQuery('.dynamic-grid').masonry({
-	    itemSelector: '.hentry',
+	    itemSelector: '.brick',
     	isAnimated: true,
-         columnWidth : '1',
-    });
+       // columnwidth: 10,
+      // width: '.hentry' 
+       // isFitWidth: true,
+      // columnWidth: function( containerWidth ) {
+ //  return containerWidth / 3;
+   //   }
+    columnWidth: 1
+   });
+    
+    jQuery('.dynamic-grid').masonry({
+        itemSelector: '.brick2',
+        isAnimated: true,
+       // columnwidth: 10,
+      // width: '.hentry' 
+       // isFitWidth: true,
+      // columnWidth: function( containerWidth ) {
+ //  return containerWidth / 3;
+   //   }
+    columnWidth: 1
+   });
     
 
  });
-
-jQuery().ready(function( jQuery ) {
-    jQuery(".wp-caption").width(function() {
-        return jQuery('img', this).width();
-    });
-    jQuery(".gallery-caption").width(function() {
-        galleryIcon = jQuery(this).prev('.gallery-icon');
-        return jQuery('img', galleryIcon).width();
-    });
-});
 
 jQuery(document).ready(function(){
     jQuery(".entry-content").fitVids();
@@ -40,7 +42,6 @@ jQuery(document).ready(function(){
             jQuery('.back-to-top').fadeOut(200);
         }
     });
-
     jQuery('.back-to-top').click(function() {
         event.preventDefault();
         jQuery('body').animate({scrollTop: 0}, 300);
@@ -49,5 +50,9 @@ jQuery(document).ready(function(){
         animation: "slide",
         directionNav: false
     });
+    var nav = responsiveNav(".menu-top-navigation-container",
+        {
+            insert: "before"
+        });
 
 });

@@ -3,7 +3,7 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('brick'); ?>>
 	<?php if( has_post_thumbnail() ): ?>
 		<div class="featured-image">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">

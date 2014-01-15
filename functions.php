@@ -170,15 +170,15 @@ function dlts_scripts() {
 	dlts_enqueue_webfonts();	
 
 	wp_enqueue_style( 'style', get_stylesheet_uri(), false, $theme->Version, 'screen, projection' );
-
+wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/responsive-nav.css', false, $theme->Version, 'screen, projection' );
 	wp_enqueue_style( 'print', get_template_directory_uri() . '/print.css', false, $theme->Version, 'print' );
 
 	wp_register_style( 'ie-style', get_template_directory_uri() . '/ie.css', false, $theme->Version, 'screen, projection' );
 	$GLOBALS['wp_styles']->add_data( 'ie-style', 'conditional', 'lt IE 9' );
 	wp_enqueue_style( 'ie-style' );
 	wp_enqueue_style( 'flex', get_template_directory_uri() . '/flexslider/flexslider.css', false, $theme->Version, 'screen, projection' );
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), $theme->Version, true );
-
+	//wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), $theme->Version, true );
+	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js', array( 'jquery' ), $theme->Version, true );
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'jquery-masonry', true );
 	
@@ -206,9 +206,6 @@ add_action( 'wp_head', 'ec_head' );
 
 
 
-
-
-
 /**
  * Enqueues google fonts css for the custom header admin preview page.
  *
@@ -225,61 +222,18 @@ add_action( 'admin_enqueue_scripts', 'emphaino_custom_header_admin_scripts' );
 
 
 /**
- * Custom classes for the body tag
- *
- * @since Emphaino 1.0
- */
-function emphaino_body_class($classes)
-{
-	if( get_theme_mod('non_responsive') == 'on' )
-		$classes[] = 'non-responsive';
-	else 
-		$classes[] = 'responsive';
-
-	$header_image = get_header_image();
-	if ( ! empty( $header_image ) )
-		$classes[] = 'custom-header';
-	else
-		$classes[] = 'no-custom-header';
-
-	if( 'blank' == get_header_textcolor() )
-		$classes[] = 'header-text-hidden';
-
-	if( get_theme_mod( 'logo_image' ) )
-		$classes[] = 'has-logo-image';
-	else
-		$classes[] = 'no-logo-image';
-
-	if( is_active_sidebar( 'the-sidebar' ) && !( ( is_home() || is_archive() ) && ( get_theme_mod( 'sidebar_in_posts_index' ) != 'on' ) ) )
-		$classes[] = 'has-sidebar';
-	else
-		$classes[] = 'no-sidebar';
-
-	if( ! is_singular() ) {
-		$classes[] = str_replace( '_', '-', get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) );
-	}
-
-	if( is_singular() && ! get_option('show_avatars') )
-		$classes[] = 'no-comment-avatars';
-
-	return $classes;
-}
-
-//add_filter( 'body_class', 'emphaino_body_class' );
-
-/**
  * Custom post classes.
  *
  * @since Emphaino 1.0
  */
-function emphaino_post_class( $classes ) {
+function ec_post_class( $classes ) {
 	if( has_post_thumbnail() ) // Check if the current post has a post thumbnail
 		$classes[] = 'has-post-thumbnail';
 	return $classes;
 }
-add_filter( 'post_class', 'emphaino_post_class' );
+add_filter( 'post_class', 'ec_post_class' );
 
-/* DLTS */
+/* Admin area facelift  */
 
 add_filter( 'manage_taxonomies_for_news_columns', 'my_news_columns' );
 function my_news_columns( $taxonomies ) {
@@ -287,3 +241,101 @@ function my_news_columns( $taxonomies ) {
     return $taxonomies;
 }
 
+//////////
+
+//http://pippinsplugins.com/adding-custom-meta-fields-to-taxonomies/
+// Add term page
+function pippin_taxonomy_add_new_meta_field() {
+	// this will add the custom meta field to the add new term page
+	?>
+	<div class="form-field">
+		<label for="term_meta[working-groups]">Names here</label>
+		
+
+		<textarea rows="10" cols="40" name="term_meta[working-groups]" id="term_meta[working-groups]"> </textarea>
+
+		<p class="description">Enter a list of members' names here</p>
+	</div>
+	<div class="form-field">
+		<label for="term_meta[wg_url]">URL here</label>
+		<input type="text" name="term_meta[wg_url]" id="term_meta[wg_url]" value="">
+		<p class="description">Enter URL</p>
+	</div>
+<?php
+}
+
+add_action( 'working-groups_add_form_fields', 'pippin_taxonomy_add_new_meta_field', 10, 2 );
+
+// Edit term page
+function pippin_taxonomy_edit_meta_field($term) {
+ 
+	// put the term ID into a variable
+	$t_id = $term->term_id;
+ 
+	// retrieve the existing value(s) for this meta field. This returns an array
+	$term_meta = get_option( "taxonomy_$t_id" ); ?>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="term_meta[working-groups]">Names</label></th>
+		<td>
+		<!-- 	<input type="text" name="term_meta[working-groups]" id="term_meta[working-groups]" value="<?php //echo esc_attr( $term_meta['working-groups'] ) ? esc_attr( $term_meta['working-groups'] ) : ''; ?>">
+-->
+			<textarea rows="12" name="term_meta[working-groups]" id="term_meta[working-groups]"> <?php echo esc_attr( $term_meta['working-groups'] ) ? esc_attr( $term_meta['working-groups'] ) : ''; ?></textarea>
+			<p class="description">Enter names</p>
+		</td>
+	</tr>
+	<tr class="form-field">
+	<th scope="row" valign="top"><label for="term_meta[wg_url]">URL</label></th>
+		<td>
+			<input type="text" name="term_meta[wg_url]" id="term_meta[wg_url]" value="<?php echo esc_attr( $term_meta['wg_url'] ) ? esc_attr( $term_meta['wg_url'] ) : ''; ?>" >
+			<p class="description">enter URL, including the http: part</p>
+		</td>
+	</tr>
+<?php
+}
+add_action( 'working-groups_edit_form_fields', 'pippin_taxonomy_edit_meta_field', 10, 2 );
+
+// Save extra taxonomy fields callback function.
+function save_taxonomy_custom_meta( $term_id ) {
+	if ( isset( $_POST['term_meta'] ) ) {
+		$t_id = $term_id;
+		$term_meta = get_option( "taxonomy_$t_id" );
+		$cat_keys = array_keys( $_POST['term_meta'] );
+		foreach ( $cat_keys as $key ) {
+			if ( isset ( $_POST['term_meta'][$key] ) ) {
+				$term_meta[$key] = $_POST['term_meta'][$key];
+			}
+		}
+		// Save the option array.
+		update_option( "taxonomy_$t_id", $term_meta );
+	}
+}  
+add_action( 'edited_working-groups', 'save_taxonomy_custom_meta', 10, 2 );  
+add_action( 'create_working-groups', 'save_taxonomy_custom_meta', 10, 2 );
+/// allow html in descriptions
+//http://docs.woothemes.com/document/allow-html-in-term-category-tag-descriptions/
+
+foreach ( array( 'pre_term_description' ) as $filter ) {
+    remove_filter( $filter, 'wp_filter_kses' );
+}
+ 
+foreach ( array( 'term_description' ) as $filter ) {
+    remove_filter( $filter, 'wp_kses_data' );
+}
+
+////
+////http://wordpress.stackexchange.com/questions/29020/how-to-remove-taxonomy-name-from-wp-title
+function mamaduka_remove_tax_name( $title, $sep, $seplocation ) {
+    if ( is_tax() ) {
+        $term_title = single_term_title( '', false );
+
+        // Determines position of separator
+        if ( 'right' == $seplocation ) {
+            $title = $term_title . " $sep ";
+        } else {
+            $title = " $sep " . $term_title;
+        }
+    }
+
+    return $title;
+}
+add_filter( 'wp_title', 'mamaduka_remove_tax_name', 10, 3 );

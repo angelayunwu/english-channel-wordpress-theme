@@ -1,27 +1,42 @@
 //////////////////////////////
 // EXTENDABLES: Common reusable classes. Go extend yourself!
 //////////////////////////////
+// Percentabge sign means silent extender
 
 %element-invisible {
-  // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    // IE6, IE7 
-    clip: rect(1px 1px 1px 1px); 
-  }
-  clip: rect(1px, 1px, 1px, 1px);
+    // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+        // IE6, IE7
+        clip: rect(1px 1px 1px 1px);
+    }
+    clip: rect(1px, 1px, 1px, 1px);
 }
 
 %break-word {
-  // http://css-tricks.com/almanac/properties/w/word-break/
-  @if $experimental-support-for-microsoft {
-    -ms-word-break: break-all;
-  }
-  word-break: break-all;
-  word-break: break-word;
-  word-break: hyphenate;
-  @include hyphens(auto);
+    // http://css-tricks.com/almanac/properties/w/word-break/
+    @if $experimental-support-for-microsoft {
+        -ms-word-break: break-all;
+    }
+    word-break: break-all;
+    word-break: break-word;
+    word-break: hyphenate;
+    @include hyphens(auto);
+}
+%small-type {
+  font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+%medium-type {
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+%large-type {
+    font-size: 2.5rem;
+    line-height: 1.5;
 }
