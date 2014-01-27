@@ -6,13 +6,6 @@
  * @since English-Channel 1.0
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- *
- * @since English-Channel 1.0
- */
-if ( ! isset( $content_width ) )
-	$content_width = 660; /* pixels */
 
 
 
@@ -40,7 +33,7 @@ function emphaino_default_settings( $setting = '' )
 }
 
 
-if ( ! function_exists( 'emphaino_setup' ) ) :
+if ( ! function_exists( 'ec_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -48,9 +41,8 @@ if ( ! function_exists( 'emphaino_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  *
- * @since Emphaino 1.0
  */
-function emphaino_setup() {
+function ec_setup() {
 
 	/**
 	 * Custom template tags for this theme.
@@ -91,7 +83,7 @@ function emphaino_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'emphaino' ),
+		'primary' => 'Primary Menu'
 	) );
 
 	/*
@@ -101,7 +93,7 @@ function emphaino_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'
 	) );
-
+	add_theme_support('html5', array('search-form')) ;
 	/**
 	 * This theme styles the visual editor with editor-style.css to match the theme style.
 	 */
@@ -112,8 +104,8 @@ function emphaino_setup() {
 	 */
 	add_filter( 'use_default_gallery_style', '__return_false' );
 }
-endif; // emphaino_setup
-add_action( 'after_setup_theme', 'emphaino_setup' );
+endif; // ec_setup
+add_action( 'after_setup_theme', 'ec_setup' );
 
 /**
  * Register widgetized area
@@ -170,7 +162,7 @@ function dlts_scripts() {
 	dlts_enqueue_webfonts();	
 
 	wp_enqueue_style( 'style', get_stylesheet_uri(), false, $theme->Version, 'screen, projection' );
-wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/responsive-nav.css', false, $theme->Version, 'screen, projection' );
+	wp_enqueue_style( 'responsive-nav', get_template_directory_uri() . '/responsive-nav.css', false, $theme->Version, 'screen, projection' );
 	wp_enqueue_style( 'print', get_template_directory_uri() . '/print.css', false, $theme->Version, 'print' );
 
 	wp_register_style( 'ie-style', get_template_directory_uri() . '/ie.css', false, $theme->Version, 'screen, projection' );
@@ -209,7 +201,6 @@ add_action( 'wp_head', 'ec_head' );
 /**
  * Enqueues google fonts css for the custom header admin preview page.
  *
- * @since Emphaino 1.0
  */
 function emphaino_custom_header_admin_scripts()
 {
@@ -339,3 +330,22 @@ function mamaduka_remove_tax_name( $title, $sep, $seplocation ) {
     return $title;
 }
 add_filter( 'wp_title', 'mamaduka_remove_tax_name', 10, 3 );
+
+
+///////
+add_filter('pre_get_posts', 'query_post_type');
+
+function query_post_type($query) {
+  	if(is_category() || is_tag()) {
+    $post_type = get_query_var('post_type');
+	//if($post_type) {
+	//   	$post_type = $post_type;
+	// } else {
+		$post_type = array('nav_menu_item', 'post', 'projects', 'news', 'events'); 
+    	$query->set('post_type',$post_type);
+		return $query;
+   // }
+	}
+}
+
+

@@ -1,9 +1,6 @@
 <?php
 /**
  * The template for displaying Search Results pages.
- *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 
 get_header(); ?>
@@ -11,15 +8,21 @@ get_header(); ?>
 		<section id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : 
+			$numR = $wp_query->found_posts;
+			?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'emphaino' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h2 class="page-desc">
+						<?php 
+						echo 'Showing ' . $numR . ' result'. (($numR > 1) ? 's ' : ' ') . ' for: ' . '<span>' . get_search_query() . '</span>' ; 
+						?>
+					</h2>
 				</header><!-- .page-header -->
 
 				<?php emphaino_content_nav( 'nav-above' ); ?>
 
-				<?php if ( 'dynamic_grid_excerpts' == get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) ) echo '<div id="dynamic-grid" class="clearfix">'; ?>
+			
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -28,7 +31,6 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 	
-				<?php if ( 'dynamic_grid_excerpts' == get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) ) echo '</div> <!-- #dynamic-grid -->'; ?>
 
 				<?php emphaino_content_nav( 'nav-below' ); ?>
 

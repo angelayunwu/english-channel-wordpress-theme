@@ -1,14 +1,12 @@
 <?php
 /**
  * Project archive pages.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
  */
 
 get_header(); ?>
 
 <section id="primary" class="content-area">
+  <!-- Here -->
   <div id="content" class="site-content" role="main">
     <?php if ( have_posts() ) : ?>
   

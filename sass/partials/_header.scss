@@ -19,12 +19,11 @@
     .site-branding-a {
         // display: inline-block;
         // background-color: #ff0000;
-         &:hover {
-          background-color: #ffff00;
-          color: #64B224;
-                text-decoration: none;
+        &:hover {
+            background-color: #ffff00;
+            color: #64B224;
+            text-decoration: none;
         }
-   
     }
     .site-branding {
         background-color: white;
@@ -36,6 +35,7 @@
             .site-title {
                 color: #64B224;
                 text-decoration: none;
+
             }
         }
         @include respond-to("desktop") {
@@ -61,6 +61,7 @@
             color: $primary-dark;
             letter-spacing: .6px;
             line-height: 1.5;
+            font-weight:400;
             // margin-left: 7rem;
             // @include respond-to("desktop") {
             //       margin-left: 0rem;
@@ -73,14 +74,64 @@
         }
     }
     .site-description {
+        @include respond-to("desktop") {
+            display: inline-block;
+        }
+    }
+    .header-r-hold {
         text-align: center;
         color: $secondary-dark;
         // font: normal 15px $sans-font;
         // font: normal 1.5rem $sans-font;
         margin-bottom: 0;
         @include respond-to("desktop") {
+            position: relative;
+            height: 34px;
             text-align: right;
-            padding-top: 8px;
+            padding: 8px 0px 0 0;
+            // display: inline-block;
+            form#searchform {
+              
+                position: absolute;
+                right: 35px;
+                top: 10px;
+            }
+            .searchB {
+                width: 34px;
+                height: 34px;
+                background-image: url(images/search-icon.png);
+                background-position: right center;
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+                display: inline-block;
+                 cursor: pointer;
+            }
+            .field {
+                background-color: transparent;
+                
+                
+                border: none;
+                cursor: pointer;
+                height: 37px;
+                margin: 3px 0;
+                padding: 0 5px 0 5px;
+                position: relative;
+                -webkit-transition: width 400ms ease, background 400ms ease;
+                transition: width 400ms ease, background 400ms ease;
+                width: 0px;
+            }
+            .field:focus, .field.open {
+                background-color: #fff;
+                border: 2px solid #c3c0ab;
+                cursor: text;
+                outline: 0;
+                width: 290px;
+            }
+            .search-submit {
+                display: none;
+            }
+            ///
+            ///
         }
     }
 }

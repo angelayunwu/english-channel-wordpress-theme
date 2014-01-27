@@ -21,9 +21,14 @@
         margin: 1rem;
         &.brick1 {
             width: 31.3rem;
+            margin: 1%;
+            width: 47.5%;
+        margin: 1%;
         }
         &.brick2 {
             width: 63.7rem;
+            width: 47.5%;
+        margin: 1%;
         }
     }
 
@@ -355,7 +360,7 @@ article.tribe_events h3 {
     font-size: 1.6em;
 }
 
-.archive, .page {
+.archive, .page, .search-results, .events-archive{
     .site-content {
         width: 100%;
         margin-bottom: 6em;
@@ -365,6 +370,9 @@ article.tribe_events h3 {
         font-size: 3em;
         margin: 0;
         color: #304B56;
+    }
+    .page-desc {
+        font-size: 1.9em;
     }
     .hentry {
         width: auto;

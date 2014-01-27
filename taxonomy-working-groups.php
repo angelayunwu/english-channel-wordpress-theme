@@ -26,7 +26,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
   $term_meta = get_option( "taxonomy_$t_id" );
   $u = trim($term_meta['wg_url']);
   if (!empty($u)){ ?>
-       <div class="wg_url"><?php echo $term_meta['wg_url']; ?></div>
+       <div class="wg_url"><a href="<?php echo $u ?>"><?php echo $u ?></a></div>
   <?php }  ?>
 
 
@@ -37,19 +37,6 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
     </header>
     <!-- .page-header -->
-
-
-<?php
-
-  $t_id = $term->term_id;
-  // retrieve the existing value(s) for this meta field. This returns an array
-  $term_meta = get_option( "taxonomy_$t_id" );
-  $u = trim($term_meta['wg_url']);
-  if (!empty($u)){ ?>
-      <div class="brick brick1 url-area" >
-      <h3 class="post-type">URL</h3>
-      <div class="hentry"><article><?php echo $term_meta['wg_url']; ?></article></div></div>
-  <?php }  ?>
 
 
       <!--  EVENTS  -->
@@ -63,7 +50,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
       if (count($all_events) > 0){
         ?>
          <div class="brick brick2">
-    <h3  class="post-type">Events</h3>
+    <h3  class="post-type">Event<?php echo (count($all_events) >1 ) ? 's' : ''; ?></h3>
     <ul class= "tribe_events tribe-events-list">
       <?php 
   		foreach($all_events as $post) {
@@ -143,11 +130,14 @@ $args = array(
 unset($the_query);
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
+
  ?>
     <div class="brick brick2">
-      <h3  class="post-type">Related Projects</h3>
+      <h3  class="post-type">Related Project<?php echo ($the_query->post_count >1 ) ? 's' : ''; ?></h3>
 
 <?php
+
+
 while ( $the_query->have_posts() ) : $the_query->the_post();
 		get_template_part( 'content', 'projects3' );
 endwhile; ?>

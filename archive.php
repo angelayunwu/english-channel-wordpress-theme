@@ -2,15 +2,11 @@
 /**
  * The template for displaying Archive pages.
  *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package Emphaino
- * @since Emphaino 1.0
- */
+*/
 
 get_header(); ?>
 
-		<section id="primary" class="content-area">
+		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 
 			<?php if ( have_posts() ) : ?>
@@ -21,10 +17,7 @@ get_header(); ?>
 							if ( is_category() ) {
 								printf( __( 'Category Archives: %s', 'emphaino' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 
-							} elseif ( is_tag() ) {
-								printf( __( 'Tag Archives: %s', 'emphaino' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-
-							} elseif ( is_author() ) {
+							}  elseif ( is_author() ) {
 								/* Queue the first post, that way we know
 								 * what author we're dealing with (if that is the case).
 								*/
@@ -45,10 +38,7 @@ get_header(); ?>
 							} elseif ( is_year() ) {
 								printf( __( 'Yearly Archives: %s', 'emphaino' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
-							} else {
-								_e( 'Archives', 'emphaino' );
-
-							}
+							} 
 						?>
 					</h1>
 					<?php
@@ -93,7 +83,6 @@ get_header(); ?>
 			<?php endif; ?>
 
 			</div><!-- #content .site-content -->
-		</section><!-- #primary .content-area -->
+		</div><!-- #primary .content-area -->
 
-<?php if( get_theme_mod( 'sidebar_in_posts_index' ) == 'on' ) get_sidebar(); ?>
 <?php get_footer(); ?>

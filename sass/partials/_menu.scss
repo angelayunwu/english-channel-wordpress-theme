@@ -27,15 +27,28 @@
         h1 {
             display: table-cell;
             padding: 1rem 1rem 0 1rem;
-            
         }
     }
     .site-navigation {
-        li.current-menu-item a, 
+        .menu-item-has-children {
+            ul {
+                display: none;
+            }
+            &:hover ul {
+                z-index: 99999;
+                display: list-item !important;
+                position: absolute;
+                margin-top: -6px;
+                margin-left: 20px;
+                @include box-shadow(rgba(#333333, 0.7) 2px 2px  4px);
+                border: 1px solid #aaa;
+            }
+        }
+        li.current-menu-item a,
         .single-projects & li.item-projects a,
         .tax-working-groups & li.item-wg a,
         .single-news & li.item-news a,
-        .events-single & li.item-events a{
+        .events-single & li.item-events a {
             background-color: white;
             color: $text-color;
         }
@@ -114,8 +127,7 @@
             }
             .page-title {
                 padding: 0rem;
-                max-width: 13em;
-                
+                // max-width: 13em;
             }
         }
         &:before {
