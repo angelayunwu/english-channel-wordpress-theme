@@ -2,7 +2,18 @@
 /**
  */
 ?>
-
+<?php
+	$kind_list = wp_get_object_terms(get_the_ID(), 'kind');
+if(!empty($kind_list)){
+  if(!is_wp_error( $kind_list )){
+    echo '<div class="news-kind"><ul>';
+    foreach($kind_list as $termk){
+      echo '<li><a href="'.get_term_link($termk->slug, 'kind').'">'.$termk->name.'</a></li>'; 
+    }
+    echo '</ul></div>';
+  }
+}
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
 	<div class="entry-content">
@@ -19,6 +30,8 @@
 
 	<footer class="entry-meta">
 		<?php emphaino_posted_on(); ?>
+
+
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'emphaino' ) );

@@ -6,11 +6,11 @@
 get_header(); ?>
 
 		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+			<div id="content" class="site-content">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php // emphaino_content_nav( 'nav-above' ); ?>
+				<?php //emphaino_content_nav( 'nav-above' ); ?>
 
 				<?php get_template_part( 'content', 'single' ); ?>
 
@@ -27,5 +27,4 @@ get_header(); ?>
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -347,5 +347,7 @@ function query_post_type($query) {
    // }
 	}
 }
+////////
+
 
 

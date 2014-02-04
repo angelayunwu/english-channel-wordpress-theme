@@ -23,12 +23,12 @@
             width: 31.3rem;
             margin: 1%;
             width: 47.5%;
-        margin: 1%;
+            margin: 1%;
         }
         &.brick2 {
             width: 63.7rem;
             width: 47.5%;
-        margin: 1%;
+            margin: 1%;
         }
     }
 
@@ -44,7 +44,7 @@
     margin-left: 30px;
     margin-left: 3rem;
 }
-
+// Individual working group page
 .tax-working-groups {
     .post-type {
         font-size: 1.6rem;
@@ -67,6 +67,14 @@
         // padding: 1px;
         width: auto;
         overflow: hidden;
+    }
+    .tribe_events {
+        .hentry {
+            padding: 10px;
+            padding: 1rem;
+            margin-bottom: 10px;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -94,30 +102,22 @@
     .comments-area {
         display: inline-block;
     }
+    .news-kind {
+        background-color: #407218;
+        padding-left: 1rem;
+        a {
+            font-size: 1.2rem;
+                letter-spacing: 2px;
+                color: rgba(255, 255, 255, 0.6);
+                background-color: #407218;
+                text-transform: uppercase;
+        }
+    }
 }
 
 #tribe-events-content {
     //background-color: lighten(nth($black, 6), 1%);
 }
-
-.tax-working-groups  .tribe_events {
-    .hentry {
-        padding: 10px;
-        padding: 1rem;
-        margin-bottom: 10px;
-        margin-bottom: 1rem;
-    }
-}
-
-// .page-template-page-working-groups-php {
-//     .entry-summary {
-//         @extend %small-type;
-//     }
-//     .entry-summary,.entry-header {
-//         background-color: pink;
-//         max-width: 66em;
-//     }
-// }
 
 .home .tribe_events,
 .tax-working-groups .tribe_events {
@@ -282,58 +282,6 @@ article.hentry.type-news {
     }
 }
 
-.home [role="main"] {
-    @include clearfix;
-    h3 {
-        font-size: 1.8rem;
-    }
-    .home-top {
-        @include clearfix;
-    }
-    .home-top-left {
-        @include respond-to("desktop") {
-            overflow: auto;
-            width: 64.5rem;
-            float: left;
-        }
-    }
-    //.js .dynamic-grid#dynamic-grid
-    article {
-        padding: 0;
-        //.js .dynamic-grid#dynamic-grid
-        &.twitter-widget {
-            float: right;
-        }
-    }
-    .entry-summary, .entry-summary p {
-        // font-size: 13px;
-        line-height: 1.3;
-    }
-    .news {
-        clear: left;
-        padding: 0;
-    }
-    .section-title {
-        margin: 0 0 1.5rem 0;
-        a {
-            display: block;
-            padding: 10px;
-            padding: 1rem;
-            background-color: #598199;
-            color: white;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            @include transition-property(background-color);
-            @include transition-duration(0.1s);
-            @include transition-timing-function(ease-in-out);
-            &:hover {
-                text-decoration: none;
-                background-color: #3d89ac;
-            }
-        }
-    }
-}
-
 article.tribe_events h3 {
     clear: none;
 }
@@ -360,11 +308,22 @@ article.tribe_events h3 {
     font-size: 1.6em;
 }
 
-.archive, .page, .search-results, .events-archive{
+.post-type-archive-news, .page-template-page-working-groups-php, .single-news, .tax-project-types, .tax-kind  {
     .site-content {
+        // background-color: pink;
+        max-width: 76rem;
+    }
+}
+
+.single-news .hentry {
+    padding: 1rem;
+}
+
+.archive, .page, .search-results, .events-archive {
+    .site-content {
+        @extend %medium-type;
         width: 100%;
         margin-bottom: 6em;
-        @extend %medium-type;
     }
     .page-header h1 {
         font-size: 3em;
@@ -378,19 +337,18 @@ article.tribe_events h3 {
         width: auto;
     }
     .archive-description {
-         @extend %small-type;
-         padding:2rem;
-         background-color: white;
+        @extend %small-type;
+        padding: 2rem;
+        background-color: white;
     }
 }
 
 .page {
     // all working groups, about, search
     .hentry {
+        @extend %small-type;
         padding: 2rem 10rem 2rem 2rem;
         margin-bottom: 1rem;
-        max-width: 76rem;
-        @extend %small-type;
     }
 }
 
@@ -844,7 +802,7 @@ object {
     margin: 0 0 1.5em;
 }
 
-/* =Navigation
+/* = Between single posts paging : Navigation
 ----------------------------------------------- */
 
 .site-content {
@@ -863,10 +821,12 @@ object {
     .nav-previous, .previous-image {
         float: left;
         text-align: left;
+        max-width: 40%;
     }
     .nav-next, .next-image {
         float: right;
         text-align: right;
+        max-width: 40%;
     }
     .previous-image, .next-image, .comment-navigation div {
         margin: 1rem;

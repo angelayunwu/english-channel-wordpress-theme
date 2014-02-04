@@ -6,7 +6,7 @@
 get_header(); ?>
 
 <section id="primary" class="content-area">
-  <div id="content" class="site-content" role="main">
+  <div id="content" class="site-content" >
     <?php if ( have_posts() ) : ?>
    
     <!-- .page-header -->
@@ -19,7 +19,7 @@ get_header(); ?>
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', 'announcements' );
+						get_template_part( 'content', 'news' );
 					?>
     <?php endwhile; ?>
   

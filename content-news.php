@@ -9,7 +9,7 @@
 	<div class="l">
 <?php 
 		$terms = wp_get_post_terms( get_the_ID(), 'kind', array("fields" => "names"));
-		echo '<div class="news-kind">ERROR ' . $terms[0] . '</div>';
+		echo '<div class="news-kind">' . $terms[0] . '</div>';
 		
 		 ?>
 	</div>

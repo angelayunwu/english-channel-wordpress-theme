@@ -32,10 +32,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
        </div>
-   
-
-
-    </header>
+   </header>
     <!-- .page-header -->
 
 
@@ -90,7 +87,7 @@ if ( $the_query->have_posts() ) {
       <h3 class="post-type">News and Notes</h3>
       <?php
 		  while ( $the_query->have_posts() ) : $the_query->the_post(); 
-				  get_template_part( 'content', 'announcements' );			
+				  get_template_part( 'content', 'news' );			
 		  endwhile;  ?>
     </div>
     <?php } ?>

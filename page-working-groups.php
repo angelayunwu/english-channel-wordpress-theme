@@ -6,7 +6,7 @@ Template Name: Working Groups
 get_header(); ?>
 
 		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
+			<div id="content" class="site-content" >
 				<?php 
 
 				$args = array(
@@ -19,18 +19,13 @@ get_header(); ?>
     $count = count($terms);
  if ( $count > 0 ){
     
-     foreach ( $terms as $term ) {
-       echo "<article class='hentry brick'>" . '<header class="entry-header"><h1 class="entry-title"><a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View working group page: %s', 'my_localization_domain'), $term->name) . '">' .  $term->name . "</a></h1></header>";
- 	echo '<div class="entry-summary">' . $term->description . '</div>';
-       echo "</article>";
-        
+	foreach ( $terms as $term ) {
+		echo "<article class='hentry brick'>" . '<header class="entry-header"><h1 class="entry-title"><a href="' . get_term_link( $term ) . '" title="' . sprintf(__('View working group page: %s', 'my_localization_domain'), $term->name) . '">' .  $term->name . "</a></h1></header>";
+ 		echo '<div class="entry-summary">' . $term->description . '</div>';
+       	echo "</article>"; 
      }
-    
  }
-
-
-				 ?>
-
+			 ?>
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
 

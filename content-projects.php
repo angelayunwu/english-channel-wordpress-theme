@@ -31,5 +31,8 @@
 		<?php the_excerpt(); ?>
 		
 	</div><!-- .entry-summary -->
+	<footer>
+
+	</footer>
 	
 </article><!-- #post-<?php the_ID(); ?> -->
