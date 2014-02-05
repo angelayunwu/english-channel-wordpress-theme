@@ -46,9 +46,12 @@
         }
         li.current-menu-item a,
         .single-projects & li.item-projects a,
+        .tax-project-types & li.item-projects a,
         .tax-working-groups & li.item-wg a,
         .single-news & li.item-news a,
-        .events-single & li.item-events a {
+        .tax-kind & li.item-news a,
+        .events-single & li.item-events a,
+        .events-archive  & li.item-events a{
             background-color: white;
             color: $text-color;
         }

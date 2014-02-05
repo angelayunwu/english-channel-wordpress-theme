@@ -100,27 +100,33 @@ foreach ( $all_events as $post ) {
       <header class="page-header">
         <h1 class="page-title">
           <?php
-  if ( is_single() ) {
-    the_title();
-  } else if ( is_post_type_archive() ) {
-    post_type_archive_title();
-   } else if ( is_tag( '' ) ) {
-    echo '<span class="type_flag">Tag:</span>';
-    wp_title( '', true );
-  } else if ( is_search() ) {
-    echo 'Search Results';
-  } else if (is_tax('kind')){
-    //$obj = get_post_type_object( 'news' );
-    //$myCPT = $obj->labels->name;
-     //wp_title( "'<h2>' . $myCPT . '</h2>'", true);
-    echo '<span class="type_flag">News and Notes:</span>';
-    echo wp_title('',false). 's';
-  } else if (is_tax('project-types')){
-    echo '<span class="type_flag">Projects:</span>';
-    echo  wp_title( '', false ) . 's';
-  } else {
-  wp_title( '', true );
-}
+          if ( is_single() ) {
+            the_title();
+          } else if ( is_post_type_archive('tribe_events') ) {
+            //  echo tribe_get_current_month_text();
+            // tribe_events_title();
+            echo "Events";
+          } else if ( is_post_type_archive() ) {
+             
+            post_type_archive_title();
+          } else if ( is_tag( '' ) ) {
+            echo '<span class="type_flag">Tag:</span>';
+            wp_title( '', true );
+          } else if ( is_search() ) {
+            echo 'Search Results';
+          } else if (is_tax('kind')){
+          //$obj = get_post_type_object( 'news' );
+          //$myCPT = $obj->labels->name;
+           //wp_title( "'<h2>' . $myCPT . '</h2>'", true);
+           echo '<span class="type_flag">News and Notes:</span>';
+            echo wp_title('',false). 's';
+          } else if (is_tax('project-types')){
+          echo '<span class="type_flag">Projects:</span>';
+          echo  wp_title( '', false ) . 's';
+          } else {
+            
+          wp_title( '', true );
+          }
 ?></h1>
         <?php
 if ( is_single() ) {

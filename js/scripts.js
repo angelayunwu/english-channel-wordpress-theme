@@ -69,5 +69,16 @@ jQuery(document).ready(function() {
         }
     });
 
+   
+    console.log('onload 1 ' + jQuery('.tribe-events-page-title').html());
+ // ajax complete function to remove active spinner
+ //tribe_ev.events = {};
+        jQuery(tribe_ev.events).on("tribe_ev_ajaxSuccess", function() {
+           console.log("is success?");
+           console.log('onload 2 ' + jQuery('.tribe-events-page-title').html());
+           jQuery('.page-title').html(jQuery('.tribe-events-page-title').html());
+           //jQuery('.page-title').html(document.title);
+        });
+        
 
 });
