@@ -2,34 +2,41 @@
 ----------------------------------------------- */
 
 #top-block {
-    position: relative;
+    
     &:before {
         content: "";
         width: 0;
-        position: absolute;
+        position: static;
         top: 0;
         bottom: 0;
     }
-    display: table;
+    position: relative;
+    display: block;
     width: 100%;
     margin-bottom: 2rem;
     .rowhold {
         display: table;
         width: 100%;
     }
-    .site-navigation {
-        width: 100%;
-        display: table-header-group;
-    }
+   .flex-viewport {
+    max-width: 100%;
+   }
     .left-block {
-        display: table-footer-group;
+       display: table-footer-group;
+        //display: table-caption;
+        width: 100%;
+       max-width: 100%;
+
         background-color: #B4D3DC;
         h1 {
             display: table-cell;
             padding: 1rem 1rem 0 1rem;
         }
+        
     }
     .site-navigation {
+        width: 100%;
+        display: table-header-group;
         .menu-item-has-children {
             ul {
                 display: none;
@@ -116,8 +123,10 @@
         }
     }
     @include respond-to("desktop") {
+        display: table;
         .rowhold {
             display: table-row;
+            width:100%;
         }
         .left-block {
             vertical-align: bottom;

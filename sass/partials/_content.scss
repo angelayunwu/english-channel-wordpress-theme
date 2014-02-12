@@ -320,6 +320,7 @@ article.tribe_events h3 {
 }
 
 .archive, .page, .search-results, .events-archive {
+    // custom content types, taxonomies
     .site-content {
         @extend %medium-type;
         width: 100%;
@@ -335,6 +336,9 @@ article.tribe_events h3 {
     }
     .hentry {
         width: auto;
+        overflow:hidden;
+        margin-bottom: 1rem;
+        
     }
     .archive-description {
         @extend %small-type;
@@ -344,11 +348,11 @@ article.tribe_events h3 {
 }
 
 .page {
-    // all working groups, about, search
+    // all working groups, about
     .hentry {
         @extend %small-type;
         padding: 2rem 10rem 2rem 2rem;
-        margin-bottom: 1rem;
+        
     }
 }
 
@@ -356,6 +360,7 @@ article.tribe_events h3 {
     width: auto;
     background-color: white;
     // margin: 0 auto 20px;
+     overflow:hidden;
     // margin: 0 auto 2rem;
 }
 

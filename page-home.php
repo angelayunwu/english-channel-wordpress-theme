@@ -18,9 +18,10 @@ get_header(); ?>
     endwhile;
     ?>
   </section>
-  <article id="post-<?php the_ID(); ?>" class="twitter-widget">
-    <div class="entry-summary"> <a class="twitter-timeline" href="https://twitter.com/imrogb/design" data-widget-id="407679371990683648" width=320 height=425 >&nbsp;</a> 
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script> 
+  <article class="twitter-widget">
+    <div class="entry-summary"><a class="twitter-timeline" href="https://twitter.com/NYUEngChannel/english-channel-list" data-widget-id="431507761684164608" width=320 height=425>&nbsp;</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
     </div>
     <!-- .entry-summary --> 
     
@@ -37,7 +38,7 @@ get_header(); ?>
    $args = array( 'post_type' => 'projects', 'posts_per_page' => 6 );
 $loop = new WP_Query( $args );
 ?>
-<div id="dynamic-grid" class="clearfix dynamic-grid">
+  <div id="dynamic-grid" class="clearfix dynamic-grid">
 
   <?php 
     while ( $loop->have_posts() ) : $loop->the_post();
@@ -45,7 +46,9 @@ $loop = new WP_Query( $args );
       get_template_part( 'content', 'projects' );
     endwhile;
 
-?></div>
+?>
+  </div>
+  </section>
   </div>
   <!-- #content .site-content --> 
 </div>

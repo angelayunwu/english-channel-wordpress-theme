@@ -10,14 +10,15 @@
 <html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" >
-<meta name="viewport" content="width=device-width, initial-scale=1" >
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=no" >
+
 <title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" >
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
 <?php wp_head(); ?>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 </head>
 
 <body <?php body_class(); ?>>
@@ -29,8 +30,8 @@
     <h2 class="site-description">
       <?php bloginfo( 'description' ); ?>
     </h2>
-    <?php get_search_form(); ?>
     <div class="searchB">&nbsp;</div>
+     <?php get_search_form(); ?>
   </div>
     <a class="site-branding-a" href="<?php echo esc_url( home_url( '/' ) ); ?>"  rel="home">
          <div class="site-branding">
@@ -104,8 +105,8 @@ foreach ( $all_events as $post ) {
             the_title();
           } else if ( is_post_type_archive('tribe_events') ) {
             //  echo tribe_get_current_month_text();
-            // tribe_events_title();
-            echo "Events";
+            tribe_events_title();
+           // echo "Events";
           } else if ( is_post_type_archive() ) {
              
             post_type_archive_title();
@@ -137,13 +138,12 @@ if ( is_single() ) {
 }
 ?>
       </header>
-    </div>
+    </div> <!-- end left block -->
     <?php endif; ?>
     <nav role="navigation" class="site-navigation">
       <div class="home-page-link"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="icon-home"><span>Home</span></a></div>
       <h1 class="assistive-text icon-menu"><span>Menu</span></h1>
       <div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
-      <? // php rewind_posts(); ?>
       <?php
 //  wp_reset_query();
 // wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => '', 'echo' => true ) ) ;

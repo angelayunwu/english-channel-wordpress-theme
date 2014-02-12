@@ -177,6 +177,8 @@ function dlts_scripts() {
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.min.js', array( 'jquery' ), '1.0', true );
 
 	wp_enqueue_script( 'emphaino-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), $theme->Version, true );
+	wp_enqueue_script( 'underscore', get_template_directory_uri() . '/js/underscore-min.js', array( 'jquery' ), '', true);
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -240,6 +242,13 @@ function pippin_taxonomy_add_new_meta_field() {
 	// this will add the custom meta field to the add new term page
 	?>
 	<div class="form-field">
+		<label for="term_meta[wg_short]">Short description</label>
+		
+		<textarea rows="3" cols="40" name="term_meta[wg_short]" id="term_meta[wg_short]"> </textarea>
+
+		<p class="description">Enter a short description here</p>
+	</div>
+	<div class="form-field">
 		<label for="term_meta[working-groups]">Names here</label>
 		
 
@@ -247,6 +256,7 @@ function pippin_taxonomy_add_new_meta_field() {
 
 		<p class="description">Enter a list of members' names here</p>
 	</div>
+	
 	<div class="form-field">
 		<label for="term_meta[wg_url]">URL here</label>
 		<input type="text" name="term_meta[wg_url]" id="term_meta[wg_url]" value="">
@@ -266,6 +276,15 @@ function pippin_taxonomy_edit_meta_field($term) {
 	// retrieve the existing value(s) for this meta field. This returns an array
 	$term_meta = get_option( "taxonomy_$t_id" ); ?>
 	<tr class="form-field">
+	<th scope="row" valign="top"><label for="term_meta[wg_short]">Short description</label></th>
+		<td>
+		<!-- 	<input type="text" name="term_meta[working-groups]" id="term_meta[working-groups]" value="<?php //echo esc_attr( $term_meta['working-groups'] ) ? esc_attr( $term_meta['working-groups'] ) : ''; ?>">
+-->
+			<textarea rows="3" name="term_meta[wg_short]" id="term_meta[wg_short]"> <?php echo esc_attr( $term_meta['wg_short'] ) ? esc_attr( $term_meta['wg_short'] ) : ''; ?></textarea>
+			<p class="description">Enter short description</p>
+		</td>
+	</tr>
+	<tr class="form-field">
 	<th scope="row" valign="top"><label for="term_meta[working-groups]">Names</label></th>
 		<td>
 		<!-- 	<input type="text" name="term_meta[working-groups]" id="term_meta[working-groups]" value="<?php //echo esc_attr( $term_meta['working-groups'] ) ? esc_attr( $term_meta['working-groups'] ) : ''; ?>">
@@ -274,6 +293,7 @@ function pippin_taxonomy_edit_meta_field($term) {
 			<p class="description">Enter names</p>
 		</td>
 	</tr>
+		
 	<tr class="form-field">
 	<th scope="row" valign="top"><label for="term_meta[wg_url]">URL</label></th>
 		<td>

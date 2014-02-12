@@ -31,7 +31,14 @@ jQuery(window).load(function() {
 
 });
 
+
+
+
+
 jQuery(document).ready(function() {
+
+
+
     jQuery(".entry-content").fitVids();
 
     jQuery(window).scroll(function() {
@@ -48,8 +55,13 @@ jQuery(document).ready(function() {
         }, 300);
     });
     jQuery('.flexslider').flexslider({
-        animation: "slide",
+        animation: "fade",
         directionNav: false
+      //  , width: 200,
+      //  after: function(){
+       //     jQuery('.flexslider').width(jQuery( document ).width());
+       //     jQuery('.flexslider').data('flexslider').resize(300);
+       // }
     });
     var nav = responsiveNav(".menu-top-navigation-container", {
         insert: "before"
@@ -69,16 +81,27 @@ jQuery(document).ready(function() {
         }
     });
 
-   
-    console.log('onload 1 ' + jQuery('.tribe-events-page-title').html());
- // ajax complete function to remove active spinner
- //tribe_ev.events = {};
+    if (jQuery('body').hasClass('events-gridview')) {
         jQuery(tribe_ev.events).on("tribe_ev_ajaxSuccess", function() {
-           console.log("is success?");
-           console.log('onload 2 ' + jQuery('.tribe-events-page-title').html());
-           jQuery('.page-title').html(jQuery('.tribe-events-page-title').html());
-           //jQuery('.page-title').html(document.title);
+            jQuery('.page-title').html(jQuery('.tribe-events-page-title').html());
+
         });
-        
+    }
+     
+
+    // jQuery(window).resize(_.debounce(function() {
+
+    //     console.log("debounce");
+    //      jQuery('.flexslider').flexslider({
+    //     animation: "slide",
+    //     directionNav: false, 
+    //      width: 200,
+    //     after: function(){
+    //         jQuery('.flexslider').data('flexslider').resize();
+    //     }
+    // });
+    //     //  
+    // }, 1000));
+
 
 });

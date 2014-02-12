@@ -35,7 +35,6 @@
             .site-title {
                 color: #64B224;
                 text-decoration: none;
-
             }
         }
         @include respond-to("desktop") {
@@ -61,7 +60,7 @@
             color: $primary-dark;
             letter-spacing: .6px;
             line-height: 1.5;
-            font-weight:400;
+            font-weight: 400;
             // margin-left: 7rem;
             // @include respond-to("desktop") {
             //       margin-left: 0rem;
@@ -70,10 +69,12 @@
             //   color: $primary-dark;
             //   @include text-shadow(rgba(0, 0, 0, 0.2) 0rem 0rem 0.1rem);
             // }
-       
+    
         }
     }
     .site-description {
+        padding-right: 10px;
+        padding-right: 1rem;
         @include respond-to("desktop") {
             display: inline-block;
         }
@@ -84,55 +85,70 @@
         // font: normal 15px $sans-font;
         // font: normal 1.5rem $sans-font;
         margin-bottom: 0;
-        @include respond-to("desktop") {
-            position: relative;
+        @include respond-to("desktop") {}
+
+        position: relative;
+        height: 34px;
+        text-align: right;
+        padding: 8px 0px 0 0;
+        // display: inline-block;
+        form#searchform {
+            position: absolute;
+            right: 35px;
+            top: 10px;
+        }
+        .searchB {
+            width: 34px;
             height: 34px;
-            text-align: right;
-            padding: 8px 0px 0 0;
-            // display: inline-block;
-            form#searchform {
-              
-                position: absolute;
-                right: 35px;
-                top: 10px;
-            }
+            background-image: url(images/search-icon.png);
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: 24px 24px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        @include respond-to("not desktop") {
             .searchB {
+                // background-color: red;
                 width: 34px;
                 height: 34px;
                 background-image: url(images/search-icon.png);
                 background-position: right center;
                 background-repeat: no-repeat;
                 background-size: 24px 24px;
-                display: inline-block;
-                 cursor: pointer;
+                display: block;
+                position: absolute;
+                right: 2rem;
+                top: 5.1rem;
             }
-            .field {
-                background-color: transparent;
-                
-                
-                border: none;
-                cursor: pointer;
-                height: 37px;
-                margin: 3px 0;
-                padding: 0 5px 0 5px;
-                position: relative;
-                -webkit-transition: width 400ms ease, background 400ms ease;
-                transition: width 400ms ease, background 400ms ease;
-                width: 0px;
-            }
-            .field:focus, .field.open {
-                background-color: #fff;
-                border: 2px solid #c3c0ab;
-                cursor: text;
-                outline: 0;
-                width: 290px;
-            }
-            .search-submit {
-                display: none;
-            }
-            ///
-            ///
         }
+
+        .field {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            height: 37px;
+            margin: 3px 0;
+            padding: 0 5px 0 5px;
+            position: relative;
+            -webkit-transition: width 400ms ease, background 400ms ease;
+            transition: width 400ms ease, background 400ms ease;
+            width: 0px;
+        }
+        .field:focus, .field.open {
+            background-color: #fff;
+            border: 2px solid #c3c0ab;
+            cursor: text;
+            outline: 0;
+            width: 290px;
+        }
+        .search-submit {
+            display: none;
+        }
+        ///
+        ///
+        //}
+
     }
 }
 
