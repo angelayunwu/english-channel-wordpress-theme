@@ -368,6 +368,11 @@ function query_post_type($query) {
 	}
 }
 ////////
-
-
+// To address bluehost limitations 
+// http://tri.be/support/forums/topic/events-displaying-on-website-but-not-in-admin-panel/page/2/
+add_action('init', 'tribe_allow_large_joins');
+function tribe_allow_large_joins(){
+	global $wpdb;
+	$wpdb->query('SET SQL_BIG_SELECTS=1');
+}
 

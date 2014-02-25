@@ -57,27 +57,33 @@ jQuery(document).ready(function() {
     jQuery('.flexslider').flexslider({
         animation: "fade",
         directionNav: false
-      //  , width: 200,
-      //  after: function(){
-       //     jQuery('.flexslider').width(jQuery( document ).width());
-       //     jQuery('.flexslider').data('flexslider').resize(300);
-       // }
+        //  , width: 200,
+        //  after: function(){
+        //     jQuery('.flexslider').width(jQuery( document ).width());
+        //     jQuery('.flexslider').data('flexslider').resize(300);
+        // }
     });
     var nav = responsiveNav(".menu-top-navigation-container", {
         insert: "before"
     });
 
     ///
-    jQuery('.searchB').click(function() {
+    jQuery('.searchB').click(function(event) {
         event.preventDefault();
         if (jQuery('input.field').hasClass('open')) {
             jQuery('input.field').removeClass('open');
-            jQuery('.site-description').fadeIn();
+            // jQuery('.site-description').fadeIn();
+            // chose this over fadeIn so as to not disrupt layout
+            jQuery('.site-description').animate({
+                opacity: 1
+            });
         } else {
             jQuery('input.field').addClass('open');
             jQuery('input.field').focus();
-            jQuery('.site-description').fadeOut();
-
+            // jQuery('.site-description').fadeOut();
+            jQuery('.site-description').animate({
+                opacity: 0
+            });
         }
     });
 
@@ -87,7 +93,7 @@ jQuery(document).ready(function() {
 
         });
     }
-     
+
 
     // jQuery(window).resize(_.debounce(function() {
 

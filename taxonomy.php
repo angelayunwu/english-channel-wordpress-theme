@@ -16,7 +16,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
     </header>
     <!-- .page-header -->
     <?php
-  $the_query = new WP_Query( $args );
+ // $the_query = new WP_Query( $args );
   $x = get_query_var( 'taxonomy' );
   while ( have_posts() ) : the_post();
       if ($x == 'project-types') {
