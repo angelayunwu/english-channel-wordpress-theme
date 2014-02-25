@@ -106,7 +106,7 @@ foreach ( $all_events as $post ) {
           } else if ( is_post_type_archive('tribe_events') ) {
             //  echo tribe_get_current_month_text();
             tribe_events_title();
-           // echo "Events";
+          
           } else if ( is_post_type_archive() ) {
              
             post_type_archive_title();
@@ -136,6 +136,10 @@ if ( is_single() ) {
     echo "<h2 class='subtitle'>$subtitle</h2>";
   }
 }
+
+  if (tribe_is_month() || tribe_is_list_view()){
+      tribe_get_template_part( 'modules/bar' ); 
+  }
 ?>
       </header>
     </div> <!-- end left block -->

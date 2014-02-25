@@ -19,8 +19,8 @@ img.size-full {
 }
 
 /* Non Responsive Layout for IE 8 */
-
-@include non-responsive;
+// 2/25 lmh commented out
+// @include non-responsive;
 
 .header-main, .widget-area, .page-header, .post-navigation, .paging-navigation {
 	border: 1px solid #ddd;

@@ -10,7 +10,7 @@
 if ( !defined('ABSPATH') ) { die('-1'); } ?>
 
 <?php 
-
+global $post;
 // Setup an array of venue details for use later in the template
 $venue_details = array();
 
