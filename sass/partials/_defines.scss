@@ -25,8 +25,10 @@ $cs-brightness-offset: 10;
 
 // Options: 0-100;
 $cs-color-model: ryb;
-
 // Options: rgb, ryb
+
+//previous background-color: #B4D3DC;
+$blue-background: #acd3df;
 
 $black: tint-stack($black-value);
 $primary: tint-stack(cs-primary());
@@ -50,55 +52,47 @@ $border-color: nth($black, 2);
 $primary-bg-color: nth($black, 6);
 $secondary-bg-color: nth($black, 5);
 $tertiary-bg-color: nth($black, 6);
-$blocks-bg-color: #eee;
+$blocks-bg-color: #eeeeee;
 
 @mixin clearfix {
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-  &:after {
-    clear: both;
-  }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
 
 @mixin primary-box {
-   background-color: #fff;
-  // background-color: $primary-bg-color;
-  // background-color: white;
- 
-  // @include box-shadow( rgba(0, 0, 0, 0.5) 0 0 1px );
-  
+    background-color: #fff;
+    // background-color: $primary-bg-color;
+    // background-color: white;
+    // @include box-shadow( rgba(0, 0, 0, 0.5) 0 0 1px );
 }
 
 @mixin secondary-box {
-  //background-color: #f6f6f6;
-  //background-color: $blocks-bg-color;
-  //@include box-shadow( rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset);
+    //background-color: #f6f6f6;
+    //background-color: $blocks-bg-color;
+    //@include box-shadow( rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset);
 }
 
 @mixin blocks-box {
-  background: $blocks-bg-color;
-  //@include box-shadow( rgba(0, 0, 0, 0.2) 0 0 0.2rem );
+    background: $blocks-bg-color;
+    //@include box-shadow( rgba(0, 0, 0, 0.2) 0 0 0.2rem );
 }
 
- .js #dynamic-grid {
-    margin: -10px -10px 20px;
-    margin: -1rem -1rem 2rem;
-  }
-
-
 @mixin fontello {
-  font-family: 'fontello';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin: 0 0.2em;
-  text-align: center;
-  opacity: 0.8;
-  line-height: 1em;
+    font-family: 'fontello';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin: 0 0.2em;
+    text-align: center;
+    opacity: 0.8;
+    line-height: 1em;
 }

@@ -26,8 +26,7 @@
         //display: table-caption;
         width: 100%;
        max-width: 100%;
-
-        background-color: #B4D3DC;
+        background-color: $blue-background;
         h1 {
             display: table-cell;
             padding: 1rem 1rem 0 1rem;
@@ -149,7 +148,7 @@
             }
         }
         &:before {
-            background-color: #B4D3DC;
+            background-color: $blue-background;
             content: "";
             width: 9999px;
             position: absolute;
@@ -160,7 +159,7 @@
         .site-navigation {
             width: 33%;
             display: table-cell;
-            background: #b4d3dc url(images/csa.jpg) no-repeat left bottom;
+            background: $blue-background url(images/csa.jpg) no-repeat left bottom;
             a.nav-toggle {
                 display: none;
             }

@@ -17,8 +17,6 @@
         overflow: visible;
     }
     .site-branding-a {
-        // display: inline-block;
-        // background-color: #ff0000;
         &:hover {
             background-color: #ffff00;
             color: #64B224;
@@ -43,6 +41,9 @@
             z-index: 1;
             padding: 10px 20px 1px 0;
             padding: 1rem 2rem 1rem 0;
+            text-align: left;
+            min-width: 31.3rem;
+            margin-top: -10px;
             &:before {
                 content: "";
                 width: 9999px;
@@ -56,20 +57,11 @@
 
         .site-title {
             font-size: 30px;
-            font-size: 3rem;
+            font-size: 3.2rem;
             color: $primary-dark;
             letter-spacing: .6px;
             line-height: 1.5;
             font-weight: 400;
-            // margin-left: 7rem;
-            // @include respond-to("desktop") {
-            //       margin-left: 0rem;
-            // }
-            // a {
-            //   color: $primary-dark;
-            //   @include text-shadow(rgba(0, 0, 0, 0.2) 0rem 0rem 0.1rem);
-            // }
-    
         }
     }
     .site-description {
@@ -148,7 +140,7 @@
         ///
         ///
         //}
-
+   
     }
 }
 
