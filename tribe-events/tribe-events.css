@@ -753,14 +753,24 @@ select.tribe-events-dropdown {
 
 .tribe-events-meta-group .tribe-events-single-section-title {
 	margin: 20px 0 10px;
-	font-size: 1.4em;
-	font-weight: bold;
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #888888;	
+	letter-spacing: 1px;
+	display: none;
 }
 
 .tribe-events-meta-group + .tribe-events-single-section-title {
 	margin-top: 0;
 }
-
+/* lmh */
+.tribe-events-meta-group-details dd,
+.tribe-events-meta-group-venue  .author{
+	
+	font-size: 1.4em;
+	
+}
 .tribe-events-event-meta .tribe-events-meta-group address.tribe-events-address {
 	margin: 0;
 	display: block;
@@ -818,15 +828,15 @@ select.tribe-events-dropdown {
 
 /* Featured Image */
 .single-tribe_events .tribe-events-event-image {
-	clear: both;
-	text-align: center;
-	margin-bottom: 30px;
+	float:left;
+	
+	margin: 0 40px 40px 0;
 }
 /* Meta Sections */
 .single-tribe_events .tribe-events-event-meta {
 	background: #fafafa;
 	border: 1px solid #eee;
-	margin: 30px 0;
+	margin: 0px 0;
 }
 
 /* Map */
@@ -865,12 +875,13 @@ select.tribe-events-dropdown {
 /* Event Meta */
 .single-tribe_events .tribe-events-event-meta {
 	font-size: 13px;
+	padding-top: 30px;
 }
 .tribe-events-event-meta .tribe-events-meta-group, 
 .tribe-events-event-meta .column {
 	float: left;
 	width: 33.3333%;
-	padding: 0 4%;
+	padding: 0;
 	text-align: left;
 	margin: 0 0 20px 0;
 	display: inline-block;
@@ -905,10 +916,16 @@ select.tribe-events-dropdown {
 	display: block;
 }
 /* Content */
-.single-tribe_events .tribe-events-content {
+.single-tribe_events .tribe-events-content,
+.single-tribe_events .tribe-events-event-meta  {
 	width: 100%;
 	max-width: 100%;
-	padding: 0;
+	padding: 30px 40px 30px 40px;
+}
+
+
+.hentry.has-post-thumbnail .tribe-events-event-meta  {
+	/*padding: 30px 0;*/
 }
 /* Twenty Thirteen Conflict */
 .sidebar.single-tribe_events .tribe-events-content {
