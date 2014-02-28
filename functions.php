@@ -139,8 +139,8 @@ add_action( 'widgets_init', 'emphaino_widgets_init' );
  */
 function dlts_enqueue_webfonts() {
 	$font_families[] = 'PT+Sans:400,700,400italic';
-	$font_families[] = 'Montserrat:700,400';
-	$font_families[] = 'Bree+Serif';
+	//$font_families[] = 'Montserrat:700,400';
+	//$font_families[] = 'Bree+Serif';
 	$font_families[] = 'Lato:100,300,400,700,100italic,300italic,400italic,700italic';
 	
 
@@ -169,7 +169,10 @@ function dlts_scripts() {
 	$GLOBALS['wp_styles']->add_data( 'ie-style', 'conditional', 'lt IE 9' );
 	wp_enqueue_style( 'ie-style' );
 	wp_enqueue_style( 'flex', get_template_directory_uri() . '/flexslider/flexslider.css', false, $theme->Version, 'screen, projection' );
-	//wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), $theme->Version, true );
+	//wp_enqueue_style( 'ec-tribe-events1', plugins_url() . '/the-events-calendar/resources/tribe-events-full.min.css', false, $theme->Version, 'screen, projection' );
+	//wp_enqueue_style( 'ec-tribe-events2', plugins_url() . '/the-events-calendar/resources/tribe-events-theme.min.css', false, $theme->Version, 'screen, projection' );
+	//wp_enqueue_style( 'ec-tribe-events', get_template_directory_uri() . '/tribe-events/tribe-events.css', false, $theme->Version, 'screen, projection' );
+
 	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js', array( 'jquery' ), $theme->Version, true );
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'jquery-masonry', true );
@@ -188,13 +191,9 @@ function dlts_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dlts_scripts' );
 
-
-
-
 function ec_head()
 {
 	echo '<script type="text/javascript">document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>';
-	
 }
 add_action( 'wp_head', 'ec_head' );
 

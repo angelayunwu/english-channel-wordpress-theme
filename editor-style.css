@@ -282,7 +282,7 @@ blockquote p:last-child {
 
 /* line 100, sass/partials/_globals.scss */
 address {
-  margin: 0 0 1em;
+  margin: 0;
 }
 
 /* line 103, sass/partials/_globals.scss */

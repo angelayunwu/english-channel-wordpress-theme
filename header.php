@@ -70,10 +70,10 @@ foreach ( $all_events as $post ) {
                 <?php the_title(); ?>
                 <span class="meta-nav">&rarr;</span> </a></h3>
               <?php
-  $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
-  if ( !empty( $subtitle ) ) {
-    echo "<h4 class='subtitle'>$subtitle</h4>";
-  }
+              $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
+              if ( !empty( $subtitle ) ) {
+                echo "<h4 class='subtitle'>$subtitle</h4>";
+              }
 ?>
               <div class="event-excerpt">
                 <?php the_excerpt(); ?>
@@ -125,8 +125,7 @@ foreach ( $all_events as $post ) {
           echo '<span class="type_flag">Projects:</span>';
           echo  wp_title( '', false ) . 's';
           } else {
-            
-          wp_title( '', true );
+            wp_title( '', true );
           }
 ?></h1>
         <?php
@@ -149,10 +148,7 @@ if ( is_single() ) {
       <h1 class="assistive-text icon-menu"><span>Menu</span></h1>
       <div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
       <?php
-//  wp_reset_query();
-// wp_nav_menu( array( 'theme_location' => 'primary', 'fallback_cb' => '', 'echo' => true ) ) ;
-wp_nav_menu( array( 'theme_location' => 'primary' ) )   ;
-
+      wp_nav_menu( array( 'theme_location' => 'primary' ) )   ;
 ?>
     </nav>
   </div>

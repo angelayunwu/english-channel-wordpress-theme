@@ -44,6 +44,7 @@
     margin-left: 30px;
     margin-left: 3rem;
 }
+
 // Individual working group page
 .tax-working-groups {
     .post-type {
@@ -107,16 +108,66 @@
         padding-left: 1rem;
         a {
             font-size: 1.2rem;
-                letter-spacing: 2px;
-                color: rgba(255, 255, 255, 0.6);
-                background-color: #407218;
-                text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.6);
+            background-color: #407218;
+            text-transform: uppercase;
         }
     }
 }
 
-#tribe-events-content {
-    //background-color: lighten(nth($black, 6), 1%);
+body:not(.events-archive) .tribe-events-list .hentry.vevent {
+    .tribe-events-content, header {
+        margin: 1em;
+    }
+    .tribe-events-event-image {
+        margin: 0 10px 10px 0;
+        margin: 0em 1.5rem 1rem 0;
+        float: left;
+    }
+    padding: 0;
+}
+
+.tribe-events-list  .hentry.vevent {
+    padding: 2.25em;
+    .entry-summary {
+        line-height: 1.7;
+        @extend %small-type;
+    }
+    .tribe-events-event-meta {
+        float: none;
+        border: 0;
+        margin: 5px 0 15px 0;
+        line-height: 1.5;
+        font-size: 14px;
+        font-weight: bold;
+        overflow: visible;
+    }
+    h2.tribe-events-list-event-title {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+    .tribe-events-event-meta address.tribe-events-address {
+        font-weight: normal;
+        font-style: normal !important;
+    }
+    .tribe-events-venue-details {
+        label {
+            display: none;
+        }
+        div, address {
+            display: inline-block;
+            font-weight: normal;
+            font-style: normal !important;
+        }
+    }
+    .tribe-events-event-image {
+        // 
+        // margin-right: 20px;
+        // // width:auto;
+        // max-width: 200px;
+   
+    }
 }
 
 .home .tribe_events,
@@ -130,7 +181,7 @@
     font-size: 100%;
     h3 a {
         color: $text-color;
-        font-size: 140%;
+        font-size: 2rem;
         font-family: Lato;
         font-weight: 300;
         letter-spacing: .6px;
@@ -184,25 +235,6 @@ body #tribe-bar-form .tribe-bar-submit input[type=submit] {
     text-shadow: none;
     background-color: $secondary-dark;
 }
-
-body .tribe-events-list .vevent.hentry {
-    // border-bottom: 1px solid pink;
-}
-
-// .archive article.hentry.type-projects,
-// .home article.hentry.type-projects {
-//     float: left;
-//     margin: 0 2% 2% 2%;
-//     @include respond-to("desktop") {
-//         width: 31.3rem;
-//         margin: 1rem;
-//     }
-
-//     @include respond-to("medium wide content") {
-//         width: 47.5%;
-//         margin: 1%;
-//     }
-// }
 
 article.hentry.type-news {
     margin: 0 0 1rem 0;
@@ -308,7 +340,7 @@ article.tribe_events h3 {
     font-size: 1.6em;
 }
 
-.post-type-archive-news, .page-template-page-working-groups-php, .single-news, .tax-project-types, .tax-kind, .single-projects  {
+.post-type-archive-news, .page-template-page-working-groups-php, .single-news, .tax-project-types, .tax-kind, .single-projects {
     .site-content {
         // background-color: pink;
         max-width: 76rem;
@@ -319,7 +351,7 @@ article.tribe_events h3 {
     padding: 1rem;
 }
 
-.archive, .page, .search-results, .events-archive {
+.archive, .page, .search-results, .search-no-results, .events-archive {
     // custom content types, taxonomies
     .site-content {
         @extend %medium-type;
@@ -336,9 +368,15 @@ article.tribe_events h3 {
     }
     .hentry {
         width: auto;
-        overflow:hidden;
+        overflow: hidden;
+        margin-bottom: 10px;
         margin-bottom: 1rem;
         
+        @extend %small-type;
+    }
+    .type-page.hentry {
+        padding:10px;
+        padding: 1rem;
     }
     .archive-description {
         @extend %small-type;
@@ -346,16 +384,16 @@ article.tribe_events h3 {
         background-color: white;
     }
 }
+
 .events-archive .page-header h1 {
-        font-size: 2.5em;
-      
-    }
+    font-size: 2.5em;
+}
+
 .page {
     // all working groups, about
     .hentry {
         @extend %small-type;
         padding: 2rem 10rem 2rem 2rem;
-        
     }
 }
 
@@ -363,7 +401,7 @@ article.tribe_events h3 {
     width: auto;
     background-color: white;
     // margin: 0 auto 20px;
-     overflow:hidden;
+    overflow: hidden;
     // margin: 0 auto 2rem;
 }
 
@@ -386,7 +424,8 @@ article.tribe_events h3 {
     }
 }
 
-.type-projects {
+.type-projects, .type-events, .type-page {
+    //.type-projects, .type-events, .type-tribe_events {
     .entry-summary, .entry-content {
         @extend %small-type;
     }

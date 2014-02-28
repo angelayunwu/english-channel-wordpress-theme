@@ -23,12 +23,16 @@ get_header(); ?>
     $args = array( 'post_type' => 'tribe_events', 's'=> get_search_query() );
     $e_query = new WP_Query( $args); 
     if ( $e_query->have_posts() ) :
-      echo "<h3>Events</h3>";
-      while ( $e_query->have_posts() ) : $e_query->the_post(); 
-        echo '<div class="hentry">';
-        tribe_get_template_part( 'list/single', 'event-ec' );
-        echo '</div>';
+      echo '<h3>Events</h3><div class="tribe-events-list">';
+   
+      while ( $e_query->have_posts() ) : $e_query->the_post();  ?>
+        <!-- Search Event  LMH -->
+    <div id="post-<?php the_ID() ?>" class="<?php tribe_events_event_classes() ?>">
+      <?php tribe_get_template_part( 'list/single', 'event-listing' ) ?>
+    </div><!-- .hentry .vevent -->
+    <?php
       endwhile;
+      echo "</div>";
     endif;
     ////
 
