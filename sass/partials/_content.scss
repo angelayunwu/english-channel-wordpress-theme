@@ -347,7 +347,10 @@ article.tribe_events h3 {
 .single-news .hentry {
     padding: 1rem;
 }
-
+.single-projects .entry-content{
+    // clear the floats
+        overflow:hidden;
+}
 .archive, .page, .search-results, .search-no-results, .events-archive {
     // custom content types, taxonomies
     .site-content {
@@ -439,6 +442,7 @@ article.tribe_events h3 {
     }
     .entry-content, .entry-summary, .entry-header {
         margin: 1rem 1rem .5em;
+
     }
 }
 
