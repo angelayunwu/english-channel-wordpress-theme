@@ -62,6 +62,10 @@
             letter-spacing: .6px;
             line-height: 1.5;
             font-weight: 400;
+            @include respond-to("mobile") {
+                font-size: 20px;
+                font-size: 2rem;
+            }
         }
     }
     .site-description {
