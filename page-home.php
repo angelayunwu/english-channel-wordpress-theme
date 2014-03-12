@@ -9,7 +9,7 @@ get_header(); ?>
   <div id="content" class="site-content" role="main">
 <section class="home-top ">
   <section class="home-top-left news">
-    <h1 class="section-title"><a href="/wp/englishchannel2/news/">News and Notes</a></h1>
+    <h1 class="section-title"><a href="<?php echo get_site_url(); ?>/news/">News and Notes</a></h1>
     <?php  
     $args = array( 'post_type' => 'news', 'posts_per_page' => 5 );
     $loop = new WP_Query( $args );
@@ -33,7 +33,7 @@ get_header(); ?>
       <?php wp_reset_query(); ?>
    <!--  </section> -->
     <section class="s3 projects">
-    <h1 class="section-title"><a href="/wp/englishchannel2/projects/">Featured Projects</a></h1>
+    <h1 class="section-title"><a href="<?php echo get_site_url(); ?>/projects/">Featured Projects</a></h1>
     <?php  
    $args = array( 'post_type' => 'projects', 'posts_per_page' => 6 );
 $loop = new WP_Query( $args );
