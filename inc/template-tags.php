@@ -84,7 +84,7 @@ function emphaino_comment( $comment, $args, $depth ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer>
 				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 80 ); ?>
+					<?php //echo get_avatar( $comment, 80 ); ?>
 					<?php printf( '<cite class="fn">%s</cite>', get_comment_author_link() ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
