@@ -28,8 +28,14 @@
         clear: left;
         padding: 0;
     }
+    .projects   {
+            margin: 1rem 0 ;
+       
+        }
     .section-title {
-        margin: 0 0 1.5rem 0;
+        
+        margin: 0rem 0 1.5rem 0;
+
         a {
             display: block;
             padding: 10px;
@@ -48,7 +54,8 @@
         }
     }
 }
-
-
+.twitter-widget .timeline {
+    margin-bottom: 0 !important;
+}
 
 

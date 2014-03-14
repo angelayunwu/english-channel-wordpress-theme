@@ -235,9 +235,13 @@ body #tribe-bar-form .tribe-bar-submit input[type=submit] {
 
 article.hentry.type-news {
     margin: 0 0 1rem 0;
+
     background-color: #fff;
     display: table;
     width: 100%;
+    &:last-child {
+            margin: 0 ;
+    }
     .t {
         @include respond-to("desktop") {
             display: table-row;
@@ -847,7 +851,7 @@ embed,
 iframe,
 object {
     max-width: 100%;
-    margin: 0 0 1.5em;
+    
 }
 
 /* = Between single posts paging : Navigation

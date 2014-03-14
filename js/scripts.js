@@ -3,41 +3,53 @@
  *
  */
 
+function loadTwitter(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}
+
+function removeTwitter(id) {
+    jQuery('script[id=' + id + ']').remove(); // Remove the included js file
+    jQuery('iframe.twitter-timeline').remove(); // Remove the timeline iframe
+}
+
+function addTwitter(options) {
+    var linkStr = '<a class="twitter-timeline"';
+    linkStr += (options.width) ? ' width="' + options.width + '"' : '';
+    linkStr += (options.height) ? ' height="' + options.height + '"' : '';
+    linkStr += (options.color) ? ' data-link-color="' + options.color + '"' : '';
+    linkStr += (options.theme) ? ' data-theme="' + options.theme + '"' : '';
+    linkStr += ' href="https://twitter.com/NYUEngChannel/english-channel-list" data-widget-id="431507761684164608">&nbsp;</a>';
+    jQuery(linkStr).appendTo(options.element);
+}
+
+function showTwitter(id, options) {
+    removeTwitter(id);
+    addTwitter(options);
+    loadTwitter(document, 'script', id);
+}
+
 jQuery(window).load(function() {
+    var z = jQuery(".home-top-left").height();
     jQuery('.dynamic-grid').masonry({
         itemSelector: '.brick',
         isAnimated: true,
-        // columnwidth: 10,
-        // width: '.hentry' 
-        // isFitWidth: true,
-        // columnWidth: function( containerWidth ) {
-        //  return containerWidth / 3;
-        //   }
         columnWidth: 1
     });
-
-    jQuery('.dynamic-grid').masonry({
-        itemSelector: '.brick2',
-        isAnimated: true,
-        // columnwidth: 10,
-        // width: '.hentry' 
-        // isFitWidth: true,
-        // columnWidth: function( containerWidth ) {
-        //  return containerWidth / 3;
-        //   }
-        columnWidth: 1
+    showTwitter('twitter-wjs', {
+        width: 320,
+        height: z,
+        element: '.twitter-widget'
     });
-
-
 });
 
 
-
-
-
 jQuery(document).ready(function() {
-
-
 
     jQuery(".entry-content").fitVids();
 
@@ -57,17 +69,10 @@ jQuery(document).ready(function() {
     jQuery('.flexslider').flexslider({
         animation: "fade",
         directionNav: false
-        //  , width: 200,
-        //  after: function(){
-        //     jQuery('.flexslider').width(jQuery( document ).width());
-        //     jQuery('.flexslider').data('flexslider').resize(300);
-        // }
     });
     var nav = responsiveNav(".menu-top-navigation-container", {
         insert: "before"
     });
-
-    ///
     jQuery('.searchB').click(function(event) {
         event.preventDefault();
         if (jQuery('input.field').hasClass('open')) {

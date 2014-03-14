@@ -19,12 +19,7 @@ get_header(); ?>
     ?>
   </section>
   <article class="twitter-widget">
-    <div class="entry-summary"><a class="twitter-timeline" href="https://twitter.com/NYUEngChannel/english-channel-list" data-widget-id="431507761684164608" width=320 height=425>&nbsp;</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-    </div>
-    <!-- .entry-summary --> 
-    
+  
   </article>
   <!-- #post-<?php the_ID(); ?> --> 
   
@@ -32,7 +27,7 @@ get_header(); ?>
 
       <?php wp_reset_query(); ?>
    <!--  </section> -->
-    <section class="s3 projects">
+    <section class="projects">
     <h1 class="section-title"><a href="<?php echo get_site_url(); ?>/projects/">Featured Projects</a></h1>
     <?php  
    $args = array( 'post_type' => 'projects', 'posts_per_page' => 6 );
