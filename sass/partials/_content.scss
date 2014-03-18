@@ -47,6 +47,13 @@
 
 // Individual working group page
 .tax-working-groups {
+    // if there is only a description, and no other content
+    .js & #dynamic-grid .brick:only-of-type {
+        color: red;
+        width:auto;
+        float:none;
+        max-width: 76rem;
+    }
     .post-type {
         font-size: 1.6rem;
         //background-color: lighten(nth($black, 3), 1%);
