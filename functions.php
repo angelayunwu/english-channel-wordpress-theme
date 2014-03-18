@@ -216,7 +216,6 @@ add_action( 'admin_enqueue_scripts', 'emphaino_custom_header_admin_scripts' );
 /**
  * Custom post classes.
  *
- * @since Emphaino 1.0
  */
 function ec_post_class( $classes ) {
 	if( has_post_thumbnail() ) // Check if the current post has a post thumbnail
