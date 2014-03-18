@@ -1,6 +1,6 @@
 <?php
 /**
- * Working Group Pages.
+ * Individual Working Group Pages.
  *
  */
 
@@ -11,9 +11,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
   <div id="content" class="site-content" role="main">
    
  <div id="dynamic-grid" class="clearfix dynamic-grid">
-
-
- <header class="page-header brick brick2"> <div class="archive-description"> 
+  <div class="page-header brick brick2"> <div class="archive-description"> 
       <?php if ( !empty( $term->description ) ): ?>
      <?php echo ($term->description); ?> 
        <?php else:   ?>
@@ -32,21 +30,18 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
        </div>
-   </header>
+   </div>
     <!-- .page-header -->
 
 
       <!--  EVENTS  -->
-
-   
-
-          <?php 
-          	global $post;
+<?php 
+      global $post;
   		$all_events = tribe_get_events(array('eventDisplay'=>'upcoming','posts_per_page'=>3,
   			'tax_query'=> array(array('taxonomy' => 'working-groups','field' => 'slug','terms' => $term->slug))));
       if (count($all_events) > 0){
         ?>
-         <div class="brick brick2">
+    <div class="brick brick2">
     <h3  class="post-type">Event<?php echo (count($all_events) >1 ) ? 's' : ''; ?></h3>
     <ul class= "tribe_events tribe-events-list">
       <?php 
@@ -83,7 +78,7 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 ?>
 
-	<div class="brick brick2" >
+	   <div class="brick brick2" >
       <h3 class="post-type">News and Notes</h3>
       <?php
 		  while ( $the_query->have_posts() ) : $the_query->the_post(); 
@@ -129,15 +124,14 @@ $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
 
  ?>
-    <div class="brick brick2">
-      <h3  class="post-type">Related Project<?php echo ($the_query->post_count >1 ) ? 's' : ''; ?></h3>
+  <div class="brick brick2">
+    <h3  class="post-type">Related Project<?php echo ($the_query->post_count >1 ) ? 's' : ''; ?></h3>
 
 <?php
-
-
 while ( $the_query->have_posts() ) : $the_query->the_post();
 		get_template_part( 'content', 'projects3' );
-endwhile; ?>
+endwhile; 
+?>
     </div>
 <?php 
 } 
@@ -149,4 +143,4 @@ endwhile; ?>
 </section>
 <!-- #primary .content-area -->
 
-<?php get_footer(); ?>
+<?php  get_footer(); ?>
