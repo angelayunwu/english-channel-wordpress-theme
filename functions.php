@@ -9,28 +9,28 @@
 
 
 
-// function emphaino_default_settings( $setting = '' )
-// {
-//  $defaults = array(
-//   'logo_image'            => '',
-//   'posts_layout'          => 'dynamic_grid_excerpts',
-//   'full_posts_feat_img'   => 'on',
-//   'sidebar_in_posts_index'=> false,
-//   'footer_text'           => '&copy; '. date('Y') .' '. get_bloginfo('name').'.',
-//   'link_color'   => '#388ca4',
-//   'non_responsive'        => false,
-//   'disable_webfonts'      => false,
-//   'disable_backtotop'  => false,
-//   'custom_css'            => '',
-//   'header_textcolor'      => '555'
+function emphaino_default_settings( $setting = '' )
+{
+ $defaults = array(
+  'logo_image'            => '',
+  'posts_layout'          => 'dynamic_grid_excerpts',
+  'full_posts_feat_img'   => 'on',
+  'sidebar_in_posts_index'=> false,
+  'footer_text'           => '&copy; '. date('Y') .' '. get_bloginfo('name').'.',
+  'link_color'   => '#388ca4',
+  'non_responsive'        => false,
+  'disable_webfonts'      => false,
+  'disable_backtotop'  => false,
+  'custom_css'            => '',
+  'header_textcolor'      => '555'
 
-//  );
+ );
 
-//  apply_filters( 'emphaino_default_settings', $defaults );
+ apply_filters( 'emphaino_default_settings', $defaults );
 
-//  if($setting) return $defaults[$setting];
-//  else return $defaults;
-// }
+ if($setting) return $defaults[$setting];
+ else return $defaults;
+}
 
 
 function ec_customize_register( $wp_customize ) {
@@ -171,12 +171,9 @@ function dlts_scripts() {
 	wp_enqueue_script( 'responsive-nav', get_template_directory_uri() . '/js/responsive-nav.js', array( 'jquery' ), $theme->Version, true );
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), true );
 	wp_enqueue_script( 'jquery-masonry', true );
-
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.min.js', array( 'jquery' ), '1.0', true );
-
 	wp_enqueue_script( 'main-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), $theme->Version, true );
 	wp_enqueue_script( 'underscore', get_template_directory_uri() . '/js/underscore-min.js', array( 'jquery' ), '', true );
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -197,13 +194,13 @@ add_action( 'wp_head', 'ec_head' );
  * Enqueues google fonts css for the custom header admin preview page.
  *
  */
-// function emphaino_custom_header_admin_scripts()
-// {
-//  if( 'appearance_page_custom-header' == get_current_screen()->id && get_theme_mod('disable_webfonts') != 'on' && !get_theme_mod('logo_image') && 'blank' !=  get_header_textcolor()) {
-//   emphaino_enqueue_webfonts();
-//  }
-// }
-// add_action( 'admin_enqueue_scripts', 'emphaino_custom_header_admin_scripts' );
+function emphaino_custom_header_admin_scripts()
+{
+ if( 'appearance_page_custom-header' == get_current_screen()->id && get_theme_mod('disable_webfonts') != 'on' && !get_theme_mod('logo_image') && 'blank' !=  get_header_textcolor()) {
+  emphaino_enqueue_webfonts();
+ }
+}
+add_action( 'admin_enqueue_scripts', 'emphaino_custom_header_admin_scripts' );
 
 
 

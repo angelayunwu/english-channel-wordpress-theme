@@ -2,8 +2,6 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 
 get_header(); ?>

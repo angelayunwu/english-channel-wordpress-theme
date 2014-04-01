@@ -4,8 +4,6 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 ?>
 

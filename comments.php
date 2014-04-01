@@ -7,8 +7,6 @@
  * handled by a callback to emphaino_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 ?>
 

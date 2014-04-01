@@ -35,22 +35,24 @@ function showTwitter(id, options) {
 }
 
 jQuery(window).load(function() {
-    var z = jQuery(".home-top-left").height();
+
     jQuery('.dynamic-grid').masonry({
         itemSelector: '.brick',
         isAnimated: true,
         columnWidth: 1
     });
-    showTwitter('twitter-wjs', {
-        width: 320,
-        height: z,
-        element: '.twitter-widget'
-    });
+    if (jQuery(document).width() > 980) {
+        showTwitter('twitter-wjs', {
+            width: 320,
+            height: jQuery(".home-top-left").height(),
+            element: '.twitter-widget'
+        });
+    }
+
 });
 
 
 jQuery(document).ready(function() {
-
     jQuery(".entry-content").fitVids();
 
     jQuery(window).scroll(function() {

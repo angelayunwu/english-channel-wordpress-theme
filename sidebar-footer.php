@@ -2,8 +2,6 @@
 /**
  * The Footer Widget Area.
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 ?>
 	<?php do_action( 'before_sidebar' ); ?>

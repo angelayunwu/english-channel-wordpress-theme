@@ -6,7 +6,7 @@ require 'compass-normalize'
 require 'compass_formalize'
 
 # Set this to the root of your project when deployed:
-http_path = "/wp/wp-content/themes/boxy"
+http_path = "/wp/wp-content/themes/english-channel"
 css_dir = "/"
 sass_dir = "sass"
 images_dir = "images"

@@ -1,8 +1,6 @@
 /**
  * Print Stylesheet
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 /* =Reset
 -------------------------------------------------------------- */
@@ -151,7 +149,7 @@ a img {
   *zoom: 1;
 }
 
-/* line 16, sass/print.scss */
+/* line 14, sass/print.scss */
 body {
   color: #000;
   font-family: "PT Sans", Verdana, Geneva, sans-serif;
@@ -160,7 +158,7 @@ body {
   line-height: 1.5;
 }
 
-/* line 24, sass/print.scss */
+/* line 22, sass/print.scss */
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   color: #888;
@@ -168,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: rgba(0, 0, 0, 0.2) 0 0 0.2rem;
 }
 
-/* line 30, sass/print.scss */
+/* line 28, sass/print.scss */
 hr {
   background-color: #aaa;
   border: 0;
@@ -177,7 +175,7 @@ hr {
 }
 
 /* Text elements */
-/* line 38, sass/print.scss */
+/* line 36, sass/print.scss */
 p, ul, ol {
   margin-bottom: 1.5em;
   -webkit-hyphens: auto;
@@ -186,57 +184,57 @@ p, ul, ol {
   word-wrap: break-word;
 }
 
-/* line 46, sass/print.scss */
+/* line 44, sass/print.scss */
 ul {
   list-style: none;
 }
-/* line 48, sass/print.scss */
+/* line 46, sass/print.scss */
 ul li:before {
   content: "\203A \0020";
 }
 
-/* line 52, sass/print.scss */
+/* line 50, sass/print.scss */
 ol, ol ol ol ol {
   list-style: decimal inside;
 }
 
-/* line 55, sass/print.scss */
+/* line 53, sass/print.scss */
 ol ol {
   list-style: lower-roman inside;
 }
 
-/* line 58, sass/print.scss */
+/* line 56, sass/print.scss */
 ol ol ol {
   list-style: lower-alpha inside;
 }
 
-/* line 61, sass/print.scss */
+/* line 59, sass/print.scss */
 ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0;
   margin-left: 1em;
 }
 
-/* line 65, sass/print.scss */
+/* line 63, sass/print.scss */
 dt {
   font-weight: bold;
 }
 
-/* line 68, sass/print.scss */
+/* line 66, sass/print.scss */
 dd {
   margin: 0 1.5em 1.5em;
 }
 
-/* line 71, sass/print.scss */
+/* line 69, sass/print.scss */
 b, strong {
   font-weight: bold;
 }
 
-/* line 74, sass/print.scss */
+/* line 72, sass/print.scss */
 dfn, cite, em, i {
   font-style: italic;
 }
 
-/* line 77, sass/print.scss */
+/* line 75, sass/print.scss */
 blockquote, pre {
   margin: 0 0 1em;
   padding: 10px;
@@ -244,12 +242,12 @@ blockquote, pre {
   border: 1px solid #aaa;
 }
 
-/* line 83, sass/print.scss */
+/* line 81, sass/print.scss */
 blockquote {
   padding-left: 4em;
   position: relative;
 }
-/* line 86, sass/print.scss */
+/* line 84, sass/print.scss */
 blockquote:before {
   position: absolute;
   left: 10px;
@@ -269,37 +267,37 @@ blockquote:before {
   opacity: 0.3;
   content: '\275d';
 }
-/* line 94, sass/print.scss */
+/* line 92, sass/print.scss */
 blockquote p:last-child {
   margin-bottom: 0;
 }
 
-/* line 98, sass/print.scss */
+/* line 96, sass/print.scss */
 address {
   margin: 0 0 1em;
 }
 
-/* line 101, sass/print.scss */
+/* line 99, sass/print.scss */
 pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   overflow: auto;
   max-width: 100%;
 }
 
-/* line 106, sass/print.scss */
+/* line 104, sass/print.scss */
 code, kbd, tt, var {
   background: #eeeeee;
   border: 1px solid #aaa;
   font: 0.9em Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
 
-/* line 111, sass/print.scss */
+/* line 109, sass/print.scss */
 abbr, acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-/* line 116, sass/print.scss */
+/* line 114, sass/print.scss */
 sup,
 sub {
   font-size: 75%;
@@ -309,32 +307,32 @@ sub {
   vertical-align: baseline;
 }
 
-/* line 123, sass/print.scss */
+/* line 121, sass/print.scss */
 sup {
   bottom: 1ex;
 }
 
-/* line 126, sass/print.scss */
+/* line 124, sass/print.scss */
 sub {
   top: .5ex;
 }
 
-/* line 129, sass/print.scss */
+/* line 127, sass/print.scss */
 small {
   font-size: 75%;
 }
 
-/* line 132, sass/print.scss */
+/* line 130, sass/print.scss */
 big {
   font-size: 125%;
 }
 
-/* line 135, sass/print.scss */
+/* line 133, sass/print.scss */
 figure {
   margin: 0;
 }
 
-/* line 138, sass/print.scss */
+/* line 136, sass/print.scss */
 table {
   margin: 0 0 1.5em;
   width: 100%;
@@ -344,7 +342,7 @@ table {
   background: #eeeeee;
 }
 
-/* line 146, sass/print.scss */
+/* line 144, sass/print.scss */
 th, td {
   padding: 5px 10px;
   padding: 0.5rem 1rem;
@@ -353,13 +351,13 @@ th, td {
   border-color: #ddd;
 }
 
-/* line 153, sass/print.scss */
+/* line 151, sass/print.scss */
 th {
   background: #eee;
   font-weight: bold;
 }
 
-/* line 160, sass/print.scss */
+/* line 158, sass/print.scss */
 button,
 input,
 select,
@@ -368,13 +366,13 @@ textarea {
 }
 
 /* Links */
-/* line 165, sass/print.scss */
+/* line 163, sass/print.scss */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 175, sass/print.scss */
+/* line 173, sass/print.scss */
 #top-bar,
 .reply,
 #respond,
@@ -382,27 +380,27 @@ a {
   display: none;
 }
 
-/* line 179, sass/print.scss */
+/* line 177, sass/print.scss */
 .site-header {
   border-bottom: 1px solid #aaa;
   margin-bottom: 20px;
   margin-bottom: 2rem;
 }
 
-/* line 184, sass/print.scss */
+/* line 182, sass/print.scss */
 .site-header .header-main {
   margin-bottom: 20px;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-/* line 190, sass/print.scss */
+/* line 188, sass/print.scss */
 .site-title {
   font-size: 40px;
   font-size: 4rem;
 }
 
-/* line 195, sass/print.scss */
+/* line 193, sass/print.scss */
 .site-description {
   font-size: 16px;
   font-size: 1.6rem;
@@ -410,54 +408,54 @@ a {
   font-weight: normal;
 }
 
-/* line 203, sass/print.scss */
+/* line 201, sass/print.scss */
 .has-logo-image .site-title, .has-logo-image .site-description {
   height: 0;
   width: 0;
   overflow: hidden;
 }
 
-/* line 210, sass/print.scss */
+/* line 208, sass/print.scss */
 .page-header {
   margin: 0 0 1.5em;
   padding: 10px;
   text-align: center;
 }
 
-/* line 216, sass/print.scss */
+/* line 214, sass/print.scss */
 .site-content {
   width: 100%;
 }
 
-/* line 219, sass/print.scss */
+/* line 217, sass/print.scss */
 .hentry, .page-header {
   padding: 0 0 1.5em;
   margin: 0 0 1.5em;
   border-bottom: 1px solid #aaa;
 }
 
-/* line 225, sass/print.scss */
+/* line 223, sass/print.scss */
 #dynamic-grid {
   height: auto !important;
 }
-/* line 227, sass/print.scss */
+/* line 225, sass/print.scss */
 #dynamic-grid .hentry {
   position: static !important;
 }
 
-/* line 232, sass/print.scss */
+/* line 230, sass/print.scss */
 .page-header span {
   text-decoration: underline;
 }
 
-/* line 236, sass/print.scss */
+/* line 234, sass/print.scss */
 .entry-title {
   font-size: 27px;
   font-size: 2.7rem;
   word-wrap: break-word;
 }
 
-/* line 245, sass/print.scss */
+/* line 243, sass/print.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6,
 .entry-summary h1,
 .entry-summary h2,
@@ -474,28 +472,28 @@ a {
   margin: 0 0 10px;
   margin: 0 0 1rem;
 }
-/* line 249, sass/print.scss */
+/* line 247, sass/print.scss */
 .entry-content h1,
 .entry-summary h1,
 .comment-content h1 {
   font-size: 24px;
   font-size: 2.4rem;
 }
-/* line 253, sass/print.scss */
+/* line 251, sass/print.scss */
 .entry-content h2,
 .entry-summary h2,
 .comment-content h2 {
   font-size: 22px;
   font-size: 2.2rem;
 }
-/* line 257, sass/print.scss */
+/* line 255, sass/print.scss */
 .entry-content h3,
 .entry-summary h3,
 .comment-content h3 {
   font-size: 18px;
   font-size: 1.8rem;
 }
-/* line 261, sass/print.scss */
+/* line 259, sass/print.scss */
 .entry-content h4,
 .entry-summary h4,
 .comment-content h4 {
@@ -503,7 +501,7 @@ a {
   font: bold 1.4rem "PT Sans", Verdana, Geneva, sans-serif;
   text-transform: uppercase;
 }
-/* line 266, sass/print.scss */
+/* line 264, sass/print.scss */
 .entry-content h5,
 .entry-summary h5,
 .comment-content h5 {
@@ -511,7 +509,7 @@ a {
   font: bold 1.2rem "PT Sans", Verdana, Geneva, sans-serif;
   text-transform: uppercase;
 }
-/* line 271, sass/print.scss */
+/* line 269, sass/print.scss */
 .entry-content h6,
 .entry-summary h6,
 .comment-content h6 {
@@ -519,7 +517,7 @@ a {
   font: bold 1.2rem "PT Sans", Verdana, Geneva, sans-serif;
 }
 
-/* line 298, sass/print.scss */
+/* line 296, sass/print.scss */
 .format-image .entry-title:before,
 .single-format-image .entry-title:before,
 .format-gallery .entry-title:before,
@@ -553,101 +551,101 @@ a {
   margin-right: 0.4em;
 }
 
-/* line 304, sass/print.scss */
+/* line 302, sass/print.scss */
 .format-image .entry-title:before, .single-format-image .entry-title:before {
   content: '\e805 \0020';
 }
 
-/* line 309, sass/print.scss */
+/* line 307, sass/print.scss */
 .format-gallery .entry-title:before, .single-format-gallery .entry-title:before {
   content: '\1f304 \0020';
 }
 
-/* line 314, sass/print.scss */
+/* line 312, sass/print.scss */
 .format-chat .entry-title:before, .single-format-chat .entry-title:before {
   content: '\e802 \0020';
 }
 
-/* line 319, sass/print.scss */
+/* line 317, sass/print.scss */
 .format-link .entry-title:before, .single-format-link .entry-title:before {
   content: '\e807 \0020';
 }
 
-/* line 324, sass/print.scss */
+/* line 322, sass/print.scss */
 .format-quote .entry-title:before, .single-format-quote .entry-title:before {
   content: '\275d \0020';
 }
 
-/* line 329, sass/print.scss */
+/* line 327, sass/print.scss */
 .format-audio .entry-title:before, .single-format-audio .entry-title:before {
   content: '\e804 \0020';
 }
 
-/* line 334, sass/print.scss */
+/* line 332, sass/print.scss */
 .format-video .entry-title:before, .single-format-video .entry-title:before {
   content: '\e806 \0020';
 }
 
-/* line 339, sass/print.scss */
+/* line 337, sass/print.scss */
 .format-status .entry-title:before, .single-format-status .entry-title:before {
   content: '\1f514 \0020';
 }
 
-/* line 344, sass/print.scss */
+/* line 342, sass/print.scss */
 .format-aside .entry-title:before, .single-format-aside .entry-title:before {
   content: '\e732 \0020';
 }
 
-/* line 349, sass/print.scss */
+/* line 347, sass/print.scss */
 .post-password-required .entry-title:before {
   content: '\e708 \0020';
 }
 
-/* line 354, sass/print.scss */
+/* line 352, sass/print.scss */
 .more-link {
   display: none;
 }
 
-/* line 358, sass/print.scss */
+/* line 356, sass/print.scss */
 .entry-meta {
   clear: both;
   font-size: 12px;
   font-size: 1.2rem;
   color: #888;
 }
-/* line 363, sass/print.scss */
+/* line 361, sass/print.scss */
 .entry-meta span {
   margin-right: 1em;
 }
-/* line 366, sass/print.scss */
+/* line 364, sass/print.scss */
 .entry-meta .permalink {
   display: none;
 }
 
-/* line 372, sass/print.scss */
+/* line 370, sass/print.scss */
 .single .entry-meta .byline,
 .group-blog .entry-meta .byline {
   display: inline;
 }
 
-/* line 375, sass/print.scss */
+/* line 373, sass/print.scss */
 .attachment .entry-meta .byline {
   display: none;
 }
 
-/* line 379, sass/print.scss */
+/* line 377, sass/print.scss */
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
 
-/* line 382, sass/print.scss */
+/* line 380, sass/print.scss */
 .featured-image {
   width: 100%;
   line-height: 0;
 }
 
-/* line 387, sass/print.scss */
+/* line 385, sass/print.scss */
 .wp-post-image {
   background: #eeeeee;
   margin: 0 0 10px;
@@ -655,7 +653,7 @@ a {
   max-width: 100%;
   height: auto;
 }
-/* line 393, sass/print.scss */
+/* line 391, sass/print.scss */
 .wp-post-image.attachment-post-thumbnail {
   float: right;
   width: 150px;
@@ -664,7 +662,7 @@ a {
   margin: 0.4em 0 1rem 1rem;
 }
 
-/* line 402, sass/print.scss */
+/* line 400, sass/print.scss */
 .page-links {
   clear: both;
   border: 1px solid #aaa;
@@ -673,56 +671,56 @@ a {
   text-align: center;
 }
 
-/* line 413, sass/print.scss */
+/* line 411, sass/print.scss */
 .blog .format-aside .entry-title a,
 .archive .format-aside .entry-title a {
   display: none;
 }
 
-/* line 418, sass/print.scss */
+/* line 416, sass/print.scss */
 .format-chat .entry-content {
   border: 1px solid #aaa;
   margin: 0 0 1.5em;
   padding: 1rem;
 }
-/* line 422, sass/print.scss */
+/* line 420, sass/print.scss */
 .format-chat .entry-content p:last-child {
   margin-bottom: 0;
 }
 
-/* line 427, sass/print.scss */
+/* line 425, sass/print.scss */
 .wp-caption {
   max-width: 100%;
 }
 
-/* line 430, sass/print.scss */
+/* line 428, sass/print.scss */
 .wp-caption, .entry-attachment {
   margin-bottom: 1.5em;
 }
-/* line 432, sass/print.scss */
+/* line 430, sass/print.scss */
 .wp-caption img, .entry-attachment img {
   background: #eeeeee;
 }
 
-/* line 436, sass/print.scss */
+/* line 434, sass/print.scss */
 .site-content .gallery {
   padding-bottom: 1.5em;
 }
 
-/* line 439, sass/print.scss */
+/* line 437, sass/print.scss */
 .gallery-caption {
   font-size: 12px;
   font-size: 1.2rem;
 }
 
-/* line 443, sass/print.scss */
+/* line 441, sass/print.scss */
 .site-content .gallery a img {
   border: none;
   height: auto;
   max-width: 90%;
 }
 
-/* line 450, sass/print.scss */
+/* line 448, sass/print.scss */
 embed,
 iframe,
 object {
@@ -730,12 +728,12 @@ object {
   margin-bottom: 1.5em;
 }
 
-/* line 456, sass/print.scss */
+/* line 454, sass/print.scss */
 .site-content .site-navigation {
   display: none;
 }
 
-/* line 462, sass/print.scss */
+/* line 460, sass/print.scss */
 .comments-title {
   font-size: 22px;
   font-size: 2.2rem;
@@ -743,22 +741,22 @@ object {
   margin-bottom: 2rem;
 }
 
-/* line 469, sass/print.scss */
+/* line 467, sass/print.scss */
 ol.commentlist {
   list-style: none;
   margin: 0 0 20px;
   margin: 0 0 2rem;
 }
-/* line 473, sass/print.scss */
+/* line 471, sass/print.scss */
 ol.commentlist ul.children {
   margin-left: 20px;
   margin-left: 2rem;
 }
-/* line 476, sass/print.scss */
+/* line 474, sass/print.scss */
 ol.commentlist ul.children > li {
   position: relative;
 }
-/* line 478, sass/print.scss */
+/* line 476, sass/print.scss */
 ol.commentlist ul.children > li:before {
   font-family: 'fontello';
   font-style: normal;
@@ -777,7 +775,7 @@ ol.commentlist ul.children > li:before {
   opacity: 0.3;
 }
 
-/* line 489, sass/print.scss */
+/* line 487, sass/print.scss */
 article.comment {
   position: relative;
   overflow: hidden;
@@ -788,7 +786,7 @@ article.comment {
   padding: 1rem;
   border-bottom: 1px solid #aaa;
 }
-/* line 498, sass/print.scss */
+/* line 496, sass/print.scss */
 article.comment footer {
   border-bottom: 1px solid #455646;
   margin-bottom: 10px;
@@ -796,7 +794,7 @@ article.comment footer {
   padding: 0 0 10px;
   padding: 0 0 1rem;
 }
-/* line 505, sass/print.scss */
+/* line 503, sass/print.scss */
 article.comment footer em {
   /* "Your comment is awaiting moderation" message */
   position: absolute;
@@ -807,20 +805,20 @@ article.comment footer em {
   font-size: 12px;
   font-size: 1.2rem;
 }
-/* line 513, sass/print.scss */
+/* line 511, sass/print.scss */
 article.comment footer em:before {
   content: '(';
 }
-/* line 516, sass/print.scss */
+/* line 514, sass/print.scss */
 article.comment footer em:after {
   content: ')';
 }
-/* line 520, sass/print.scss */
+/* line 518, sass/print.scss */
 article.comment footer br {
   display: none;
 }
 
-/* line 526, sass/print.scss */
+/* line 524, sass/print.scss */
 .pingback p {
   position: relative;
   margin: 0 0 10px;
@@ -829,7 +827,7 @@ article.comment footer br {
   padding: 1rem 1rem 1rem 2.8rem;
   border: 1px solid #aaa;
 }
-/* line 533, sass/print.scss */
+/* line 531, sass/print.scss */
 .pingback p:before {
   font-family: 'fontello';
   font-style: normal;
@@ -849,7 +847,7 @@ article.comment footer br {
   opacity: 0.5;
 }
 
-/* line 543, sass/print.scss */
+/* line 541, sass/print.scss */
 .avatar {
   float: left;
   margin-bottom: 10px;
@@ -860,7 +858,7 @@ article.comment footer br {
   background: #eeeeee;
 }
 
-/* line 555, sass/print.scss */
+/* line 553, sass/print.scss */
 .comment-author cite {
   position: relative;
   left: 10px;
@@ -871,7 +869,7 @@ article.comment footer br {
   font-style: normal;
 }
 
-/* line 566, sass/print.scss */
+/* line 564, sass/print.scss */
 .comment-meta {
   position: relative;
   left: 10px;
@@ -880,7 +878,7 @@ article.comment footer br {
   font-size: 1.2rem;
 }
 
-/* line 574, sass/print.scss */
+/* line 572, sass/print.scss */
 .bypostauthor > .comment .comment-author cite:after {
   content: '*';
   font-size: 0.8em;
@@ -888,7 +886,7 @@ article.comment footer br {
   bottom: 0.2em;
 }
 
-/* line 582, sass/print.scss */
+/* line 580, sass/print.scss */
 #bottom-bar {
   font-size: 12px;
   font-size: 1.2rem;

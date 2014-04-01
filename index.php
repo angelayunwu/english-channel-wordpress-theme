@@ -3,7 +3,7 @@
  * The main template file.
  *
  *
- * @package Boxy
+ * @package English Channel
  */
 
 get_header(); ?>
@@ -15,10 +15,10 @@ get_header(); ?>
 
 				<?php if( is_paged() ) emphaino_content_nav( 'nav-above' ); ?>
 
-				<?php if ( 'dynamic_grid_excerpts' == get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) ) echo '<div id="dynamic-grid" class="clearfix">'; ?>
+				<div id="dynamic-grid" class="clearfix">'
 
 					<?php /* Start the Loop */ ?>
-					asdfdsf
+					
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -31,7 +31,7 @@ get_header(); ?>
 
 					<?php endwhile; ?>
 
-				<?php if ( 'dynamic_grid_excerpts' == get_theme_mod( 'posts_layout', emphaino_default_settings('posts_layout') ) ) echo '</div> <!-- #dynamic-grid -->'; ?>
+				</div>
 
 				<?php emphaino_content_nav( 'nav-below' ); ?>
 

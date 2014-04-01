@@ -4,8 +4,6 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 
 
