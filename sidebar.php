@@ -2,8 +2,6 @@
 /**
  * Sidebar
  *
- * @package Emphaino
- * @since Emphaino 1.2
  */
 ?>
 	<?php do_action( 'before_sidebar' ); ?>

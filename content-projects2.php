@@ -1,7 +1,5 @@
 <?php
 /**
- * @package Emphaino
- * @since Emphaino 1.0
  */
 ?>
 
