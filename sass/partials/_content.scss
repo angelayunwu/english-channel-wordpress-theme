@@ -49,8 +49,8 @@
 .tax-working-groups {
     // if there is only a description, and no other content available
     .js & #dynamic-grid .brick:only-of-type {
-        width:auto;
-        float:none;
+        width: auto;
+        float: none;
         max-width: 76rem;
     }
     .post-type {
@@ -211,8 +211,24 @@ body:not(.events-archive) .tribe-events-list .hentry.vevent {
         margin: 0 2rem 0 0rem;
     }
     .event-body.thumbtrue {
-        margin: 0 2rem 0 165px;
+        margin: 0 ;
     }
+    margin: 1rem;
+    .flex-control-nav {
+        left: 1rem;
+    }
+    @include respond-to("desktop") {
+        margin: 0rem;
+        .event-body.thumbtrue {
+            margin: 0 2rem 0 165px;
+        }
+    }
+    @include respond-to("medium wide content") {
+        .event-body.thumbtrue {
+            margin: 0 2rem 0 165px;
+        }
+    }
+
     time {
         display: block;
         margin-top: 1rem;
@@ -241,12 +257,11 @@ body #tribe-bar-form .tribe-bar-submit input[type=submit] {
 
 article.hentry.type-news {
     margin: 0 0 1rem 0;
-
     background-color: #fff;
     display: table;
     width: 100%;
     &:last-child {
-            margin: 0 ;
+        margin: 0;
     }
     .t {
         @include respond-to("desktop") {
@@ -310,14 +325,6 @@ article.hentry.type-news {
                 }
             }
         }
-        // &:hover {
-        //   background: white url(images/waves2.png);
-        //   cursor: pointer;
-        //   .l {
-        //     background: #305713;
-        //   }
-        // }
-   
     }
 }
 
@@ -356,16 +363,19 @@ article.tribe_events h3 {
 .single-news .hentry {
     padding: 1rem;
 }
-.single-projects .entry-content{
+
+.single-projects .entry-content {
     // clear the floats
-        overflow:hidden;
+    overflow: hidden;
 }
+
 .archive, .page, .search-results, .search-no-results, .events-archive {
     // custom content types, taxonomies
     .site-content {
         @extend %medium-type;
         width: 100%;
         // margin-bottom: 6em;
+   
     }
     .page-header h1 {
         font-size: 3em;
@@ -380,11 +390,10 @@ article.tribe_events h3 {
         overflow: hidden;
         margin-bottom: 10px;
         margin-bottom: 1rem;
-        
         @extend %small-type;
     }
     .type-page.hentry {
-        padding:10px;
+        padding: 10px;
         padding: 1rem;
     }
     .archive-description {
@@ -392,15 +401,17 @@ article.tribe_events h3 {
         padding: 2rem;
         background-color: white;
         .wg_url {
-             @extend %medium-type;
-             padding: 3rem 0 1rem 0;
+            @extend %medium-type;
+            padding: 3rem 0 1rem 0;
         }
     }
 }
+
 .page-template-page-about-php .hentry .entry-content {
     @extend %medium-type;
-     margin: 4rem 6rem ;
+    margin: 4rem 6rem;
 }
+
 .events-archive .page-header h1 {
     font-size: 2.5em;
 }
@@ -458,7 +469,6 @@ article.tribe_events h3 {
     }
     .entry-content, .entry-summary, .entry-header {
         margin: 1rem 1rem .5em;
-
     }
 }
 
@@ -863,7 +873,6 @@ embed,
 iframe,
 object {
     max-width: 100%;
-    
 }
 
 /* = Between single posts paging : Navigation
