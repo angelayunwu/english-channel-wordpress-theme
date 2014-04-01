@@ -9,28 +9,28 @@
 
 
 
-function emphaino_default_settings( $setting = '' )
-{
-	$defaults = array(
-		'logo_image'            => '',
-		'posts_layout'          => 'dynamic_grid_excerpts',
-		'full_posts_feat_img'   => 'on',
-		'sidebar_in_posts_index'=> false,
-		'footer_text'           => '&copy; '. date('Y') .' '. get_bloginfo('name').'.',
-		'link_color'			=> '#388ca4',
-		'non_responsive'        => false,
-		'disable_webfonts'      => false,
-		'disable_backtotop'		=> false,
-		'custom_css'            => '',
-		'header_textcolor'      => '555'
+// function emphaino_default_settings( $setting = '' )
+// {
+// 	$defaults = array(
+// 		'logo_image'            => '',
+// 		'posts_layout'          => 'dynamic_grid_excerpts',
+// 		'full_posts_feat_img'   => 'on',
+// 		'sidebar_in_posts_index'=> false,
+// 		'footer_text'           => '&copy; '. date('Y') .' '. get_bloginfo('name').'.',
+// 		'link_color'			=> '#388ca4',
+// 		'non_responsive'        => false,
+// 		'disable_webfonts'      => false,
+// 		'disable_backtotop'		=> false,
+// 		'custom_css'            => '',
+// 		'header_textcolor'      => '555'
 		
-	);
+// 	);
 
-	apply_filters( 'emphaino_default_settings', $defaults );
+// 	apply_filters( 'emphaino_default_settings', $defaults );
 
-	if($setting) return $defaults[$setting];
-	else return $defaults;
-}
+// 	if($setting) return $defaults[$setting];
+// 	else return $defaults;
+// }
 
 
 if ( ! function_exists( 'ec_setup' ) ) :
@@ -54,14 +54,7 @@ function ec_setup() {
 	 */
 	require get_template_directory() . '/inc/extras.php';
 
-  
-
-	/**
-	 * Make theme available for translation
-	 * Translations can be filed in the /languages/ directory
-	 */
-	load_theme_textdomain( 'emphaino', get_template_directory() . '/languages' );
-
+ 
 	/**
 	 * Add default posts and comments RSS feed links to head
 	 */
@@ -139,10 +132,7 @@ add_action( 'widgets_init', 'emphaino_widgets_init' );
  */
 function dlts_enqueue_webfonts() {
 	$font_families[] = 'PT+Sans:400,700,400italic';
-	//$font_families[] = 'Montserrat:700,400';
-	//$font_families[] = 'Bree+Serif';
-	$font_families[] = 'Lato:100,300,400,700,100italic,300italic,400italic,700italic';
-	
+	$font_families[] = 'Lato:100,300,400,700,100italic,300italic,400italic,700italic';	
 
 	$protocol = is_ssl() ? 'https' : 'http';
 	$query_args = array(

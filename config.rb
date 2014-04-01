@@ -1,5 +1,5 @@
 # Require any additional compass plugins here.
-require 'compass-pattern-primer'
+
 require 'toolkit'
 require 'modular-scale'
 require 'compass-normalize'
