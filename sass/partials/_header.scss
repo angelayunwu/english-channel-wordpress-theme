@@ -75,11 +75,23 @@
             display: inline-block;
         }
     }
+    .modal_underlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        top: -8px;
+        background-color: rgba(20, 20, 20, 0.8);
+        // background-color: black;
+        // @include transition-property(background-color);
+        // @include transition-duration(0.7s);
+        // @include transition-timing-function(ease-in-out);
+        // opacity: 0;
+   
+    }
     .header-r-hold {
         text-align: center;
         color: $secondary-dark;
-        // font: normal 15px $sans-font;
-        // font: normal 1.5rem $sans-font;
         margin-bottom: 0;
         @include respond-to("desktop") {}
 
@@ -87,11 +99,15 @@
         height: 34px;
         text-align: right;
         padding: 8px 0px 0 0;
-        // display: inline-block;
         form#searchform {
             position: absolute;
+            z-index: 20;
             right: 35px;
             top: 10px;
+            @include respond-to("not desktop") {
+                right: 55px;
+                top: 45px;
+            }
         }
         .searchB {
             width: 34px;
@@ -102,10 +118,10 @@
             background-size: 24px 24px;
             display: inline-block;
             cursor: pointer;
+            position: relative;
         }
         @include respond-to("not desktop") {
             .searchB {
-                // background-color: red;
                 width: 34px;
                 height: 34px;
                 background-image: url(images/search-icon.png);
@@ -114,8 +130,15 @@
                 background-size: 24px 24px;
                 display: block;
                 position: absolute;
+                z-index: 20;
                 right: 2rem;
                 top: 5.1rem;
+            }
+        }
+
+        @include respond-to("mobile") {
+            .searchB {
+                top: 4.3rem;
             }
         }
 
@@ -137,6 +160,9 @@
             cursor: text;
             outline: 0;
             width: 290px;
+            @include respond-to("mobile") {
+                width: 240px;
+            }
         }
         .search-submit {
             display: none;

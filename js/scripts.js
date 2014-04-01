@@ -84,13 +84,38 @@ jQuery(document).ready(function() {
             jQuery('.site-description').animate({
                 opacity: 1
             });
+            console.log("case a");
+            jQuery('.modal_underlay').remove();
         } else {
             jQuery('input.field').addClass('open');
+
             jQuery('input.field').focus();
-            // jQuery('.site-description').fadeOut();
+            // Modal blocker
+            if (jQuery(this).css("position") == "absolute") {
+                var modal_underlay = jQuery('<div class="modal_underlay"></div>');
+
+                jQuery(modal_underlay).prependTo('.header-r-hold');
+                jQuery(modal_underlay).css({
+                    // "position": "absolute",
+                    // "width": "100%",
+                    "height": jQuery(document).height(),
+                    // "z-index": "10",
+                    // "top": "-8px",
+                    // "background-color": "rgba(20,20,20,.8)",
+
+
+                });
+                // jQuery(modal_underlay).animate({
+                //     opacity: 0.5
+                // }, 5000);
+
+            }
+
+            //
             jQuery('.site-description').animate({
                 opacity: 0
             });
+            console.log("case b");
         }
     });
 
