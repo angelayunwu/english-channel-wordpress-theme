@@ -33,14 +33,14 @@
 // }
 
 
-// function mytheme_customize_register( $wp_customize ) {
-// 	//All our sections, settings, and controls will be added here
-// 	$wp_customize->remove_section( 'nav' );
-// 	$wp_customize->remove_section( 'static_front_page' );
-// 	$wp_customize->add_control( 'blogdescription' )->theme_supports=false;
+function ec_customize_register( $wp_customize ) {
+	//All our sections, settings, and controls will be added here
+	$wp_customize->remove_section( 'nav' );
+	$wp_customize->remove_section( 'static_front_page' );
+	//$wp_customize->add_control( 'blogdescription' )->theme_supports=false;
 
-// }
-// add_action( 'customize_register', 'mytheme_customize_register' );
+}
+add_action( 'customize_register', 'ec_customize_register' );
 
 
 if ( ! function_exists( 'ec_setup' ) ) :
