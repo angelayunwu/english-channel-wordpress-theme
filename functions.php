@@ -339,9 +339,8 @@ function ec_remove_tax_name( $title, $sep, $seplocation ) {
 }
 add_filter( 'wp_title', 'ec_remove_tax_name', 10, 3 );
 
-
 ///////
-add_filter( 'pre_get_posts', 'query_post_type' );
+//add_filter( 'pre_get_posts', 'query_post_type' );
 
 function query_post_type( $query ) {
 	if ( is_category() || is_tag() ) {
@@ -353,7 +352,10 @@ function query_post_type( $query ) {
 		$query->set( 'post_type', $post_type );
 		return $query;
 		// }
-	}
+	} //else if ($query->is_search) {
+		//$query->set('post_type', array( 'nav_menu_item', 'post', 'projects', 'news', 'events' ));
+   // }
+    //return $query;
 }
 ////////
 // To address bluehost limitations
