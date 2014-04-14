@@ -3,7 +3,7 @@
  * Single Event Template
  * A single event. This displays the event title, description, meta, and
  * optionally, the Google map for the event.
- * 
+ *
  * Override this template in your own theme by creating a file at [your-theme]/tribe-events/single-event.php
  *
  * @package TribeEventsCalendar
@@ -12,7 +12,7 @@
  *
  */
 
-if ( !defined('ABSPATH') ) { die('-1'); }
+if ( !defined( 'ABSPATH' ) ) { die( '-1' ); }
 
 $event_id = get_the_ID();
 
@@ -30,7 +30,7 @@ $event_id = get_the_ID();
 
 
 	<div class="tribe-events-schedule updated published tribe-clearfix">
-		
+
 		<?php echo tribe_events_event_recurring_info_tooltip(); ?>
 		<?php  if ( tribe_get_cost() ) :  ?>
 			<span class="tribe-events-divider">|</span>
@@ -49,7 +49,7 @@ $event_id = get_the_ID();
 	</div><!-- #tribe-events-header -->
 
 	<?php while ( have_posts() ) :  the_post(); ?>
-		<div id="post-<?php the_ID(); ?>" <?php post_class('vevent'); ?>>
+		<div id="post-<?php the_ID(); ?>" <?php post_class( 'vevent' ); ?>>
 			<!-- Event featured image -->
 			<?php //echo tribe_event_featured_image(); ?>
 
@@ -62,10 +62,30 @@ $event_id = get_the_ID();
 
 			<!-- Event meta -->
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+<div class = "meta-holder">
 				<?php echo tribe_events_single_event_meta() ?>
+			    
+			   <?php
+$wg_list = wp_get_object_terms( get_the_ID(), 'working-groups' );
+if ( !empty( $wg_list ) ) {
+	if ( !is_wp_error( $wg_list ) ) {
+		$numItems = count( $wg_list );
+		$i = 0;
+		echo '<dl class="working-group"><dt>Working Group:</dt> ';
+		foreach ( $wg_list as $w ) {
+			$uu =  get_term_link( $w->slug, 'working-groups' );
+			echo '<dd><a href="' . $uu . '">' . $w->name .'</a>';
+
+			if ( ++$i != $numItems ) {echo ', ';}
+			echo '</dd>';
+		}
+		echo '</dl>';
+	}
+} ?>
+</div>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div><!-- .hentry .vevent -->
-		<?php if( get_post_type() == TribeEvents::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
+		<?php if ( get_post_type() == TribeEvents::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
 
 	<!-- Event footer -->
