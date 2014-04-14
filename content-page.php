@@ -13,7 +13,7 @@
     </div>
     <?php endif; // featured image ?>
     <?php the_content(); ?>
-    <?php wp_link_pages( array( 'before' => '<div class="page-links icon-docs">' . __( 'Pages:', 'emphaino' ), 'after' => '</div>' ) ); ?>
+  
   </div>
   <!-- .entry-content -->
   <?php else: ?>
