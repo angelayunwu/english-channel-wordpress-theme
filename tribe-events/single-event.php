@@ -63,9 +63,7 @@ $event_id = get_the_ID();
 			<!-- Event meta -->
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 <div class = "meta-holder">
-				<?php echo tribe_events_single_event_meta() ?>
-			    
-			   <?php
+	 <?php
 $wg_list = wp_get_object_terms( get_the_ID(), 'working-groups' );
 if ( !empty( $wg_list ) ) {
 	if ( !is_wp_error( $wg_list ) ) {
@@ -82,6 +80,10 @@ if ( !empty( $wg_list ) ) {
 		echo '</dl>';
 	}
 } ?>
+
+				<?php echo tribe_events_single_event_meta() ?>
+			    
+
 </div>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div><!-- .hentry .vevent -->
