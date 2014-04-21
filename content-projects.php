@@ -16,7 +16,7 @@
 		<?php endif; // featured image ?>
 
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'emphaino' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><span class="info">Project: &nbsp;</span><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'emphaino' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php if(is_search()){?><span class="info">Project: &nbsp;</span><?php } ?><?php the_title(); ?></a></h1>
 		<?php
 		$subtitle = types_render_field("subtitle", array("raw"=>"true"));
      if (!empty($subtitle)) {
