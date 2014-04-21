@@ -17,8 +17,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
        <?php else:   ?>
       Description coming soon.
       <?php endif; ?>
-
-         <?php
+    <?php
   $t_id = $term->term_id;
   // retrieve the existing value(s) for this meta field. This returns an array
   $term_meta = get_option( "taxonomy_$t_id" );
@@ -26,10 +25,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
   if (!empty($u)){ ?>
        <div class="wg_url"><a href="<?php echo $u ?>"><?php echo $u ?></a></div>
   <?php }  ?>
-
-
-
-       </div>
+   </div>
    </div>
     <!-- .page-header -->
 
@@ -48,10 +44,9 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
   		foreach($all_events as $post) {
     		setup_postdata($post);
     		?>
-         <li class="hentry" id="post-<?php the_ID(); ?>" >
+        <li class="hentry" id="post-<?php the_ID(); ?>" >
           		<?php tribe_get_template_part( 'list/single', 'event-ec' ) ?>
-          
-          </li>
+        </li>
           <?php } //endforeach 
           ?>
         </ul></div>

@@ -41,8 +41,8 @@ if ( $pageterms ): ?>
         <?php foreach ( $pageterms as $wg ): ?>
         <article class="hentry type-projects type-working-group">
         <header class="entry-header">
-          <div>Working Group</div>
-          <h1 class="entry-title"><a href="working-groups/<?php echo $wg->slug; ?>"><?php echo $wg->name; ?></a></h1></header>
+          
+          <h1 class="entry-title"><a href="working-groups/<?php echo $wg->slug; ?>"><span class="info">Working Group: &nbsp;</span><?php echo $wg->name; ?></a></h1></header>
         <div class="entry-summary"><?php echo $wg->description; ?></div>
         </article>
         <?php endforeach; ?>
