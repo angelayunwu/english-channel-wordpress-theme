@@ -14,10 +14,6 @@ get_header(); ?>
     <?php /* Start the Loop */ ?>
     <?php while ( have_posts() ) : the_post(); ?>
     <?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
 						get_template_part( 'content', 'projects' );
 					?>
     <?php endwhile; ?>
@@ -31,5 +27,5 @@ get_header(); ?>
 </section>
 <!-- #primary .content-area -->
 
-<?php if( get_theme_mod( 'sidebar_in_posts_index' ) == 'on' ) get_sidebar(); ?>
+
 <?php get_footer(); ?>
