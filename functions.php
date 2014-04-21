@@ -297,8 +297,12 @@ function save_taxonomy_custom_meta( $term_id ) {
 		$term_meta = get_option( "taxonomy_$t_id" );
 		$cat_keys = array_keys( $_POST['term_meta'] );
 		foreach ( $cat_keys as $key ) {
+
 			if ( isset ( $_POST['term_meta'][$key] ) ) {
-				$term_meta[$key] = $_POST['term_meta'][$key];
+				$value = $_POST['term_meta'][$key];
+				$value = get_magic_quotes_gpc() ? $value : stripslashes($value);
+
+				$term_meta[$key] = $value;
 			}
 		}
 		// Save the option array.
