@@ -29,7 +29,7 @@ $has_venue_address = ( $venue_address ) ? ' location': '';
 		<?php endif; // featured image ?>
 
 	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( 'Permalink to %s', the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( 'Permalink to %s', the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><span class="info">Event: &nbsp;</span><?php the_title(); ?></a></h1>
 		<?php
 $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
 if ( !empty( $subtitle ) ) {
