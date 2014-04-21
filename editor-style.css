@@ -37,7 +37,7 @@ body {
   background: #fff;
 }
 
-/* line 39, sass/partials/_reset.scss */
+/* line 40, sass/partials/_reset.scss */
 article,
 aside,
 details,
@@ -46,52 +46,53 @@ figure,
 footer,
 header,
 nav,
+main,
 section {
   display: block;
 }
 
-/* line 42, sass/partials/_reset.scss */
+/* line 43, sass/partials/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 45, sass/partials/_reset.scss */
+/* line 46, sass/partials/_reset.scss */
 table {
   /* tables still need 'cellspacing="0"' in the markup */
   border-collapse: separate;
   border-spacing: 0;
 }
 
-/* line 49, sass/partials/_reset.scss */
+/* line 50, sass/partials/_reset.scss */
 caption, th, td {
   font-weight: normal;
   text-align: left;
 }
 
-/* line 54, sass/partials/_reset.scss */
+/* line 55, sass/partials/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";
 }
 
-/* line 57, sass/partials/_reset.scss */
+/* line 58, sass/partials/_reset.scss */
 blockquote, q {
   quotes: "" "";
 }
 
-/* line 60, sass/partials/_reset.scss */
+/* line 61, sass/partials/_reset.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 64, sass/partials/_reset.scss */
+/* line 65, sass/partials/_reset.scss */
 a:hover,
 a:active {
   /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
   outline: 0;
 }
 
-/* line 67, sass/partials/_reset.scss */
+/* line 68, sass/partials/_reset.scss */
 a img {
   border: 0;
 }

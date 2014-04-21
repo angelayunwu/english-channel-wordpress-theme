@@ -60,3 +60,10 @@
   }
   filter: unquote("alpha(opacity=#{round($opacity * 100)})");
 }
+
+@mixin non-responsive{
+  
+  #page, #primary {
+    width: 960px; 
+  }
+}

@@ -1,8 +1,6 @@
 <?php
 /**
  * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
  */
 
 ?>
@@ -13,11 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0,user-scalable=no" >
 
 <title><?php wp_title( '|', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
 
 <?php wp_head(); ?>
+<!--[if lt IE 9]>
+<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/respond.js" type="text/javascript"></script>
+<![endif]-->
+
+
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 </head>
 

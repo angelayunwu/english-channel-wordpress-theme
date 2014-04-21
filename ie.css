@@ -2,11 +2,9 @@
  * Styles for IE8.
  * IE7 and below not supported.
  *
- * @package Emphaino
- * @since Emphaino 1.0
  */
 /* Prevent stretching of full-size images with height and width attributes in IE8 */
-/* line 17, sass/ie.scss */
+/* line 15, sass/ie.scss */
 .site-header img,
 .entry-content img,
 img.size-full {
@@ -14,7 +12,12 @@ img.size-full {
 }
 
 /* Non Responsive Layout for IE 8 */
-/* line 25, sass/ie.scss */
+/* line 66, sass/partials/_mixins.scss */
+#page, #primary {
+  width: 960px;
+}
+
+/* line 23, sass/ie.scss */
 .header-main, .widget-area, .page-header, .post-navigation, .paging-navigation {
   border: 1px solid #ddd;
 }
