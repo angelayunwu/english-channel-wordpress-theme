@@ -24,7 +24,7 @@ $wgcount = count( $pageterms );
     <?php
 $numR = 0;
 if ( have_posts() || ( $wgcount > 0 ) ) :
-  $numR = ( $wp_query->found_posts ) + $wgcount;
+  $numR = ( $wp_query->post_count ) + $wgcount;
 ?>
     <header class="page-header">
       <h2 class="page-desc">
