@@ -50,6 +50,7 @@ $event_id = get_the_ID();
 
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class( 'vevent' ); ?>>
+			<?php // the_title( '<h2 class="tribe-events-single-event-title summary entry-title">', '</h2>' ); ?>
 			<!-- Event featured image -->
 			<?php //echo tribe_event_featured_image(); ?>
 
@@ -62,28 +63,24 @@ $event_id = get_the_ID();
 
 			<!-- Event meta -->
 			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-<div class = "meta-holder">
-	 <?php
-$wg_list = wp_get_object_terms( get_the_ID(), 'working-groups' );
-if ( !empty( $wg_list ) ) {
-	if ( !is_wp_error( $wg_list ) ) {
-		$numItems = count( $wg_list );
-		$i = 0;
-		echo '<dl class="working-group"><dt>Working Group:</dt> ';
-		foreach ( $wg_list as $w ) {
-			$uu =  get_term_link( $w->slug, 'working-groups' );
-			echo '<dd><a href="' . $uu . '">' . $w->name .'</a>';
-
-			if ( ++$i != $numItems ) {echo ', ';}
-			echo '</dd>';
-		}
-		echo '</dl>';
-	}
-} ?>
-
+			<div class = "meta-holder">
 				<?php echo tribe_events_single_event_meta() ?>
-			    
-
+				<?php
+				$wg_list = wp_get_object_terms( get_the_ID(), 'working-groups' );
+				if ( !empty( $wg_list ) ) {
+					if ( !is_wp_error( $wg_list ) ) {
+						$numItems = count( $wg_list );
+						$i = 0;
+						echo '<dl class="working-group"><dt>Working Group:</dt> ';
+						foreach ( $wg_list as $w ) {
+							$uu =  get_term_link( $w->slug, 'working-groups' );
+							echo '<dd><a href="' . $uu . '">' . $w->name .'</a>';
+							if ( ++$i != $numItems ) {echo ',&nbsp;';}
+							echo '</dd>';
+						}
+						echo '</dl>';
+					}
+				} ?>
 </div>
 			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 			</div><!-- .hentry .vevent -->
