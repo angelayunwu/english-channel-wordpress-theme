@@ -30,33 +30,57 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
     <!-- .page-header -->
 
 
-      <!--  EVENTS  -->
+<!--  UPCOMING EVENTS  -->
 <?php 
       global $post;
-  		$all_events = tribe_get_events(array('eventDisplay'=>'upcoming','posts_per_page'=>3,
+  		$all_events = tribe_get_events(array('eventDisplay'=>'upcoming','posts_per_page'=>30,
   			'tax_query'=> array(array('taxonomy' => 'working-groups','field' => 'slug','terms' => $term->slug))));
       if (count($all_events) > 0){
         ?>
-    <div class="brick brick2">
-    <h3  class="post-type">Event<?php echo (count($all_events) >1 ) ? 's' : ''; ?></h3>
-    <ul class= "tribe_events tribe-events-list">
-      <?php 
-  		foreach($all_events as $post) {
-    		setup_postdata($post);
+        <div class="brick brick2">
+        <h3  class="post-type">Upcoming Event<?php echo (count($all_events) >1 ) ? 's' : ''; ?></h3>
+        <ul class= "tribe_events tribe-events-list">
+        <?php 
+  		  foreach($all_events as $post) {
+    		  setup_postdata($post);
     		?>
         <li class="hentry" id="post-<?php the_ID(); ?>" >
           		<?php tribe_get_template_part( 'list/single', 'event-ec' ) ?>
         </li>
-          <?php } //endforeach 
-          ?>
+        <?php } //endforeach 
+        ?>
         </ul></div>
         <?php
         } // end if 
-
         ?>
        
-<!--  END EVENTS  -->
+<!--  END UPCOMING EVENTS  -->
 
+<!--  PAST EVENTS  -->
+<?php 
+      global $post;
+      $all_events = tribe_get_events(array('eventDisplay'=>'past','posts_per_page'=>30,
+        'tax_query'=> array(array('taxonomy' => 'working-groups','field' => 'slug','terms' => $term->slug))));
+      if (count($all_events) > 0){
+        ?>
+        <div class="brick brick2">
+        <h3  class="post-type">Past Event<?php echo (count($all_events) >1 ) ? 's' : ''; ?></h3>
+        <ul class= "tribe_events tribe-events-list">
+        <?php 
+        foreach($all_events as $post) {
+          setup_postdata($post);
+        ?>
+        <li class="hentry" id="post-<?php the_ID(); ?>" >
+              <?php tribe_get_template_part( 'list/single', 'event-ec' ) ?>
+        </li>
+        <?php } //endforeach 
+        ?>
+        </ul></div>
+        <?php
+        } // end if 
+        ?>
+       
+<!--  END PAST EVENTS  -->
 
     <?php 	
 $args = array(
