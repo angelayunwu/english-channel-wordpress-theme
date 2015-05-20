@@ -20,6 +20,17 @@
 
 
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function()
+{ (i[r].q=i[r].q||[]).push(arguments)}
+,i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54671719-1', 'auto');
+ga('send', 'pageview');
+</script>
+
 </head>
 
 <body <?php body_class(); ?>>
@@ -59,7 +70,7 @@ global $post;
 $all_events = tribe_get_events( array( 'eventDisplay'=>'upcoming', 'posts_per_page'=>3 ) );
 foreach ( $all_events as $post ) {
   setup_postdata( $post );
-          ?>
+?>
           <li id="post-<?php the_ID(); ?>" >
             <?php if ( has_post_thumbnail() ) { ?>
             <div class="event-thumb">
@@ -71,10 +82,10 @@ foreach ( $all_events as $post ) {
                 <?php the_title(); ?>
                 <span class="meta-nav">&rarr;</span> </a></h3>
               <?php
-              $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
-              if ( !empty( $subtitle ) ) {
-                echo "<h4 class='subtitle'>$subtitle</h4>";
-              }
+  $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
+  if ( !empty( $subtitle ) ) {
+    echo "<h4 class='subtitle'>$subtitle</h4>";
+  }
 ?>
               <div class="event-excerpt">
                 <?php the_excerpt(); ?>
@@ -103,32 +114,35 @@ foreach ( $all_events as $post ) {
         <h1 class="page-title">
           <?php
           if ( is_single() ) {
-            the_title();
-          } else if ( is_post_type_archive('tribe_events') ) {
+            if ( get_post_type() == 'tribe_events' ) {
+              echo 'Event';
+            } else {
+              the_title();
+            }
+          } else if ( is_post_type_archive( 'tribe_events' ) ) {
             //  echo tribe_get_current_month_text();
             tribe_events_title();
-          
+
           } else if ( is_post_type_archive() ) {
-             
             post_type_archive_title();
           } else if ( is_tag( '' ) ) {
             echo '<span class="type_flag">Tag:</span>';
             wp_title( '', true );
           } else if ( is_search() ) {
             echo 'Search Results';
-          } else if (is_tax('kind')){
-          //$obj = get_post_type_object( 'news' );
-          //$myCPT = $obj->labels->name;
-           //wp_title( "'<h2>' . $myCPT . '</h2>'", true);
-           echo '<span class="type_flag">News and Notes:</span>';
-            echo wp_title('',false). 's';
-          } else if (is_tax('project-types')){
-          echo '<span class="type_flag">Projects:</span>';
-          echo  wp_title( '', false ) . 's';
+          } else if ( is_tax( 'kind' ) ) {
+            //$obj = get_post_type_object( 'news' );
+            //$myCPT = $obj->labels->name;
+            //wp_title( "'<h2>' . $myCPT . '</h2>'", true);
+            echo '<span class="type_flag">News and Notes:</span>';
+            echo wp_title( '', false ). 's';
+          } else if ( is_tax( 'project-types' ) ) {
+            echo '<span class="type_flag">Projects:</span>';
+            echo  wp_title( '', false ) . 's';
           } else {
             wp_title( '', true );
           }
-?></h1>
+          ?></h1>
         <?php
 if ( is_single() ) {
   $subtitle = types_render_field( "subtitle", array( "raw"=>"true" ) );
@@ -137,9 +151,9 @@ if ( is_single() ) {
   }
 }
 
-  if (tribe_is_month() || tribe_is_list_view()){
-      tribe_get_template_part( 'modules/bar' ); 
-  }
+if ( tribe_is_month() || tribe_is_list_view() ) {
+  tribe_get_template_part( 'modules/bar' );
+}
 ?>
       </header>
     </div> <!-- end left block -->
@@ -149,7 +163,7 @@ if ( is_single() ) {
       <h1 class="assistive-text icon-menu"><span>Menu</span></h1>
       <div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
       <?php
-      wp_nav_menu( array( 'theme_location' => 'primary' ) )   ;
+wp_nav_menu( array( 'theme_location' => 'primary' ) )   ;
 ?>
     </nav>
   </div>

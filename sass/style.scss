@@ -6,12 +6,20 @@ Version: 1.2.3
 License: GNU General Public License
 License URI: license.txt
 */
+@import "compass";
+
 @import "compass/typography";
 @import "compass/css3";
 
+@import "breakpoint";
+
 @import 'modular-scale';
+
+
+
+
 @import 'toolkit';
-@import "compass";
+
 
 @import "partials/_breakpoints";
 @import "partials/_browsers";
@@ -23,6 +31,7 @@ License URI: license.txt
 
 @import "partials/_reset";
 @import "partials/_globals";
+@import "partials/_settings";
 @import "partials/_helpers";
 @import "partials/_canvas";
 @import "partials/_header";
@@ -34,4 +43,3 @@ License URI: license.txt
 @import "partials/_footer";
 
 @import "partials/_extendables";
-

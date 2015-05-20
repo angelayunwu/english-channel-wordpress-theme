@@ -4,6 +4,9 @@ require 'toolkit'
 require 'modular-scale'
 require 'compass-normalize'
 require 'compass_formalize'
+require 'color-schemer'
+require 'breakpoint'
+
 
 # Set this to the root of your project when deployed:
 http_path = "/wp/wp-content/themes/english-channel"
@@ -15,7 +18,7 @@ fonts_dir = "fonts"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :expanded
+output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true

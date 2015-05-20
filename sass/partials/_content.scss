@@ -188,6 +188,7 @@ body:not(.events-archive) .tribe-events-list .hentry.vevent {
         font-family: Lato;
         font-weight: 300;
         letter-spacing: .6px;
+        line-height: normal;
         &:hover {
             color: $link-color;
         }

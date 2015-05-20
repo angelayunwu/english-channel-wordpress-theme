@@ -7,8 +7,10 @@
 
 
 @import "compass";
+@import "partials/_settings";
 @import "partials/_defines";
 @import "partials/_mixins";
+
 /* Prevent stretching of full-size images with height and width attributes in IE8 */
 .site-header img,
 .entry-content img,

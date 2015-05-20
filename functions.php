@@ -140,7 +140,7 @@ function dlts_enqueue_webfonts() {
 
 	$protocol = is_ssl() ? 'https' : 'http';
 	$query_args = array(
-		'family' => implode( '|', $font_families ),
+		'family' => implode( '%7C', $font_families ),
 	);
 	wp_enqueue_style( 'webfonts', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 }

@@ -1,7 +1,8 @@
 //////////////////////////////
 // COLORS: Create a color scheme
 //////////////////////////////
-@import "toolkit/colours";
+@import "color-schemer";
+@import "toolkit/colors";
 
 // tint-stack, shade-stack etc
 
@@ -31,19 +32,19 @@ $cs-color-model: ryb;
 $blue-background: #acd3df;
 
 $black: tint-stack($black-value);
-$primary: tint-stack(cs-primary());
-$primary-dark: darken(nth($primary, 2), 50%);
-$secondary: tint-stack(cs-secondary());
+$primary_stack: tint-stack($cs-primary);
+$primary-dark: darken(nth($primary_stack, 2), 50%);
+$secondary: tint-stack($cs-primary);
 $secondary-dark: darken(nth($secondary, 2), 40%);
 $secondary-dark2: darken(nth($secondary, 2), 50%);
-$tertiary: tint-stack(cs-tertiary());
-$quadrary: tint-stack(cs-quadrary());
+$tertiary: tint-stack($cs-primary);
+$quadrary: tint-stack($cs-primary);
 
 //$sans-font: 'PT Sans', Verdana, Geneva, sans-serif;
 $sans-font: "PT Sans", Verdana, Geneva, sans-serif;
 $heading-font: Lato, "PT Sans", Verdana, Geneva, sans-serif;
 $serif-font: "PT Sans", Verdana, Geneva, sans-serif;
-$site-heading-color: nth($primary, 1);
+$site-heading-color: nth($cs-primary, 1);
 $heading-color: $primary-dark;
 $text-color: nth($black, 1);
 $link-color: nth($quadrary, 1);
@@ -53,7 +54,7 @@ $primary-bg-color: nth($black, 6);
 $secondary-bg-color: nth($black, 5);
 $tertiary-bg-color: nth($black, 6);
 $blocks-bg-color: #eeeeee;
-
+$blocks-bg-color: #ff0000;
 @mixin clearfix {
     &:before,
     &:after {
