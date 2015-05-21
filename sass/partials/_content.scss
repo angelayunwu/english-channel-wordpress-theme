@@ -588,7 +588,6 @@ article.tribe_events h3 {
 .single-format-aside,
 .post-password-required {
     .entry-title:before {
-        @include fontello;
         margin-right: 0.4em;
     }
 }
@@ -668,7 +667,7 @@ figure.quote {
     &:before {
         position: absolute;
         left: 0;
-        @include fontello;
+  
         font-size: 2em;
         opacity: 0.5;
         content: '\275d';
@@ -734,7 +733,7 @@ footer.entry-meta {
 
 .page-links {
     clear: both;
-    @include secondary-box;
+ 
     margin: 0 0 1em;
     padding: 1rem;
     text-align: center;
@@ -895,7 +894,7 @@ object {
 .site-content {
     .site-navigation {
         clear: both;
-        @include secondary-box;
+    
         margin: 10px 0 30px;
         margin: 1rem 0 3rem;
         overflow: hidden;
