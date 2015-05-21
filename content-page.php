@@ -7,7 +7,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <?php if (is_single() || is_page()) : ?>
   <div class="entry-content">
-    <?php if( has_post_thumbnail() && 'on' == get_theme_mod( 'full_posts_feat_img', emphaino_default_settings('full_posts_feat_img') ) ): ?>
+    <?php if( has_post_thumbnail() && 'on' == get_theme_mod( 'full_posts_feat_img', ec_default_settings('full_posts_feat_img') ) ): ?>
     <div class="featured-image">
       <?php the_post_thumbnail('full-width'); ?>
     </div>

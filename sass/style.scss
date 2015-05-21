@@ -13,13 +13,9 @@ License URI: license.txt
 
 @import "breakpoint";
 
-@import 'modular-scale';
+@import "modular-scale";
 
-
-
-
-@import 'toolkit';
-
+@import "toolkit";
 
 @import "partials/_breakpoints";
 @import "partials/_browsers";

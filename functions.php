@@ -9,7 +9,7 @@
 
 
 
-function emphaino_default_settings( $setting = '' )
+function ec_default_settings( $setting = '' )
 {
  $defaults = array(
   'logo_image'            => '',
@@ -26,7 +26,7 @@ function emphaino_default_settings( $setting = '' )
 
  );
 
- apply_filters( 'emphaino_default_settings', $defaults );
+ apply_filters( 'ec_default_settings', $defaults );
 
  if($setting) return $defaults[$setting];
  else return $defaults;
@@ -106,29 +106,7 @@ if ( ! function_exists( 'ec_setup' ) ) :
 endif; // ec_setup
 add_action( 'after_setup_theme', 'ec_setup' );
 
-/**
- * Register widgetized area
- */
-function emphaino_widgets_init() {
-	register_sidebar( array(
-			'name' => __( 'Footer Widget Area', 'emphaino' ),
-			'id' => 'footer-widget-area',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>',
-		) );
-	register_sidebar( array(
-			'name' => __( 'Sidebar', 'emphaino' ),
-			'description' => ( get_theme_mod( 'sidebar_in_posts_index' ) == 'on' )?__( 'Appears in blog home, archives, single posts and pages.', 'emphanio' ):__( 'Appears in single posts and pages.', 'emphaino' ),
-			'id' => 'the-sidebar',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' => '</aside>',
-			'before_title' => '<h1 class="widget-title">',
-			'after_title' => '</h1>',
-		) );
-}
-add_action( 'widgets_init', 'emphaino_widgets_init' );
+
 
 
 /**
@@ -186,18 +164,6 @@ function ec_head() {
 add_action( 'wp_head', 'ec_head' );
 
 
-
-/**
- * Enqueues google fonts css for the custom header admin preview page.
- *
- */
-function emphaino_custom_header_admin_scripts()
-{
- if( 'appearance_page_custom-header' == get_current_screen()->id && get_theme_mod('disable_webfonts') != 'on' && !get_theme_mod('logo_image') && 'blank' !=  get_header_textcolor()) {
-  emphaino_enqueue_webfonts();
- }
-}
-add_action( 'admin_enqueue_scripts', 'emphaino_custom_header_admin_scripts' );
 
 
 

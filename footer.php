@@ -8,10 +8,9 @@
 <!-- #main .site-main -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-  <?php get_sidebar('footer'); ?>
   <div id="bottom-bar">
     <div class="inner">
-      <div class="footer-text"> <?php echo get_theme_mod( 'footer_text', emphaino_default_settings('footer_text') ) ?> </div>
+      <div class="footer-text"> <?php echo get_theme_mod( 'footer_text', ec_default_settings('footer_text') ) ?> </div>
       <div class="site-info">Powered by <a href="http://dlib.nyu.edu/dlts/" target="_blank">Digital Library Technology Services</a></div>
     </div>
     <!-- .inner --> 
