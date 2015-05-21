@@ -4,11 +4,10 @@
 @import "color-schemer";
 @import "toolkit/colors";
 
-// tint-stack, shade-stack etc
 
-// Example color scheme
-// this is an approximation of the green
-$primary-color: #22e744;
+
+// Tomato red
+$primary-color: #e73122;
 $black-value: #071e09;
 
 //$background-color: #11ff11;
@@ -26,6 +25,7 @@ $cs-brightness-offset: 10;
 
 // Options: 0-100;
 $cs-color-model: ryb;
+
 // Options: rgb, ryb
 
 //previous background-color: #B4D3DC;
@@ -54,46 +54,22 @@ $primary-bg-color: nth($black, 6);
 $secondary-bg-color: nth($black, 5);
 $tertiary-bg-color: nth($black, 6);
 $blocks-bg-color: #eeeeee;
-$blocks-bg-color: #ff0000;
+
 @mixin clearfix {
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 
 @mixin primary-box {
-    background-color: #fff;
-    // background-color: $primary-bg-color;
-    // background-color: white;
-    // @include box-shadow( rgba(0, 0, 0, 0.5) 0 0 1px );
-}
-
-@mixin secondary-box {
-    //background-color: #f6f6f6;
-    //background-color: $blocks-bg-color;
-    //@include box-shadow( rgba(0, 0, 0, 0.1) 0 0 0 0.1rem inset);
+  background-color: #fff;
 }
 
 @mixin blocks-box {
-    background: $blocks-bg-color;
-    //@include box-shadow( rgba(0, 0, 0, 0.2) 0 0 0.2rem );
-}
-
-@mixin fontello {
-    font-family: 'fontello';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin: 0 0.2em;
-    text-align: center;
-    opacity: 0.8;
-    line-height: 1em;
+  background: $blocks-bg-color;
 }
