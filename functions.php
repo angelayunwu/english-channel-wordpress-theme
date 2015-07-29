@@ -332,3 +332,42 @@ function tribe_allow_large_joins() {
 	global $wpdb;
 	$wpdb->query( 'SET SQL_BIG_SELECTS=1' );
 }
+
+// Add Events to RSS Feed
+function add_events_to_rss_feed( $args ) {
+  if ( isset( $args['feed'] ) && !isset( $args['post_type'] ) )
+    $args['post_type'] = array('post', 'tribe_events');
+  return $args;
+}
+ 
+add_filter( 'request', 'add_events_to_rss_feed' );
+
+// Add Tribe Event Namespace
+add_action( 'rss2_ns', 'events_rss2_namespace' );
+ 
+function events_rss2_namespace() {
+    echo 'xmlns:ev="http://purl.org/rss/2.0/modules/event/"'."\n";
+}
+ 
+// Add Event Dates to RSS Feed
+add_action('rss_item','tribe_rss_feed_add_eventdate');
+add_action('rss2_item','tribe_rss_feed_add_eventdate');
+add_action('commentsrss2_item','tribe_rss_feed_add_eventdate');
+ 
+function tribe_rss_feed_add_eventdate() {
+  if ( ! tribe_is_event() ) return;
+  ?>
+  <ev:tribe_event_meta xmlns:ev="Event">
+  <?php if (tribe_get_start_date() !== tribe_get_end_date() ) { ?>
+ 
+    <ev:startdate><?php echo tribe_get_start_date(); ?></ev:startdate>
+    <ev:enddate><?php echo tribe_get_end_date(); ?></ev:enddate>
+ 
+  <?php } else { ?>
+ 
+    <ev:startdate><?php echo tribe_get_start_date(); ?></ev:startdate>
+ 
+  <?php } ?>
+  </ev:tribe_event_meta>
+ 
+<?php }
