@@ -348,5 +348,3 @@ function tribemeta_in_feed($content) {
 add_filter('the_content','tribemeta_in_feed');
  
 ?>
- 
-<?php }
